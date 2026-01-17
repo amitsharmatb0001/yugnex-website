@@ -1,26 +1,554 @@
+/* app/globals.css */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ===========================
+   BASE RESET & TYPOGRAPHY
+   =========================== */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+
+/* Focus-in animation for hero text */
+@keyframes focusIn {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.3em;
+    filter: blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    letter-spacing: 0.02em;
+    filter: blur(0);
+  }
+}
+
+.animate-focus {
+  animation: focusIn 1.2s ease-out both;
+}
+
+/* Code stream background */
+.code-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.code-snippet {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0.2;
+  animation: codeRise linear infinite;
+}
+
+@keyframes codeRise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.3;
+  }
+
+  90% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-140vh);
+    opacity: 0;
+  }
+}
+
+.code-python {
+  color: #93c5fd;
+}
+
+.code-javascript {
+  color: #67e8f9;
+}
+
+.code-java {
+  color: #e5e7eb;
+}
+
+.code-success {
+  color: #86efac;
+}
+
+.code-error {
+  color: #fca5a5;
+}
+
+/* Particle / Neural Dots */
+.particle-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #93c5fd;
+  border-radius: 50%;
+  opacity: 0.3;
+  box-shadow: 0 0 8px rgba(147, 197, 253, 0.6);
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translate(0, 100vh) scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+    transform: translate(20px, 80vh) scale(1);
+  }
+
+  50% {
+    transform: translate(-20px, 50vh) scale(1);
+  }
+
+  90% {
+    opacity: 0.5;
+    transform: translate(20px, 20vh) scale(1);
+  }
+
+  100% {
+    transform: translate(0, -10vh) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Neural canvas layer */
+#neuralCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* ===========================
+   CONTAINER SYSTEM
+   =========================== */
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* ===========================
+   TYPOGRAPHY SCALE
+   =========================== */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+/* ===========================
+   LINKS
+   =========================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ===========================
+   HEADER & FOOTER
+   =========================== */
+
+.site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 6rem;
+}
+
+/* ===========================
+   NAVIGATION
+   =========================== */
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  color: #e5e7eb;
+  /* Gray-200 for softer white */
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fbbf24;
+  /* Gold hover */
+  text-decoration: none;
+}
+
+.brand-logo {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 1.5rem;
+  /* Restored size */
+
+  /* Solid Gold - Exact Match */
+  color: #fbbf24 !important;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.brand-logo:hover {
+  filter: brightness(1.2);
+  /* letter-spacing removed to prevent stretching */
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+}
+
+.trademark {
+  font-size: 0.4em;
+  vertical-align: super;
+  margin-left: 2px;
+  color: #fbbf24;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+/* ===========================
+   SCROLLBAR (PREMIUM)
+   =========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2933;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* ===========================
+   VISION/MISSION PAGE ANIMATIONS
+   =========================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+/* New animations for enhanced Vision/Mission pages */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes pulseSlow {
+
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 6s ease-in-out infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(30px, -30px);
+  }
+
+  50% {
+    transform: translate(-30px, 30px);
+  }
+
+  75% {
+    transform: translate(30px, 15px);
+  }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 10s ease-in-out infinite 5s;
+}
+
+/* ===========================
+   RTL (RIGHT-TO-LEFT) SUPPORT
+   =========================== */
+
+/* Arabic locale support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Mirror flex layouts */
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+/* Reverse navigation */
+[dir="rtl"] .nav-list {
+  flex-direction: row-reverse;
+}
+
+/* Reverse grid layouts */
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+/* Adjust padding and margins */
+[dir="rtl"] .container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Mirror brand logo positioning */
+[dir="rtl"] .brand-logo {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Mirror trademark positioning */
+[dir="rtl"] .trademark {
+  margin-left: 0;
+  margin-right: 2px;
+}
+
+/* Adjust text alignment for RTL */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] p {
+  text-align: right;
+}
+
+/* Center-aligned elements stay centered */
+[dir="rtl"] .text-center {
+  text-align: center;
+}
+
+/* Mirror footer grid */
+[dir="rtl"] footer .grid {
+  direction: rtl;
+}
+
+/* Adjust border positioning */
+[dir="rtl"] .border-l {
+  border-left: none;
+  border-right: 1px solid;
+}
+
+[dir="rtl"] .pl-8 {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+/* Mirror animations that use translateX */
+[dir="rtl"] .animate-slide-up {
+  animation: slideUpRtl 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideUpRtl {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scaleX(-1);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(-1);
+  }
 }
