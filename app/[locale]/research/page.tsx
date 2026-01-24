@@ -3,6 +3,7 @@ import { Locale } from '@/app/lib/i18n'
 import { resolveLocaleForPage } from '@/app/lib/localeGuard'
 import { loadResearchContent } from '@/app/lib/contentLoader'
 import { buildSeo } from '@/app/lib/seo'
+import CodeBackground from '@/app/background/CodeBackground'
 import ParticleBackground from '@/app/background/ParticleBackground'
 import TextBlock from '@/app/components/sections/TextBlock'
 import ResearchPapers from '@/app/components/research/ResearchPapers'
@@ -35,6 +36,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
 
     return (
         <main className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-black text-gray-200">
+            <CodeBackground />
             <ParticleBackground />
 
             {/* Header */}

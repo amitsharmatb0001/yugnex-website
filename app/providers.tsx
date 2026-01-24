@@ -8,7 +8,7 @@ import { useAnalytics } from '@/app/lib/useAnalytics'
 
   Responsibilities:
   - Catch rendering errors (ErrorBoundary)
-  - Start global client-only systems (analytics, later maybe auth, theme, etc.)
+  - Start global client-only systems (analytics, etc.)
   - Provide a single hydration boundary for layout.tsx
 
   It must export a DEFAULT component called Providers.
@@ -18,6 +18,8 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   // Start privacy-respecting analytics on route change
   useAnalytics()
 
-  // Wrap the entire app in an error boundary
-  return <ErrorBoundary>{children}</ErrorBoundary>
+  // Wrap the entire app in error boundary
+  return (
+    <ErrorBoundary>{children}</ErrorBoundary>
+  )
 }

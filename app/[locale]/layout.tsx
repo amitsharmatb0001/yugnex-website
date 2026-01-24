@@ -25,17 +25,15 @@ export async function generateMetadata({
 
     const baseUrl = 'https://yugnex.com'
 
+    const alternateLanguages = SUPPORTED_LOCALES.reduce((acc, lang) => {
+        acc[lang] = `${baseUrl}/${lang}`
+        return acc
+    }, {} as Record<string, string>)
+
     return {
         alternates: {
             canonical: `${baseUrl}/${locale}`,
-            languages: {
-                en: `${baseUrl}/en`,
-                'en-IN': `${baseUrl}/en-IN`,
-                hi: `${baseUrl}/hi`,
-                fr: `${baseUrl}/fr`,
-                de: `${baseUrl}/de`,
-                ja: `${baseUrl}/ja`,
-            },
+            languages: alternateLanguages,
         },
     }
 }

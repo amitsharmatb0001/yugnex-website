@@ -25,8 +25,10 @@ export default function AdminRegister() {
         // Check if user is authenticated (for adding additional admins)
         async function checkAuth() {
             try {
-                const res = await fetch('/api/admin/analytics?days=1')
-                if (res.status === 200) {
+                const res = await fetch('/api/admin/me')
+                const data = await res.json()
+
+                if (data.user) {
                     // User is authenticated, can add additional admin
                     setIsFirstUser(false)
                 } else {

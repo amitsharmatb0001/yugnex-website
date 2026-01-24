@@ -39,21 +39,13 @@ export default function ContactForm({ labels }: ContactFormProps) {
         setStatus('submitting')
 
         const formData = new FormData(form)
-        const data = {
-            name: formData.get('name') as string,
-            email: formData.get('email') as string,
-            organization: formData.get('organization') as string | undefined,
-            message: formData.get('message') as string,
-            turnstileToken: token
-        }
+        formData.append('turnstileToken', token)
 
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
+                // Content-Type header is not set for FormData; browser sets it with boundary
+                body: formData
             })
 
             const result = await response.json()
@@ -79,20 +71,20 @@ export default function ContactForm({ labels }: ContactFormProps) {
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <Script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-  strategy="afterInteractive"
-  onLoad={() => {
-    const interval = setInterval(() => {
-      if (window.turnstile && document.getElementById('turnstile-widget')) {
-        clearInterval(interval)
-        window.turnstile.render('#turnstile-widget', {
-          sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!,
-          callback: (t: string) => setToken(t),
-        })
-      }
-    }, 200)
-  }}
-/>
+                src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+                strategy="afterInteractive"
+                onLoad={() => {
+                    const interval = setInterval(() => {
+                        if (window.turnstile && document.getElementById('turnstile-widget')) {
+                            clearInterval(interval)
+                            window.turnstile.render('#turnstile-widget', {
+                                sitekey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!,
+                                callback: (t: string) => setToken(t),
+                            })
+                        }
+                    }, 200)
+                }}
+            />
 
 
             <div className="grid md:grid-cols-2 gap-6">

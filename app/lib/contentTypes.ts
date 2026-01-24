@@ -107,7 +107,7 @@ export interface PlatformContent {
         title: string
         description: string
     }
-    builtFor: {
+    builtFor?: {
         title: string
         subtitle: string
         body: string

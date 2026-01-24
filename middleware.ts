@@ -36,20 +36,25 @@ export function middleware(req: NextRequest) {
       (locale: Locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
     )
 
-    // Force HTTPS
-    const proto = req.headers.get('x-forwarded-proto')
-    if (proto && proto === 'http') {
-      const httpsUrl = new URL(req.url)
-      httpsUrl.protocol = 'https:'
-      return NextResponse.redirect(httpsUrl)
+    // Force HTTPS in production
+    if (process.env.NODE_ENV === 'production') {
+      const proto = req.headers.get('x-forwarded-proto')
+      if (proto && proto === 'http') {
+        const httpsUrl = new URL(req.url)
+        httpsUrl.protocol = 'https:'
+        return NextResponse.redirect(httpsUrl)
+      }
     }
 
     if (!hasLocale) {
       const acceptLanguage = req.headers.get('accept-language') || ''
       const detectedLocale = detectLocale(acceptLanguage)
 
-      const redirectUrl = new URL(`/${detectedLocale}${pathname}`, req.url)
-      const redirectResponse = NextResponse.redirect(redirectUrl)
+      // Use nextUrl to preserve the original hostname/protocol
+      const url = req.nextUrl.clone()
+      url.pathname = `/${detectedLocale}${pathname}`
+
+      const redirectResponse = NextResponse.redirect(url)
 
       applySecurityHeaders(redirectResponse)
       return redirectResponse

@@ -3,8 +3,11 @@ import { Locale } from '@/app/lib/i18n'
 import { resolveLocaleForPage } from '@/app/lib/localeGuard'
 import { loadAboutContent } from '@/app/lib/contentLoader'
 import { buildSeo } from '@/app/lib/seo'
+import NeuralCanvas from '@/app/background/NeuralCanvas'
+import CodeBackground from '@/app/background/CodeBackground'
 import ParticleBackground from '@/app/background/ParticleBackground'
 import TextBlock from '@/app/components/sections/TextBlock'
+import { getUILabels } from '@/app/lib/uiLabels'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
     const { locale } = await params
@@ -30,9 +33,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     const { locale } = await params
     const effectiveLocale = resolveLocaleForPage(locale, 'about')
     const content = await loadAboutContent(effectiveLocale)
+    const ui = getUILabels(locale)
 
     return (
         <main className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-black text-gray-200">
+            <NeuralCanvas />
+            <CodeBackground />
             <ParticleBackground />
 
             <div className="relative z-10 container mx-auto px-6 max-w-5xl">
@@ -50,7 +56,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                         </div>
 
                         <div>
-                            <h3 className="text-xl text-white mb-3">Founder</h3>
+                            <h3 className="text-xl text-white mb-3">{ui.founder}</h3>
                             <div className="p-6 bg-yellow-900/5 border border-yellow-500/10 rounded-lg">
                                 <p className="text-yellow-200 font-medium mb-2">{content.founder.name}</p>
                                 <p className="text-gray-400 text-sm">{content.founder.bio}</p>
@@ -61,7 +67,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                     {/* Right Column: Approach & Stats */}
                     <div className="space-y-12">
                         <div>
-                            <h3 className="text-xl text-white mb-6">Our Approach</h3>
+                            <h3 className="text-xl text-white mb-6">{ui.ourApproach}</h3>
                             <ul className="space-y-3">
                                 {content.approach.map((item, i) => (
                                     <li key={i} className="flex gap-3 text-gray-300">

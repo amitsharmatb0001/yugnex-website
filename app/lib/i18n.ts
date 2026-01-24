@@ -14,6 +14,15 @@ export const SUPPORTED_LOCALES = [
   'en',      // English (Global)
   'en-IN',   // English (India)
   'hi',      // Hindi
+  'hi-Latn', // Hinglish (Hindi in Latin script)
+  'ta',      // Tamil
+  'te',      // Telugu
+  'bn',      // Bengali
+  'mr',      // Marathi
+  'gu',      // Gujarati
+  'kn',      // Kannada
+  'ml',      // Malayalam
+  'pa',      // Punjabi
   'fr',      // French
   'de',      // German
   'ja',      // Japanese

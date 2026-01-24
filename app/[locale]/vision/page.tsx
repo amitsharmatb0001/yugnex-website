@@ -1,14 +1,16 @@
-import { Locale } from '@/app/lib/i18n'
-import { resolveLocaleForPage } from '@/app/lib/localeGuard'
-import { loadVisionContent } from '@/app/lib/contentLoader'
-import ParticleBackground from '@/app/background/ParticleBackground'
-import CodeBackground from '@/app/background/CodeBackground'
 import NeuralCanvas from '@/app/background/NeuralCanvas'
+import CodeBackground from '@/app/background/CodeBackground'
+import ParticleBackground from '@/app/background/ParticleBackground'
+import { loadVisionContent } from '@/app/lib/contentLoader'
+import { type Locale } from '@/app/lib/i18n'
+import { getUILabels } from '@/app/lib/uiLabels'
+import { resolveLocaleForPage } from '@/app/lib/localeGuard'
 
 export default async function VisionPage({ params }: { params: Promise<{ locale: Locale }> }) {
     const { locale } = await params
     const effectiveLocale = resolveLocaleForPage(locale, 'vision')
     const content = await loadVisionContent(effectiveLocale)
+    const ui = getUILabels(locale)
 
     return (
         <main className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-black text-white">
@@ -16,18 +18,13 @@ export default async function VisionPage({ params }: { params: Promise<{ locale:
             <CodeBackground />
             <ParticleBackground />
 
-            {/* Enhanced Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-b from-yellow-500/10 via-transparent to-black/60 pointer-events-none z-0" />
-            <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-yellow-500/15 rounded-full blur-[120px] pointer-events-none z-0 animate-pulse-slow" />
-            <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-yellow-500/15 rounded-full blur-[120px] pointer-events-none z-0 animate-pulse-slow" style={{ animationDelay: '2s' }} />
-
             <div className="relative z-10 container mx-auto px-6 max-w-6xl">
 
                 {/* Epic Title Section */}
                 <div className="mb-20 text-center">
                     <div className="mb-8 animate-fade-in">
                         <span className="inline-block px-6 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-sm font-semibold tracking-wider uppercase">
-                            Vision
+                            {ui.vision}
                         </span>
                     </div>
 

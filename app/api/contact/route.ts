@@ -47,7 +47,16 @@ export async function POST(request: NextRequest) {
     }
 
     // 2) Parse and validate input
-    const body: ContactFormData = await request.json()
+    // 2) Parse and validate input
+    const formData = await request.formData()
+
+    const body: ContactFormData = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      organization: formData.get('organization') as string | undefined,
+      message: formData.get('message') as string,
+      turnstileToken: formData.get('turnstileToken') as string
+    }
 
     if (!body.name || !body.email || !body.message) {
       return NextResponse.json(

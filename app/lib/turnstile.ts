@@ -53,7 +53,7 @@ export async function verifyTurnstileToken(
   }
 
   try {
-    const formData = new URLSearchParams();
+    const formData = new FormData();
     formData.append('secret', secretKey);
     formData.append('response', token);
     if (remoteIp) {
@@ -62,9 +62,6 @@ export async function verifyTurnstileToken(
 
     const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
       body: formData,
     });
 

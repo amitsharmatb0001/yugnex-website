@@ -16,11 +16,6 @@ export default async function MissionPage({ params }: { params: Promise<{ locale
             <CodeBackground />
             <ParticleBackground />
 
-            {/* Enhanced Gradient Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-b from-yellow-500/10 via-transparent to-black/60 pointer-events-none z-0" />
-            <div className="absolute top-1/4 right-1/3 w-[600px] h-[600px] bg-yellow-500/15 rounded-full blur-[120px] pointer-events-none z-0 animate-float" />
-            <div className="absolute bottom-1/4 left-1/3 w-[600px] h-[600px] bg-yellow-500/15 rounded-full blur-[120px] pointer-events-none z-0 animate-float-delayed" />
-
             <div className="relative z-10 container mx-auto px-6 max-w-6xl">
 
                 {/* Mission Header */}

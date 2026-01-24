@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
   Automatically redirects to login page
 */
 
-export default function AdminRoot() {
-    redirect('./admin/login')
+export default async function AdminRoot({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  redirect(`/${locale}/admin/login`)
 }

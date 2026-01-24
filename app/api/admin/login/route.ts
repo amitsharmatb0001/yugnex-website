@@ -63,10 +63,17 @@ export async function POST(req: NextRequest) {
         response.cookies.set('admin_token', token, cookieOptions)
 
         return response
-    } catch (error) {
-        console.error('Login error:', error)
+    } catch (error: any) {
+        console.error('Login error details:', {
+            message: error.message,
+            code: error.code,
+            stack: error.stack
+        })
         return NextResponse.json(
-            { error: 'Internal server error' },
+            {
+                error: 'Internal server error',
+                details: process.env.NODE_ENV === 'development' ? error.message : undefined
+            },
             { status: 500 }
         )
     }

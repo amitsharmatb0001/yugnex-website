@@ -93,10 +93,17 @@ export async function POST(req: NextRequest) {
             success: true,
             message: 'Admin account created successfully'
         })
-    } catch (error) {
-        console.error('Registration error:', error)
+    } catch (error: any) {
+        console.error('Registration error details:', {
+            message: error.message,
+            code: error.code, // MySQL error code
+            stack: error.stack
+        })
         return NextResponse.json(
-            { error: 'Internal server error' },
+            {
+                error: 'Internal server error',
+                details: process.env.NODE_ENV === 'development' ? error.message : undefined
+            },
             { status: 500 }
         )
     }

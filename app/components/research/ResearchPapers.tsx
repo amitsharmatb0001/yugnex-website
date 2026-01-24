@@ -2,6 +2,8 @@
 
 import React from 'react';
 import PdfViewer from './PdfViewer';
+import { getUILabels } from '@/app/lib/uiLabels';
+import { type Locale } from '@/app/lib/i18n';
 
 interface ResearchPaper {
     id: string;
@@ -24,6 +26,8 @@ interface ResearchPapersProps {
  * Displays available research papers with PDF viewers
  */
 export default function ResearchPapers({ locale = 'en' }: ResearchPapersProps) {
+    const ui = getUILabels(locale as Locale);
+
     // Research papers data
     const papers: ResearchPaper[] = [
         {
@@ -42,7 +46,7 @@ export default function ResearchPapers({ locale = 'en' }: ResearchPapersProps) {
         <section className="space-y-12">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-600 mb-4">
-                    Research Publications
+                    {ui.researchPublications}
                 </h2>
                 <p className="text-gray-400 max-w-3xl mx-auto">
                     Explore our research on foundational AI systems, autonomous software engineering,
@@ -63,12 +67,12 @@ export default function ResearchPapers({ locale = 'en' }: ResearchPapersProps) {
                                     </h3>
                                     {paper.authors && paper.authors.length > 0 && (
                                         <p className="text-sm text-gray-400 mb-2">
-                                            <span className="font-medium">Authors:</span>{' '}
+                                            <span className="font-medium">{ui.authors}:</span>{' '}
                                             {paper.authors.join(', ')}
                                         </p>
                                     )}
                                     <p className="text-sm text-gray-500">
-                                        Published: {new Date(paper.publishDate).toLocaleDateString(locale, {
+                                        {ui.published}: {new Date(paper.publishDate).toLocaleDateString(locale, {
                                             year: 'numeric',
                                             month: 'long',
                                             day: 'numeric'
@@ -109,7 +113,7 @@ export default function ResearchPapers({ locale = 'en' }: ResearchPapersProps) {
             {/* Coming Soon Notice */}
             <div className="text-center p-8 bg-black/20 border border-yellow-500/10 rounded-lg">
                 <p className="text-gray-400">
-                    More research publications coming soon. Follow us on social media for updates.
+                    {ui.moreResearchComingSoon}
                 </p>
             </div>
         </section>

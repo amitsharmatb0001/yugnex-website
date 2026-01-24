@@ -1,16 +1,18 @@
-import { Locale } from '@/app/lib/i18n'
-import { resolveLocaleForPage } from '@/app/lib/localeGuard'
-import { loadContactContent } from '@/app/lib/contentLoader'
 import ParticleBackground from '@/app/background/ParticleBackground'
 import CodeBackground from '@/app/background/CodeBackground'
 import NeuralCanvas from '@/app/background/NeuralCanvas'
-import TextBlock from '@/app/components/sections/TextBlock'
 import ContactForm from '@/app/components/forms/ContactForm'
+import TextBlock from '@/app/components/sections/TextBlock'
+import { loadContactContent } from '@/app/lib/contentLoader'
+import { type Locale } from '@/app/lib/i18n'
+import { getUILabels } from '@/app/lib/uiLabels'
+import { resolveLocaleForPage } from '@/app/lib/localeGuard'
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: Locale }> }) {
     const { locale } = await params
     const effectiveLocale = resolveLocaleForPage(locale, 'contact')
     const content = await loadContactContent(effectiveLocale)
+    const ui = getUILabels(locale)
 
     return (
         <main className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-black text-gray-200">
@@ -33,18 +35,18 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
                         {/* Social / Direct Channels */}
                         <div className="border-t border-white/10 pt-8 space-y-4">
-                            <h3 className="text-sm uppercase tracking-widest text-gray-500 font-semibold">Connect</h3>
+                            <h3 className="text-sm uppercase tracking-widest text-gray-500 font-semibold">{ui.connect}</h3>
                             <ul className="space-y-3 text-gray-300">
                                 <li className="flex items-center gap-3">
-                                    <span className="text-yellow-500 opacity-70">Email</span>
+                                    <span className="text-yellow-500 opacity-70">{ui.email}</span>
                                     <a href={`mailto:${content.socials.email}`} className="hover:text-yellow-400 transition-colors">{content.socials.email}</a>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <span className="text-yellow-500 opacity-70">Follow</span>
+                                    <span className="text-yellow-500 opacity-70">{ui.follow}</span>
                                     <a href="https://x.com/YugNex" target="_blank" className="hover:text-yellow-400 transition-colors">{content.socials.twitter}</a>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <span className="text-yellow-500 opacity-70">Location</span>
+                                    <span className="text-yellow-500 opacity-70">{ui.location}</span>
                                     <span>{content.socials.location}</span>
                                 </li>
                             </ul>

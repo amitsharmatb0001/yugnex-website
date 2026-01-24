@@ -7,11 +7,6 @@ export const platformContent: PlatformContent = {
         title: "What We're Building",
         description: "An AI-powered platform that goes beyond code generation to truly understand, reason about, and collaborate on complex software systems. Not another autocomplete tool. A collaborative engineering partner that brings architectural understanding, systemic reasoning, and validation to your development workflow."
     },
-    builtFor: {
-        title: "Built for Complex Systems",
-        subtitle: "The Reality of Modern Development",
-        body: "Modern software isn't built in isolation. It's thousands of files, millions of lines, intricate dependency chains, and architectural decisions that compound over time. A single change can ripple through dozens of modules in ways that aren't immediately obvious."
-    },
     capabilities: [
         {
             title: "Understands Architecture, Not Just Syntax",

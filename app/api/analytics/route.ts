@@ -56,7 +56,18 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true })
   } catch (error) {
     // Analytics must never break UX - fail silently
+    // In development, database might not be running - this is OK
+    const isDevelopment = process.env.NODE_ENV === 'development'
+
+    if (isDevelopment) {
+      // Silently skip analytics in development if DB not available
+      // Don't spam console in dev mode
+      return NextResponse.json({ ok: true, skipped: true })
+    }
+
+    // In production, log the error
     console.error('Analytics storage error:', error)
-    return NextResponse.json({ ok: false }, { status: 500 })
+    // Return 200 to prevent client-side errors (analytics should never break UX)
+    return NextResponse.json({ ok: false, error: 'Analytics unavailable' }, { status: 200 })
   }
 }

@@ -83,7 +83,7 @@ export function getSecureCookieOptions(): {
 
     return {
         httpOnly: true, // Prevents JavaScript access (XSS protection)
-        secure: true, // HTTPS only - enforced in both dev and production
+        secure: isProduction, // HTTPS only in production, allow HTTP in dev
         sameSite: 'strict', // CSRF protection
         maxAge: 60 * 60 * 24, // 24 hours in seconds
         path: '/',
