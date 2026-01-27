@@ -7,9 +7,11 @@ interface HeroProps {
   subline: string
   banner?: string
   credentials?: string
+  slogan?: string
+  introduction?: string
 }
 
-export default function HeroSection({ title, tagline, subline, banner, credentials }: HeroProps) {
+export default function HeroSection({ title, tagline, subline, banner, credentials, slogan, introduction }: HeroProps) {
   return (
     <section
       id="main-content"
@@ -76,7 +78,7 @@ export default function HeroSection({ title, tagline, subline, banner, credentia
         WebkitTextFillColor: 'transparent',
         marginBottom: '1rem'
       }}>
-        The Old Ends. The Next Begins.
+        {slogan || 'The Old Ends. The Next Begins.'}
       </p>
 
       <p style={{
@@ -88,7 +90,7 @@ export default function HeroSection({ title, tagline, subline, banner, credentia
         marginTop: '1rem',
         lineHeight: 1.6
       }}>
-        YugNex AI is laying the foundation for a new class of artificial intelligence that functions as a lasting engineering organization.
+        {introduction || 'YugNex AI is laying the foundation for a new class of artificial intelligence that functions as a lasting engineering organization.'}
       </p>
 
       {credentials && (

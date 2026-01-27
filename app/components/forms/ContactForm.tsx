@@ -13,6 +13,13 @@ interface ContactFormProps {
         message: string
         submit: string
     }
+    messages?: {
+        sending?: string
+        sent?: string
+        success?: string
+        error?: string
+        verification?: string
+    }
 }
 
 declare global {
@@ -21,7 +28,7 @@ declare global {
     }
 }
 
-export default function ContactForm({ labels }: ContactFormProps) {
+export default function ContactForm({ labels, messages }: ContactFormProps) {
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
     const [token, setToken] = useState<string>('')
     const [errorMessage, setErrorMessage] = useState<string>('')
@@ -32,7 +39,7 @@ export default function ContactForm({ labels }: ContactFormProps) {
         setErrorMessage('')
 
         if (!token) {
-            setErrorMessage('Please complete the verification check.')
+            setErrorMessage(messages?.verification || 'Please complete the verification check.')
             return
         }
 
@@ -51,7 +58,7 @@ export default function ContactForm({ labels }: ContactFormProps) {
             const result = await response.json()
 
             if (!response.ok) {
-                throw new Error(result.error || 'Failed to send message')
+                throw new Error(result.error || messages?.error || 'Failed to send message')
             }
 
             setStatus('success')
@@ -64,7 +71,7 @@ export default function ContactForm({ labels }: ContactFormProps) {
             }, 5000)
         } catch (error) {
             setStatus('error')
-            setErrorMessage(error instanceof Error ? error.message : 'Failed to send message. Please try again or email us directly.')
+            setErrorMessage(error instanceof Error ? error.message : (messages?.error || 'Failed to send message. Please try again or email us directly.'))
         }
     }
 
@@ -129,7 +136,7 @@ export default function ContactForm({ labels }: ContactFormProps) {
                 loading={status === 'submitting'}
                 disabled={status === 'submitting' || status === 'success'}
             >
-                {status === 'submitting' ? 'Sending...' : status === 'success' ? 'Sent!' : labels.submit}
+                {status === 'submitting' ? (messages?.sending || 'Sending...') : status === 'success' ? (messages?.sent || 'Sent!') : labels.submit}
             </SubmitButton>
 
             {errorMessage && (
@@ -140,13 +147,13 @@ export default function ContactForm({ labels }: ContactFormProps) {
 
             {status === 'success' && (
                 <div className="p-4 bg-green-900/20 border border-green-500/30 text-green-400 rounded">
-                    ✓ Message sent successfully! We'll be in touch shortly.
+                    ✓ {messages?.success || "Message sent successfully! We'll be in touch shortly."}
                 </div>
             )}
 
             {status === 'error' && !errorMessage && (
                 <div className="p-4 bg-red-900/20 border border-red-500/30 text-red-400 rounded">
-                    Failed to send message. Please try again or contact us directly at contact@yugnex.com
+                    {messages?.error || "Failed to send message. Please try again or contact us directly at contact@yugnex.com"}
                 </div>
             )}
         </form>

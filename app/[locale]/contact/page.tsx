@@ -64,6 +64,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                                 message: content.form.messageLabel,
                                 submit: content.form.submitLabel
                             }}
+                            messages={{
+                                sending: ui.sending,
+                                sent: ui.sent,
+                                success: ui.successMessage,
+                                error: ui.errorMessage,
+                                verification: ui.verificationRequired,
+                            }}
                         />
                     </div>
                 </div>

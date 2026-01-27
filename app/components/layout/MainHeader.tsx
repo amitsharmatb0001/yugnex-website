@@ -32,25 +32,25 @@ export default function MainHeader({ locale: propLocale }: { locale?: Locale } =
   const ui = getUILabels(locale)
 
   // Morph Animation Logic: Sanskrit → English (both typed out)
-  const [headerText, setHeaderText] = React.useState('YugNex™')
-  const hasAnimated = React.useRef(false)
+  const [headerText, setHeaderText] = React.useState(`${ui.brandName}™`)
 
   React.useEffect(() => {
-    // Only run animation once on client mount
-    if (hasAnimated.current) return
-    hasAnimated.current = true
-
     const header = document.getElementById('headerMorph')
     if (!header) return
 
     const sanskrit = "युगनेक्स"
-    const english = "YugNex"
+    const targetBrand = ui.brandName
 
     // Phase 1: Type out Sanskrit
     let i = 0
     header.textContent = ''
 
-    const typeSanskrit = setInterval(() => {
+    // Refs for intervals to allow cleanup
+    let typeSanskrit: NodeJS.Timeout
+    let typeTarget: NodeJS.Timeout
+    let pauseTimeout: NodeJS.Timeout
+
+    typeSanskrit = setInterval(() => {
       if (i < sanskrit.length) {
         header.textContent += sanskrit[i]
         i++
@@ -58,30 +58,32 @@ export default function MainHeader({ locale: propLocale }: { locale?: Locale } =
         clearInterval(typeSanskrit)
 
         // Phase 2: Pause before transitioning
-        setTimeout(() => {
+        pauseTimeout = setTimeout(() => {
           header.textContent = ''
 
-          // Phase 3: Type out English
+          // Phase 3: Type out Target Language Brand Name
           let j = 0
-          const typeEnglish = setInterval(() => {
-            if (j < english.length) {
-              header.textContent += english[j]
+          typeTarget = setInterval(() => {
+            if (j < targetBrand.length) {
+              header.textContent += targetBrand[j]
               j++
             } else {
-              clearInterval(typeEnglish)
+              clearInterval(typeTarget)
               // Phase 4: Add trademark after typing is complete
-              header.innerHTML = `${english}<sup class="trademark">™</sup>`
-              setHeaderText(`${english}™`)
+              header.innerHTML = `${targetBrand}<sup class="trademark">™</sup>`
+              setHeaderText(`${targetBrand}™`)
             }
-          }, 120) // Slightly faster for English
+          }, 120)
         }, 800) // Pause duration
       }
     }, 150) // Sanskrit typing speed
 
     return () => {
       clearInterval(typeSanskrit)
+      clearInterval(typeTarget)
+      clearTimeout(pauseTimeout)
     }
-  }, []) // Run once on mount
+  }, [ui.brandName]) // Re-run when brand name changes (locale change)
 
   // Close mobile menu when route changes
   React.useEffect(() => {

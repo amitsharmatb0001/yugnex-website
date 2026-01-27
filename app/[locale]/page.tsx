@@ -4,6 +4,7 @@
 
 import { Locale } from '@/app/lib/i18n'
 import { loadHomeContent } from '@/app/lib/contentLoader'
+import { getUILabels } from '@/app/lib/uiLabels'
 import HeroSection from '@/app/components/hero/HeroSection'
 import FAQSection from '@/app/components/sections/FAQSection'
 import NeuralCanvas from '@/app/background/NeuralCanvas'
@@ -19,6 +20,7 @@ export default async function HomePage({
 }) {
     const { locale } = await params
     const content = await loadHomeContent(locale)
+    const ui = getUILabels(locale)
 
     return (
         <div style={{ position: 'relative', overflow: 'hidden' }}>
@@ -34,6 +36,8 @@ export default async function HomePage({
                 subline={content.subline}
                 banner={content.banner}
                 credentials={content.credentials}
+                slogan={ui.heroSlogan}
+                introduction={ui.heroIntro}
             />
         </div>
     )

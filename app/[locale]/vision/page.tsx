@@ -28,12 +28,9 @@ export default async function VisionPage({ params }: { params: Promise<{ locale:
                         </span>
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 animate-gradient">
-                            The Old Ends.
-                        </span>
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-200 animate-gradient mt-2">
-                            The Next Begins.
+                    <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 animate-gradient pb-2">
+                            {ui.heroSlogan || 'The Old Ends. The Next Begins.'}
                         </span>
                     </h1>
 

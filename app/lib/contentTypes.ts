@@ -70,6 +70,16 @@ export interface ResearchContent {
         body: string
         points: string[]
     }
+    papers: Array<{
+        id: string
+        title: string
+        description: string
+        pdfUrl: string
+        fileName: string
+        publishDate: string
+        authors: string[]
+        tags: string[]
+    }>
 }
 
 export interface TechnologyContent {

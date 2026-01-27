@@ -1,7 +1,7 @@
 import { HomeContent } from '@/app/lib/contentTypes'
 
 export const homeContent: HomeContent = {
-    heroTitle: "YugNex AI",
+    heroTitle: "യുഗ്നെക്സ് AI",
     tagline: "ലോകത്തിലെ ആദ്യത്തെ സ്ഥിരമായ സോഫ്റ്റ്‌വെയർ എഞ്ചിനീയറിംഗ് ഇന്റലിജൻസ്.",
     subline: "ആശയം മുതൽ ഉൽപ്പാദനം വരെ, മുഴുവൻ സോഫ്റ്റ്‌വെയർ ജീവിതചക്രത്തിലുടനീളം മെമ്മറി, യുക്തി, തുടർച്ച എന്നിവയോടെ.",
     banner: "നിലവിൽ അടിസ്ഥാന ഗവേഷണത്തിലും പ്രധാന സിസ്റ്റം വികസനത്തിലുമാണ്.",

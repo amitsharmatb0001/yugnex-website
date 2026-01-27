@@ -66,7 +66,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
 
             {/* Research Papers Section */}
             <section className="relative z-10 container mx-auto px-6 max-w-6xl">
-                <ResearchPapers locale={effectiveLocale} />
+                <ResearchPapers locale={effectiveLocale} papers={content.papers || []} />
             </section>
         </main>
     )

@@ -1,15 +1,27 @@
 import { ResearchContent } from '@/app/lib/contentTypes'
 
 export const researchContent: ResearchContent = {
-    title: "Research",
+    title: "ஆராய்ச்சி",
     philosophy: {
-        title: "First Principles Thinking",
-        body: "We approach AI engineering from first principles, building systems that truly understand software architecture.",
+        title: "முதல் கோட்பாடுகள் சிந்தனை",
+        body: "மென்பொருள் கட்டமைப்பை உண்மையிலேயே புரிந்துகொள்ளும் அமைப்புகளை உருவாக்கி, முதல் கோட்பாடுகளிலிருந்து AI பொறியியலை அணுகுகிறோம்.",
         points: [
-            "Deep understanding over surface-level generation",
-            "Systemic reasoning about architecture and implications",
-            "Continuous learning and adaptation",
-            "Human-AI collaborative intelligence"
+            "மேலோட்டமான தலைமுறையை விட ஆழமான புரிதல்",
+            "கட்டமைப்பு மற்றும் தாக்கங்களைப் பற்றிய முறையான பகுத்தறிவு",
+            "தொடர்ச்சியான கற்றல் மற்றும் தழுவல்",
+            "மனித-AI கூட்டு நுண்ணறிவு"
         ]
-    }
+    },
+    papers: [
+        {
+            id: 'whitepaper-2026',
+            title: 'தன்னியக்க மென்பொருள் பொறியியலை நோக்கி: சவால்கள் மற்றும் திசைகள்',
+            description: 'AI-உதவி மென்பொருள் பொறியியலில் பகுத்தறிவு, சூழல் மற்றும் கட்டடக்கலை புரிதல் பற்றிய ஆராய்ச்சி. நிலையான, தன்னியக்க மென்பொருள் பொறியியல் நுண்ணறிவை உருவாக்குவதில் உள்ள அடிப்படை சவால்களை இந்த ஆய்வறிக்கை ஆராய்கிறது.',
+            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
+            fileName: 'YugNex_Research_Whitepaper.pdf',
+            publishDate: '2026-01-01',
+            authors: ['YugNex தொழில்நுட்ப ஆராய்ச்சி பிரிவு'],
+            tags: ['AI', 'மென்பொருள் பொறியியல்', 'தன்னியக்க அமைப்புகள்', 'ஆராய்ச்சி']
+        }
+    ]
 }

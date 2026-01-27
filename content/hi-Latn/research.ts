@@ -1,16 +1,27 @@
 import { ResearchContent } from '@/app/lib/contentTypes'
 
 export const researchContent: ResearchContent = {
-    title: "Foundations Banana, Features Nahi",
+    title: "Shodh",
     philosophy: {
-        title: "Kyun Lagta Hai Time",
-        body: "Aap pooch sakte hain: \"Ab kuch kyun nahi ship kar rahe?\" Kyunki foundational technology ko rush nahi kar sakte. Jab Google ne apna search algorithm banaya, unhone incrementally ship nahi kiya. Jab OpenAI ne GPT-3 ko train kiya, unhone pehle GPT-0.5 release nahi kiya. Hum AI bana rahe hain jo engineering decisions leta hai. Iske liye reasoning, context-awareness, aur reliability ki level chahiye jo current systems mein nahi hai. Hum time le rahe hain kyunki problem deserve karti hai.",
+        title: "Pratham Siddhant Soch",
+        body: "Hum AI engineering ko pratham siddhanton se dekhte hain, aisi systems banate hain jo vastav mein software architecture ko samajhti hain.",
         points: [
-            "Unsolved problems par deep research",
-            "Rigorously test kiye gaye novel architectures",
-            "Reliably kaam karne wale systems, sirf demos nahi",
-            "Innovations ko protect karne ke liye patents",
-            "Sahi karne ka time"
+            "Satahi star ki generation par gehri samajh",
+            "Architecture aur implications ke bare mein systematic tark",
+            "Nirantar seekhna aur anukuln (adaptation)",
+            "Manav-AI sahyogi buddhimatta"
         ]
-    }
+    },
+    papers: [
+        {
+            id: 'whitepaper-2026',
+            title: 'Swayatt Software Engineering ki or: Chunautiyan aur Dishayein',
+            description: 'AI-assisted software engineering mein reasoning, context, aur architectural samajh par shodh. Yeh whitepaper persistent, autonomous software engineering intelligence banane mein aane wali moolbhoot chunautiyon ki padtaal karta hai.',
+            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
+            fileName: 'YugNex_Research_Whitepaper.pdf',
+            publishDate: '2026-01-01',
+            authors: ['YugNex Technical Research Division'],
+            tags: ['AI', 'Software Engineering', 'Autonomous Systems', 'Research']
+        }
+    ]
 }

@@ -63,7 +63,7 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: Lo
 
                 {/* FAQ Content */}
                 <div className="mb-12">
-                    <FAQSection items={content} />
+                    <FAQSection items={content} title={ui.frequentlyAskedQuestions} />
                 </div>
 
                 {/* Footer CTA */}

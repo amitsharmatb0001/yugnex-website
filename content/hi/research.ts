@@ -1,15 +1,27 @@
 import { ResearchContent } from '@/app/lib/contentTypes'
 
 export const researchContent: ResearchContent = {
-    title: "Research",
+    title: "शोध",
     philosophy: {
-        title: "First Principles Thinking",
-        body: "We approach AI engineering from first principles, building systems that truly understand software architecture.",
+        title: "प्रथम सिद्धांत सोच",
+        body: "हम प्रथम सिद्धांतों से एआई इंजीनियरिंग का दृष्टिकोण अपनाते हैं, ऐसी प्रणालियों का निर्माण करते हैं जो वास्तव में सॉफ्टवेयर आर्किटेक्चर को समझती हैं।",
         points: [
-            "Deep understanding over surface-level generation",
-            "Systemic reasoning about architecture and implications",
-            "Continuous learning and adaptation",
-            "Human-AI collaborative intelligence"
+            "सतही स्तर की पीढ़ी पर गहरी समझ",
+            "आर्किटेक्चर और निहितार्थों के बारे में व्यवस्थित तर्क",
+            "निरंतर सीखना और अनुकूलन",
+            "मानव-एआई सहयोगी बुद्धिमत्ता"
         ]
-    }
+    },
+    papers: [
+        {
+            id: 'whitepaper-2026',
+            title: 'स्वायत्त सॉफ्टवेयर इंजीनियरिंग की ओर: चुनौतियाँ और दिशाएँ',
+            description: 'एआई-सहायता प्राप्त सॉफ्टवेयर इंजीनियरिंग में तर्क, संदर्भ और वास्तुशिल्प समझ पर शोध। यह श्वेतपत्र लगातार, स्वायत्त सॉफ्टवेयर इंजीनियरिंग बुद्धिमत्ता के निर्माण में मूलभूत चुनौतियों की पड़ताल करता है।',
+            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
+            fileName: 'YugNex_Research_Whitepaper.pdf',
+            publishDate: '2026-01-01',
+            authors: ['YugNex तकनीकी अनुसंधान प्रभाग'],
+            tags: ['AI', 'सॉफ्टवेयर इंजीनियरिंग', 'स्वायत्त प्रणाली', 'शोध']
+        }
+    ]
 }

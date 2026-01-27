@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import PdfViewer from './PdfViewer';
 import { getUILabels } from '@/app/lib/uiLabels';
 import { type Locale } from '@/app/lib/i18n';
+import { Download } from 'lucide-react';
 
 interface ResearchPaper {
     id: string;
@@ -18,29 +18,16 @@ interface ResearchPaper {
 
 interface ResearchPapersProps {
     locale?: string;
+    papers: ResearchPaper[];
 }
 
 /**
  * Research Papers Component
  * 
- * Displays available research papers with PDF viewers
+ * Displays available research papers
  */
-export default function ResearchPapers({ locale = 'en' }: ResearchPapersProps) {
+export default function ResearchPapers({ locale = 'en', papers }: ResearchPapersProps) {
     const ui = getUILabels(locale as Locale);
-
-    // Research papers data
-    const papers: ResearchPaper[] = [
-        {
-            id: 'whitepaper-2026',
-            title: 'Toward Autonomous Software Engineering: Challenges and Directions',
-            description: 'Research on reasoning, context, and architectural understanding in AI-assisted software engineering. This whitepaper explores the foundational challenges in building persistent, autonomous software engineering intelligence.',
-            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
-            fileName: 'YugNex_Research_Whitepaper.pdf',
-            publishDate: '2026-01-01',
-            authors: ['YugNex Technology Research Division'],
-            tags: ['AI', 'Software Engineering', 'Autonomous Systems', 'Research'],
-        },
-    ];
 
     return (
         <section className="space-y-12">
@@ -49,6 +36,7 @@ export default function ResearchPapers({ locale = 'en' }: ResearchPapersProps) {
                     {ui.researchPublications}
                 </h2>
                 <p className="text-gray-400 max-w-3xl mx-auto">
+                    {/* Localization note: This text might need to be moved to uiLabels if not already there */}
                     Explore our research on foundational AI systems, autonomous software engineering,
                     and persistent intelligence architectures.
                 </p>
@@ -95,17 +83,20 @@ export default function ResearchPapers({ locale = 'en' }: ResearchPapersProps) {
                                 </div>
                             )}
 
-                            <p className="text-gray-300 leading-relaxed">
+                            <p className="text-gray-300 leading-relaxed mb-6">
                                 {paper.description}
                             </p>
-                        </div>
 
-                        {/* PDF Viewer */}
-                        <PdfViewer
-                            pdfUrl={paper.pdfUrl}
-                            title={paper.title}
-                            downloadFileName={paper.fileName}
-                        />
+                            <a
+                                href={paper.pdfUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition-colors"
+                            >
+                                <Download size={20} />
+                                {ui.downloadPDF || 'Download PDF'}
+                            </a>
+                        </div>
                     </div>
                 ))}
             </div>
