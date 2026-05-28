@@ -1,0 +1,27 @@
+.slideUp {
+  animation: slideUpKeyframe 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideUpKeyframe {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay0 { animation-delay: 0ms; }
+.delay1 { animation-delay: 100ms; }
+.delay2 { animation-delay: 200ms; }
+.delay3 { animation-delay: 300ms; }
+.delay4 { animation-delay: 400ms; }
+.delay5 { animation-delay: 500ms; }
+.delay6 { animation-delay: 600ms; }
+.delay7 { animation-delay: 700ms; }
+.delay8 { animation-delay: 800ms; }
+.delay9 { animation-delay: 900ms; }
+.delay10 { animation-delay: 1000ms; }

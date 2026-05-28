@@ -1,0 +1,184 @@
+.papersSection {
+  margin-top: 3rem;
+}
+
+.dossierLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  min-height: 480px;
+}
+
+@media (min-width: 1024px) {
+  .dossierLayout {
+    grid-template-columns: 1fr 1.3fr;
+  }
+}
+
+.ledgerList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.paperTab {
+  background: rgba(15, 15, 15, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(251, 191, 36, 0.15);
+  border-radius: 10px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.paperTab:hover {
+  border-color: rgba(251, 191, 36, 0.4);
+  background: rgba(251, 191, 36, 0.02);
+  transform: translateY(-1px);
+}
+
+.activeTab {
+  background: rgba(251, 191, 36, 0.06);
+  border-color: rgba(251, 191, 36, 0.6);
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.08);
+}
+
+.paperTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.activeTab .paperTitle {
+  color: #fbbf24;
+}
+
+.authorList {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+.publishDate {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+.dossierCard {
+  background: rgba(9, 9, 11, 0.85);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.dossierHeader {
+  border-bottom: 1px solid rgba(251, 191, 36, 0.15);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dossierLabel {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.dossierTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.dossierAbstract {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 180px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.dossierMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 1.25rem;
+}
+
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metaLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.metaValue {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.dossierFooter {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #fbbf24;
+  color: #000;
+  border: 1px solid #fbbf24;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.downloadButton:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+.defaultView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #6b7280;
+  padding: 4rem 2rem;
+}

@@ -1,0 +1,46 @@
+.legalArticle {
+  color: #e5e7eb;
+}
+
+.legalArticle h1,
+.legalArticle h2,
+.legalArticle h3,
+.legalArticle h4 {
+  color: #fbbf24;
+}
+
+.legalArticle a {
+  color: #fbbf24;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.legalArticle a:hover {
+  opacity: 0.8;
+}
+
+.legalArticle strong {
+  color: #f9fafb;
+  font-weight: 700;
+}
+
+.legalArticle code {
+  color: #fcd34d;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.legalArticle pre {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.delay2s {
+  animation-delay: 2s;
+}

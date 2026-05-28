@@ -1,0 +1,189 @@
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.milestonesNav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .milestonesNav {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.milestoneButton {
+  background: rgba(9, 9, 11, 0.6);
+  border: 1px solid rgba(251, 191, 36, 0.15);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.milestoneButton:hover {
+  border-color: rgba(251, 191, 36, 0.45);
+  background: rgba(251, 191, 36, 0.02);
+  transform: translateY(-1px);
+}
+
+.activeButton {
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.65);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.1);
+}
+
+.milestoneDate {
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.milestoneLabel {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  font-weight: 600;
+}
+
+.activeButton .milestoneLabel {
+  color: #fff;
+}
+
+.statusIndicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fbbf24;
+}
+
+.statusCompleted {
+  background: #34d399;
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
+}
+
+.statusProgress {
+  background: #fbbf24;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
+  animation: pulse 1.5s infinite;
+}
+
+.statusPlanned {
+  background: #6b7280;
+}
+
+.detailCard {
+  background: rgba(9, 9, 11, 0.8);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 1rem;
+  padding: 2.25rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@media (min-width: 768px) {
+  .detailCard {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.detailTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.detailDesc {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.7;
+  font-light: 300;
+}
+
+.milestoneBadge {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.badgeCompleted {
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.badgeProgress {
+  background: rgba(251, 191, 36, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.badgePlanned {
+  background: rgba(255, 255, 255, 0.05);
+  color: #a1a1aa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.docPanel {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.docHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fbbf24;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.docLine {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #a1a1aa;
+}
+
+.docValue {
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

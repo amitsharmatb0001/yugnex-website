@@ -1,0 +1,303 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  width: 100%;
+}
+
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Limitations Explorer Styles */
+.explorerLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background: rgba(251, 191, 36, 0.02);
+  border: 1px solid rgba(251, 191, 36, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+@media (min-width: 768px) {
+  .explorerLayout {
+    grid-template-columns: 280px 1fr;
+    padding: 2rem;
+  }
+}
+
+.tabsList {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .tabsList {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+}
+
+.tabButton {
+  padding: 1rem;
+  text-align: left;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #9ca3af;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tabButton:hover {
+  background: rgba(251, 191, 36, 0.05);
+  border-color: rgba(251, 191, 36, 0.3);
+  color: #f3f4f6;
+}
+
+.tabButtonActive {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: #fbbf24;
+  color: #fbbf24;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.15);
+}
+
+.panelContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.panelTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 0.5rem;
+}
+
+.panelDesc {
+  color: #d1d5db;
+  line-height: 1.625;
+  font-size: 0.95rem;
+}
+
+.terminalConsole {
+  background: #050507;
+  border: 1px solid rgba(251, 191, 36, 0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.8rem;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.terminalHeader {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.terminalDots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dotRed { background: #ef4444; }
+.dotYellow { background: #eab308; }
+.dotGreen { background: #22c55e; }
+
+.terminalBody {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 160px;
+}
+
+.terminalPrompt {
+  color: #a855f7;
+}
+
+.terminalLog {
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.terminalError {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.terminalSuccess {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.terminalWarn {
+  color: #f59e0b;
+}
+
+/* Approach Sandbox Styles */
+.approachGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .approachGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.approachCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.approachCard:hover {
+  border-color: rgba(251, 191, 36, 0.4);
+  background: rgba(251, 191, 36, 0.03);
+  transform: translateY(-2px);
+}
+
+.approachCardActive {
+  border-color: #fbbf24;
+  background: rgba(251, 191, 36, 0.06);
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.1);
+}
+
+.approachHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.approachTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.approachCardActive .approachTitle,
+.approachCard:hover .approachTitle {
+  color: #fbbf24;
+}
+
+.approachBody {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.approachCardActive .approachBody {
+  color: #e5e7eb;
+}
+
+.approachSimulation {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-t: 1px solid rgba(251, 191, 36, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+.simulationStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.simulationDiagram {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #22c55e;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; max-height: 0; overflow: hidden; }
+  to { opacity: 1; max-height: 200px; }
+}
+
+@media (max-width: 767px) {
+  .explorerLayout {
+    padding: 1rem;
+    gap: 1.25rem;
+  }
+  .tabButton {
+    padding: 0.65rem 1rem;
+    font-size: 0.8rem;
+  }
+  .panelContent {
+    gap: 1rem;
+  }
+  .panelTitle {
+    font-size: 1.15rem;
+  }
+  .panelDesc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .terminalBody {
+    padding: 0.75rem;
+    min-height: 100px;
+  }
+  .approachCard {
+    padding: 1rem;
+  }
+  .approachTitle {
+    font-size: 0.95rem;
+  }
+  .approachBody {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .simulationDiagram {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+}
