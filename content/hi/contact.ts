@@ -1,22 +1,22 @@
 import { ContactContent } from '@/app/lib/contentTypes'
 
 export const contactContent: ContactContent = {
-    title: "Contact Us",
+    title: "हमसे संपर्क करें",
     intro: {
-        title: "Get in Touch",
-        body: "We're currently in deep research mode. For partnership inquiries or media requests, please reach out."
+        title: "आगे की यात्रा",
+        body: "हम किसी महत्वपूर्ण चीज़ पर गहन अनुसंधान एवं विकास के अंतिम चरण में हैं। अगला कोडिंग सहायक नहीं. कोई वृद्धिशील सुधार नहीं. लेकिन सॉफ्टवेयर कैसे बनाया जाता है, इस पर एक बुनियादी पुनर्विचार। यदि आप शीघ्र पहुंच, विकास अद्यतन, या साझेदारी के अवसरों में रुचि रखते हैं, तो संपर्क करें।",
     },
     form: {
-        title: "Send a Message",
-        nameLabel: "Name",
-        emailLabel: "Email",
-        orgLabel: "Organization",
-        messageLabel: "Message",
-        submitLabel: "Send Message"
+        title: "पूछताछ",
+        nameLabel: "नाम",
+        emailLabel: "ईमेल",
+        orgLabel: "संगठन",
+        messageLabel: "संदेश",
+        submitLabel: "जांच भेजें",
     },
     socials: {
-        twitter: "https://x.com/yugnex",
-        email: "contact@yugnex.com",
-        location: "Bhilwara, Rajasthan, India"
-    }
+        twitter: "@युगनेक्स",
+        email: "amit@yugnex.com",
+        location: "भीलवाड़ा, राजस्थान, भारत",
+    },
 }

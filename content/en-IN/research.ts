@@ -10,19 +10,26 @@ export const researchContent: ResearchContent = {
             "Novel architectures tested rigorously",
             "Systems that work reliably, not just demos",
             "Patents to protect innovations",
-            "Time to get it right"
-        ]
+            "Time to get it right",
+        ],
     },
     papers: [
         {
-            id: 'whitepaper-2026',
-            title: 'Toward Autonomous Software Engineering: Challenges and Directions',
-            description: 'Research on reasoning, context, and architectural understanding in AI-assisted software engineering. This whitepaper explores the foundational challenges in building persistent, autonomous software engineering intelligence.',
-            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
-            fileName: 'YugNex_Research_Whitepaper.pdf',
-            publishDate: '2026-01-01',
-            authors: ['YugNex Technology Research Division'],
-            tags: ['AI', 'Software Engineering', 'Autonomous Systems', 'Research']
-        }
-    ]
+            id: "whitepaper-2026",
+            title: "Toward Autonomous Software Engineering: Challenges and Directions",
+            description: "Research on reasoning, context, and architectural understanding in AI-assisted software engineering. This whitepaper explores the foundational challenges in building persistent, autonomous software engineering intelligence.",
+            pdfUrl: "/YugNex_Research_Whitepaper.pdf",
+            fileName: "YugNex_Research_Whitepaper.pdf",
+            publishDate: "2026-01-01",
+            authors: [
+                "YugNex Technology Research Division",
+            ],
+            tags: [
+                "AI",
+                "Software Engineering",
+                "Autonomous Systems",
+                "Research",
+            ],
+        },
+    ],
 }

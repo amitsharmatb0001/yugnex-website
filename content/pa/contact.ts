@@ -4,7 +4,7 @@ export const contactContent: ContactContent = {
     title: "ਸੰਪਰਕ",
     intro: {
         title: "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
-        body: "ਅਸੀਂ ਨਿਪੁੰਨ ਹੋਣ ਤੱਕ ਸਰਗਰਮੀ ਨਾਲ ਸਹਿਯੋਗ ਨਹੀਂ ਕਰ ਰਹੇ, ਪਰ ਅਸੀਂ ਪੁੱਛਗਿੱਛ ਦਾ ਸਵਾਗਤ ਕਰਦੇ ਹਾਂ."
+        body: "ਅਸੀਂ ਨਿਪੁੰਨ ਹੋਣ ਤੱਕ ਸਰਗਰਮੀ ਨਾਲ ਸਹਿਯੋਗ ਨਹੀਂ ਕਰ ਰਹੇ, ਪਰ ਅਸੀਂ ਪੁੱਛਗਿੱਛ ਦਾ ਸਵਾਗਤ ਕਰਦੇ ਹਾਂ.",
     },
     form: {
         title: "ਸੁਨੇਹਾ ਭੇਜੋ",
@@ -12,11 +12,11 @@ export const contactContent: ContactContent = {
         emailLabel: "ਈਮੇਲ",
         orgLabel: "ਸੰਗਠਨ (ਵਿਕਲਪਿਕ)",
         messageLabel: "ਸੁਨੇਹਾ",
-        submitLabel: "ਭੇਜੋ"
+        submitLabel: "ਭੇਜੋ",
     },
     socials: {
         twitter: "@YugNex",
-        email: "hello@yugnex.com",
-        location: "Gurugram, India"
-    }
+        email: "amit@yugnex.com",
+        location: "ਭੀਲਵਾੜਾ, ਰਾਜਸਥਾਨ, ਭਾਰਤ",
+    },
 }

@@ -1,54 +1,54 @@
 export const faqContent = [
     {
-        question: "When can I try it?",
-        answer: "We're in advanced prototype phase with launch planned for 2027. Join our waitlist for early access."
+        question: "मैं इसे कब आज़मा सकता हूँ?",
+        answer: "हम 2027 में लॉन्च की योजना के साथ उन्नत प्रोटोटाइप चरण में हैं। शीघ्र पहुंच के लिए हमारी प्रतीक्षा सूची में शामिल हों।",
     },
     {
-        question: "Is this another code completion tool?",
-        answer: "No. We're building systems that understand and reason about entire software architectures."
+        question: "क्या यह एक अन्य कोड पूर्णता उपकरण है?",
+        answer: "नहीं, हम ऐसी प्रणालियाँ बना रहे हैं जो संपूर्ण सॉफ़्टवेयर आर्किटेक्चर को समझती हैं और तर्क करती हैं।",
     },
     {
-        question: "Why should I believe this is possible?",
-        answer: "Because AI capabilities have reached the threshold where true software reasoning is feasible. We've filed patents on the core innovations. The question is execution, not possibility."
+        question: "मुझे क्यों विश्वास करना चाहिए कि यह संभव है?",
+        answer: "क्योंकि एआई क्षमताएं उस सीमा तक पहुंच गई हैं जहां वास्तविक सॉफ्टवेयर तर्क संभव है। हमने मुख्य नवाचारों पर पेटेंट दायर किया है। सवाल क्रियान्वयन का है, संभावना का नहीं.",
     },
     {
-        question: "Are you hiring?",
-        answer: "Currently focused on core R&D. Future opportunities will be announced."
+        question: "क्या तुम नौकरी पर राखी रहे हो?",
+        answer: "वर्तमान में मुख्य अनुसंधान एवं विकास पर ध्यान केंद्रित किया गया है। भविष्य के अवसरों की घोषणा की जाएगी.",
     },
     {
-        question: "What makes you different from Cursor, GitHub Copilot, or other AI coding tools?",
-        answer: "Those are assistance tools. We're building autonomous engineering systems. The difference is reasoning vs. generation."
+        question: "क्या चीज़ आपको कर्सर, GitHub Copilot, या अन्य AI कोडिंग टूल से अलग बनाती है?",
+        answer: "वे सहायता उपकरण हैं. हम स्वायत्त इंजीनियरिंग सिस्टम बना रहे हैं। अंतर तर्क बनाम पीढ़ी का है।",
     },
     {
-        question: "Will this replace developers?",
-        answer: "No. Software engineering requires human judgment, creativity, and context that AI can't replace. Our platform augments engineers, handling the cognitive load of system understanding so you can focus on higher-level decisions."
+        question: "क्या यह डेवलपर्स की जगह लेगा?",
+        answer: "नहीं, सॉफ़्टवेयर इंजीनियरिंग के लिए मानवीय निर्णय, रचनात्मकता और संदर्भ की आवश्यकता होती है जिसे AI प्रतिस्थापित नहीं कर सकता। हमारा प्लेटफ़ॉर्म सिस्टम समझ के संज्ञानात्मक भार को संभालने वाले इंजीनियरों को बढ़ाता है ताकि आप उच्च-स्तरीय निर्णयों पर ध्यान केंद्रित कर सकें।",
     },
     {
-        question: "How does it handle proprietary codebases?",
-        answer: "Your code stays yours. We're building for on-premise and private cloud deployment with full data sovereignty. No code leaves your infrastructure without your explicit permission."
+        question: "यह मालिकाना कोडबेस को कैसे संभालता है?",
+        answer: "आपका कोड आपका ही रहता है. हम पूर्ण डेटा संप्रभुता के साथ ऑन-प्रिमाइस और निजी क्लाउड परिनियोजन के लिए निर्माण कर रहे हैं। आपकी स्पष्ट अनुमति के बिना कोई भी कोड आपके बुनियादी ढांचे को नहीं छोड़ता।",
     },
     {
-        question: "What languages/frameworks does it support?",
-        answer: "We're starting with the most widely-used languages and frameworks. Specific support matrix will be announced closer to launch."
+        question: "यह किन भाषाओं/ढांचों का समर्थन करता है?",
+        answer: "हम सबसे व्यापक रूप से उपयोग की जाने वाली भाषाओं और रूपरेखाओं से शुरुआत कर रहे हैं। विशिष्ट समर्थन मैट्रिक्स की घोषणा लॉन्च के करीब की जाएगी।",
     },
     {
-        question: "Can it work with legacy systems?",
-        answer: "Yes. In fact, legacy systems with minimal documentation are where architectural understanding becomes most valuable. The platform reconstructs architectural intent from the code itself."
+        question: "क्या यह लीगेसी सिस्टम के साथ काम कर सकता है?",
+        answer: "हाँ। वास्तव में, न्यूनतम दस्तावेज़ीकरण वाली विरासत प्रणाली वह जगह है जहां वास्तुशिल्प समझ सबसे मूल्यवान हो जाती है। प्लेटफ़ॉर्म कोड से ही वास्तुशिल्प इरादे का पुनर्निर्माण करता है।",
     },
     {
-        question: "What's the learning curve?",
-        answer: "If you can use your current IDE, you can use our platform. We're designing for zero friction adoption."
+        question: "सीखने की अवस्था क्या है?",
+        answer: "यदि आप अपनी वर्तमान आईडीई का उपयोग कर सकते हैं, तो आप हमारे प्लेटफ़ॉर्म का उपयोग कर सकते हैं। हम शून्य घर्षण अपनाने के लिए डिज़ाइन कर रहे हैं।",
     },
     {
-        question: "Is my code used for training?",
-        answer: "No. Your code is never used for training. The platform analyzes your specific codebase to understand its unique architecture—your IP stays completely private."
+        question: "क्या मेरा कोड प्रशिक्षण के लिए उपयोग किया जाता है?",
+        answer: "नहीं, आपके कोड का उपयोग कभी भी प्रशिक्षण के लिए नहीं किया जाता है। प्लेटफ़ॉर्म अपने अद्वितीय आर्किटेक्चर को समझने के लिए आपके विशिष्ट कोडबेस का विश्लेषण करता है - आपका आईपी पूरी तरह से निजी रहता है।",
     },
     {
-        question: "How is this different from AI pair programming?",
-        answer: "AI pair programming tools predict what you'll type next. We understand what your changes will do to the entire system. It's the difference between tactical assistance and strategic understanding."
+        question: "यह AI जोड़ी प्रोग्रामिंग से किस प्रकार भिन्न है?",
+        answer: "एआई जोड़ी प्रोग्रामिंग टूल भविष्यवाणी करते हैं कि आप आगे क्या टाइप करेंगे। हम समझते हैं कि आपके परिवर्तन पूरे सिस्टम पर क्या प्रभाव डालेंगे। यह सामरिक सहायता और रणनीतिक समझ के बीच का अंतर है।",
     },
     {
-        question: "When exactly will it launch?",
-        answer: "2027, when it's ready for production use. We're not rushing to market with demos—we're building systems that work reliably in real-world conditions."
-    }
+        question: "यह वास्तव में कब लॉन्च होगा?",
+        answer: "2027, जब यह उत्पादन उपयोग के लिए तैयार होगा। हम डेमो के साथ बाज़ार में उतरने में जल्दबाजी नहीं कर रहे हैं - हम ऐसी प्रणालियाँ बना रहे हैं जो वास्तविक दुनिया की परिस्थितियों में विश्वसनीय रूप से काम करती हैं।",
+    },
 ]

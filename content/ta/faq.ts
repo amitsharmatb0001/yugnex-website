@@ -1,54 +1,54 @@
 export const faqContent = [
     {
-        question: "When can I try it?",
-        answer: "We're in advanced prototype phase with launch planned for 2027. Join our waitlist for early access."
+        question: "நான் எப்போது முயற்சி செய்யலாம்?",
+        answer: "2027 இல் தொடங்க திட்டமிடப்பட்ட முன்மாதிரி கட்டத்தில் நாங்கள் இருக்கிறோம். முன்கூட்டியே அணுகுவதற்கு எங்கள் காத்திருப்புப் பட்டியலில் சேரவும்.",
     },
     {
-        question: "Is this another code completion tool?",
-        answer: "No. We're building systems that understand and reason about entire software architectures."
+        question: "இது மற்றொரு குறியீட்டை நிறைவு செய்யும் கருவியா?",
+        answer: "இல்லை. முழு மென்பொருள் கட்டமைப்புகளையும் புரிந்துகொள்ளும் மற்றும் பகுத்தறியும் அமைப்புகளை நாங்கள் உருவாக்குகிறோம்.",
     },
     {
-        question: "Why should I believe this is possible?",
-        answer: "Because AI capabilities have reached the threshold where true software reasoning is feasible. We've filed patents on the core innovations. The question is execution, not possibility."
+        question: "இது சாத்தியம் என்று நான் ஏன் நம்ப வேண்டும்?",
+        answer: "ஏனெனில் AI திறன்கள் உண்மையான மென்பொருள் பகுத்தறிவு சாத்தியமான வாசலை எட்டியுள்ளன. முக்கிய கண்டுபிடிப்புகளுக்கு காப்புரிமையை தாக்கல் செய்துள்ளோம். கேள்வி மரணதண்டனை, சாத்தியம் அல்ல.",
     },
     {
-        question: "Are you hiring?",
-        answer: "Currently focused on core R&D. Future opportunities will be announced."
+        question: "நீங்கள் பணியமர்த்துகிறீர்களா?",
+        answer: "தற்போது முக்கிய R&D மீது கவனம் செலுத்துகிறது. எதிர்கால வாய்ப்புகள் அறிவிக்கப்படும்.",
     },
     {
-        question: "What makes you different from Cursor, GitHub Copilot, or other AI coding tools?",
-        answer: "Those are assistance tools. We're building autonomous engineering systems. The difference is reasoning vs. generation."
+        question: "கர்சர், கிட்ஹப் கோபிலட் அல்லது பிற AI குறியீட்டு கருவிகளிலிருந்து உங்களை வேறுபடுத்துவது எது?",
+        answer: "அவை உதவி கருவிகள். நாங்கள் தன்னாட்சி பொறியியல் அமைப்புகளை உருவாக்குகிறோம். வித்தியாசம் பகுத்தறிவு மற்றும் தலைமுறை.",
     },
     {
-        question: "Will this replace developers?",
-        answer: "No. Software engineering requires human judgment, creativity, and context that AI can't replace. Our platform augments engineers, handling the cognitive load of system understanding so you can focus on higher-level decisions."
+        question: "இது டெவலப்பர்களை மாற்றுமா?",
+        answer: "இல்லை. மென்பொருள் பொறியியலுக்கு மனித அறிவு, படைப்பாற்றல் மற்றும் AI மாற்ற முடியாத சூழல் தேவை. எங்கள் இயங்குதளம் பொறியாளர்களை அதிகரிக்கிறது, கணினி புரிதலின் அறிவாற்றல் சுமையைக் கையாளுகிறது, எனவே நீங்கள் உயர்நிலை முடிவுகளில் கவனம் செலுத்தலாம்.",
     },
     {
-        question: "How does it handle proprietary codebases?",
-        answer: "Your code stays yours. We're building for on-premise and private cloud deployment with full data sovereignty. No code leaves your infrastructure without your explicit permission."
+        question: "தனியுரிம குறியீட்டுத் தளங்களை இது எவ்வாறு கையாள்கிறது?",
+        answer: "உங்கள் குறியீடு உங்களுடையதாகவே இருக்கும். முழு தரவு இறையாண்மையுடன் ஆன்-பிரைமைஸ் மற்றும் பிரைவேட் கிளவுட் வரிசைப்படுத்தலை உருவாக்கி வருகிறோம். உங்களின் வெளிப்படையான அனுமதியின்றி எந்தக் குறியீடும் உங்கள் உள்கட்டமைப்பை விட்டுவிடாது.",
     },
     {
-        question: "What languages/frameworks does it support?",
-        answer: "We're starting with the most widely-used languages and frameworks. Specific support matrix will be announced closer to launch."
+        question: "எந்த மொழிகள்/கட்டமைப்புகளை இது ஆதரிக்கிறது?",
+        answer: "நாங்கள் மிகவும் பரவலாகப் பயன்படுத்தப்படும் மொழிகள் மற்றும் கட்டமைப்புகளுடன் தொடங்குகிறோம். குறிப்பிட்ட ஆதரவு அணி தொடங்குவதற்கு நெருக்கமாக அறிவிக்கப்படும்.",
     },
     {
-        question: "Can it work with legacy systems?",
-        answer: "Yes. In fact, legacy systems with minimal documentation are where architectural understanding becomes most valuable. The platform reconstructs architectural intent from the code itself."
+        question: "இது மரபு அமைப்புகளுடன் வேலை செய்ய முடியுமா?",
+        answer: "ஆம். உண்மையில், கட்டடக்கலை புரிதல் மிகவும் மதிப்புமிக்கதாக மாறும் குறைந்தபட்ச ஆவணங்கள் கொண்ட மரபு அமைப்புகள். பிளாட்பார்ம் கட்டிடக்கலை நோக்கத்தை குறியீட்டிலிருந்தே புனரமைக்கிறது.",
     },
     {
-        question: "What's the learning curve?",
-        answer: "If you can use your current IDE, you can use our platform. We're designing for zero friction adoption."
+        question: "கற்றல் வளைவு என்ன?",
+        answer: "உங்கள் தற்போதைய IDE ஐ நீங்கள் பயன்படுத்தினால், நீங்கள் எங்கள் தளத்தைப் பயன்படுத்தலாம். பூஜ்ஜிய உராய்வு தத்தெடுப்புக்காக நாங்கள் வடிவமைக்கிறோம்.",
     },
     {
-        question: "Is my code used for training?",
-        answer: "No. Your code is never used for training. The platform analyzes your specific codebase to understand its unique architecture—your IP stays completely private."
+        question: "எனது குறியீடு பயிற்சிக்கு பயன்படுத்தப்படுகிறதா?",
+        answer: "இல்லை. பயிற்சிக்கு உங்கள் குறியீடு பயன்படுத்தப்படாது. இயங்குதளமானது உங்கள் குறிப்பிட்ட கோட்பேஸை அதன் தனித்துவமான கட்டமைப்பைப் புரிந்துகொள்ள பகுப்பாய்வு செய்கிறது - உங்கள் ஐபி முற்றிலும் தனிப்பட்டதாக இருக்கும்.",
     },
     {
-        question: "How is this different from AI pair programming?",
-        answer: "AI pair programming tools predict what you'll type next. We understand what your changes will do to the entire system. It's the difference between tactical assistance and strategic understanding."
+        question: "AI ஜோடி நிரலாக்கத்திலிருந்து இது எவ்வாறு வேறுபட்டது?",
+        answer: "AI ஜோடி நிரலாக்க கருவிகள் நீங்கள் அடுத்து என்ன தட்டச்சு செய்வீர்கள் என்று கணிக்கின்றன. உங்கள் மாற்றங்கள் முழு அமைப்பிலும் என்ன செய்யும் என்பதை நாங்கள் புரிந்துகொள்கிறோம். இது தந்திரோபாய உதவிக்கும் மூலோபாய புரிதலுக்கும் உள்ள வித்தியாசம்.",
     },
     {
-        question: "When exactly will it launch?",
-        answer: "2027, when it's ready for production use. We're not rushing to market with demos—we're building systems that work reliably in real-world conditions."
-    }
+        question: "அது சரியாக எப்போது தொடங்கப்படும்?",
+        answer: "2027, அது உற்பத்தி பயன்பாட்டிற்கு தயாராக இருக்கும் போது. நாங்கள் டெமோக்களுடன் சந்தைக்கு விரைந்து செல்லவில்லை - நிஜ உலக நிலைமைகளில் நம்பகத்தன்மையுடன் செயல்படும் அமைப்புகளை நாங்கள் உருவாக்குகிறோம்.",
+    },
 ]
