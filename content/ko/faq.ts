@@ -1,54 +1,54 @@
 export const faqContent = [
     {
-        question: "When can I try it?",
-        answer: "We're in advanced prototype phase with launch planned for 2027. Join our waitlist for early access."
+        question: "언제 시도해 볼 수 있나요?",
+        answer: "우리는 2027년 출시를 목표로 고급 프로토타입 단계에 있습니다. 조기 액세스 대기자 명단에 등록하세요.",
     },
     {
-        question: "Is this another code completion tool?",
-        answer: "No. We're building systems that understand and reason about entire software architectures."
+        question: "이것은 또 다른 코드 완성 도구입니까?",
+        answer: "아니요. 우리는 전체 소프트웨어 아키텍처를 이해하고 추론하는 시스템을 구축하고 있습니다.",
     },
     {
-        question: "Why should I believe this is possible?",
-        answer: "Because AI capabilities have reached the threshold where true software reasoning is feasible. We've filed patents on the core innovations. The question is execution, not possibility."
+        question: "왜 이것이 가능하다고 믿어야 합니까?",
+        answer: "AI 기능이 진정한 소프트웨어 추론이 가능한 임계값에 도달했기 때문입니다. 우리는 핵심 혁신에 대한 특허를 출원했습니다. 문제는 가능성이 아니라 실행이다.",
     },
     {
-        question: "Are you hiring?",
-        answer: "Currently focused on core R&D. Future opportunities will be announced."
+        question: "채용 중이신가요?",
+        answer: "현재는 핵심 R&D에 집중하고 있습니다. 향후 기회가 발표될 예정입니다.",
     },
     {
-        question: "What makes you different from Cursor, GitHub Copilot, or other AI coding tools?",
-        answer: "Those are assistance tools. We're building autonomous engineering systems. The difference is reasoning vs. generation."
+        question: "Cursor, GitHub Copilot 또는 기타 AI 코딩 도구와 다른 점은 무엇입니까?",
+        answer: "그것은 보조 도구입니다. 우리는 자율 엔지니어링 시스템을 구축하고 있습니다. 차이점은 추론과 세대입니다.",
     },
     {
-        question: "Will this replace developers?",
-        answer: "No. Software engineering requires human judgment, creativity, and context that AI can't replace. Our platform augments engineers, handling the cognitive load of system understanding so you can focus on higher-level decisions."
+        question: "이것이 개발자를 대체할 것인가?",
+        answer: "아니요. 소프트웨어 엔지니어링에는 AI가 대체할 수 없는 인간의 판단력, 창의성, 맥락이 필요합니다. 우리 플랫폼은 엔지니어를 강화하여 시스템 이해의 인지적 부하를 처리하므로 더 높은 수준의 결정에 집중할 수 있습니다.",
     },
     {
-        question: "How does it handle proprietary codebases?",
-        answer: "Your code stays yours. We're building for on-premise and private cloud deployment with full data sovereignty. No code leaves your infrastructure without your explicit permission."
+        question: "독점 코드베이스를 어떻게 처리합니까?",
+        answer: "귀하의 코드는 귀하의 것입니다. 우리는 완전한 데이터 주권을 갖춘 온프레미스 및 프라이빗 클라우드 배포를 위해 구축하고 있습니다. 귀하의 명시적인 허가 없이는 코드가 인프라를 떠나지 않습니다.",
     },
     {
-        question: "What languages/frameworks does it support?",
-        answer: "We're starting with the most widely-used languages and frameworks. Specific support matrix will be announced closer to launch."
+        question: "어떤 언어/프레임워크를 지원하나요?",
+        answer: "우리는 가장 널리 사용되는 언어와 프레임워크부터 시작합니다. 구체적인 지원 매트릭스는 출시가 가까워지면 발표될 예정입니다.",
     },
     {
-        question: "Can it work with legacy systems?",
-        answer: "Yes. In fact, legacy systems with minimal documentation are where architectural understanding becomes most valuable. The platform reconstructs architectural intent from the code itself."
+        question: "레거시 시스템에서 작동할 수 있나요?",
+        answer: "예. 실제로 최소한의 문서가 포함된 레거시 시스템은 아키텍처에 대한 이해가 가장 가치 있는 곳입니다. 플랫폼은 코드 자체에서 아키텍처 의도를 재구성합니다.",
     },
     {
-        question: "What's the learning curve?",
-        answer: "If you can use your current IDE, you can use our platform. We're designing for zero friction adoption."
+        question: "학습 곡선은 무엇입니까?",
+        answer: "현재 IDE를 사용할 수 있다면 당사 플랫폼을 사용할 수 있습니다. 우리는 마찰이 전혀 없는 채택을 위해 설계하고 있습니다.",
     },
     {
-        question: "Is my code used for training?",
-        answer: "No. Your code is never used for training. The platform analyzes your specific codebase to understand its unique architecture—your IP stays completely private."
+        question: "내 코드가 훈련에 사용됩니까?",
+        answer: "아니요. 귀하의 코드는 교육에 사용되지 않습니다. 플랫폼은 특정 코드베이스를 분석하여 고유한 아키텍처를 이해합니다. 귀하의 IP는 완전히 비공개로 유지됩니다.",
     },
     {
-        question: "How is this different from AI pair programming?",
-        answer: "AI pair programming tools predict what you'll type next. We understand what your changes will do to the entire system. It's the difference between tactical assistance and strategic understanding."
+        question: "이것이 AI 쌍 프로그래밍과 어떻게 다른가요?",
+        answer: "AI 쌍 프로그래밍 도구는 다음에 입력할 내용을 예측합니다. 우리는 귀하의 변경 사항이 전체 시스템에 어떤 영향을 미칠지 이해하고 있습니다. 전술적 지원과 전략적 이해의 차이입니다.",
     },
     {
-        question: "When exactly will it launch?",
-        answer: "2027, when it's ready for production use. We're not rushing to market with demos—we're building systems that work reliably in real-world conditions."
-    }
+        question: "정확히 언제 출시되나요?",
+        answer: "2027년에는 프로덕션용으로 사용할 준비가 됩니다. 우리는 데모를 가지고 시장에 서두르지 않고 실제 조건에서 안정적으로 작동하는 시스템을 구축하고 있습니다.",
+    },
 ]

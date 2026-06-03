@@ -1,54 +1,132 @@
 import { PlatformContent } from '@/app/lib/contentTypes'
 
 export const platformContent: PlatformContent = {
-    title: "Platform",
-    subtitle: "Autonomous Software Engineering Platform",
+    title: "플랫폼",
+    subtitle: "자율 소프트웨어 엔지니어링, 재구상됨",
     hero: {
-        title: "YugNex Platform",
-        description: "An AI-powered platform that understands, reasons, and collaborates on complex software systems."
-    },
-    builtFor: {
-        title: "Built for Engineers",
-        subtitle: "By Engineers",
-        body: "We understand the challenges of building complex software systems. YugNex is designed to amplify your capabilities, not replace them."
+        title: "우리가 만들고 있는 것",
+        description: "코드 생성을 넘어 복잡한 소프트웨어 시스템을 진정으로 이해하고 추론하고 협업할 수 있는 AI 기반 플랫폼입니다. 다른 자동 완성 도구가 아닙니다. 개발 워크플로우에 아키텍처 이해, 체계적 추론 및 검증을 제공하는 협업 엔지니어링 파트너입니다.",
     },
     capabilities: [
         {
-            title: "Architecture Understanding",
-            description: "Comprehends your system's structure and design patterns",
+            title: "구문뿐만 아니라 아키텍처를 이해합니다.",
+            description: "현재 도구는 다음 코드 줄을 예측하지만, 당사 플랫폼은 시스템 아키텍처, 종속성 및 디자인 패턴에 대한 포괄적인 이해를 구축합니다.",
             points: [
-                "Analyzes code relationships and dependencies",
-                "Understands design patterns and architectural decisions",
-                "Maintains context across the entire codebase"
-            ]
-        }
+                "변경 사항은 전체 시스템 컨텍스트에서 평가됩니다.",
+                "구현 전에 종속성 영향을 이해합니다.",
+                "아키텍처 경계가 자동으로 존중됩니다.",
+                "기술 부채에 대한 영향을 사전에 파악합니다.",
+            ],
+        },
+        {
+            title: "시사점에 대한 이유",
+            description: "모든 코드 변경에는 성능, 보안, 유지 관리 가능성, 확장성 등의 의미가 있습니다. 우리 플랫폼은 단지 코드를 생성하는 것이 아닙니다. 해당 코드가 시스템에 어떤 의미인지 추론합니다.",
+            points: [
+                "시스템 전반에 걸친 영향이 분석됩니다.",
+                "위험과 장단점이 평가됩니다.",
+                "대체 접근법이 고려됩니다.",
+                "건축적 일관성이 유지됩니다.",
+            ],
+        },
+        {
+            title: "여러 수준에서 검증",
+            description: "구문적으로 올바른 코드가 목표가 아닙니다. 구조적으로 건전하고 유지 관리가 가능하며 안전한 코드가 목표입니다.",
+            points: [
+                "정확성: 문제가 발생하지 않고 작동합니까?",
+                "안전: 보안 경계가 유지됩니까?",
+                "아키텍처: 시스템 설계와 일치합니까?",
+                "유지 관리 가능성: 엔지니어가 지금부터 6개월 후에 이를 이해할 수 있을까요?",
+            ],
+        },
     ],
     useCases: [
         {
-            title: "Legacy Code Modernization",
-            challenge: "Update old codebases without breaking functionality",
-            solution: "YugNex understands the entire system and suggests safe refactoring paths"
-        }
+            title: "복잡한 리팩토링",
+            challenge: "대규모 코드베이스에서 리팩토링하는 것은 위험합니다. 코드가 사용되는 모든 위치, 깨질 수 있는 모든 종속성을 이해해야 합니다.",
+            solution: "전체 종속성 그래프를 분석하고, 영향을 받는 모든 구성 요소를 식별하고, 아키텍처 의미를 평가하고, 변경 사항을 안전하게 실행하도록 돕습니다.",
+        },
+        {
+            title: "아키텍처 분석",
+            challenge: "대규모 코드베이스가 실제로 어떻게 작동하는지(패턴, 암시적 계약, 디자인 결정)를 이해하는 데는 새로운 팀 구성원이 몇 주가 걸립니다.",
+            solution: "시스템 구조, 종속성 관계, 디자인 패턴 및 아키텍처 경계를 보여주는 포괄적인 아키텍처 맵을 구축합니다.",
+        },
+        {
+            title: "안전 시스템의 진화",
+            challenge: "버그 발생, 아키텍처 원칙 위반 또는 기술적 부채 생성 없이 기능을 추가하거나 변경합니다.",
+            solution: "전체 시스템 컨텍스트에서 제안된 변경 사항을 평가하고, 구현 전에 잠재적인 문제를 식별하고, 구조적으로 일관된 접근 방식을 제안합니다.",
+        },
+        {
+            title: "레거시 코드 이해",
+            challenge: "최소한의 문서, 불분명한 설계 결정, 누적된 기술 부채가 포함된 상속된 코드베이스는 유지 관리 비용이 많이 듭니다.",
+            solution: "아키텍처 의도를 재구성하고, 디자인 패턴과 안티패턴을 식별하고, 종속 관계를 매핑하고, 기술 부채를 표면화합니다.",
+        },
+        {
+            title: "대규모 코드 검토",
+            challenge: "철저한 코드 검토를 위해서는 시스템 전반에 걸친 영향을 이해해야 하지만 검토자는 시간과 인지 대역폭이 제한되어 있습니다.",
+            solution: "심층적인 아키텍처 분석을 수행하고 여러 차원에 걸쳐 잠재적인 문제를 식별하며 사람의 판단이 필요한 문제를 강조합니다.",
+        },
     ],
     targetAudience: [
         {
-            role: "Engineering Teams",
-            painPoints: ["Context switching", "Knowledge silos", "Technical debt"],
-            benefit: "Shared AI teammate with perfect memory and system understanding"
-        }
+            role: "엔지니어링 팀",
+            painPoints: [
+                "다양한 서비스",
+                "아키텍처 패턴",
+                "보안/성능 요구사항",
+            ],
+            benefit: "자동 완성 이상의 것이 필요합니다. 건축학적 이해가 필요합니다.",
+        },
+        {
+            role: "수석 엔지니어 및 건축가",
+            painPoints: [
+                "종속성 추적",
+                "아키텍처 위반 검토",
+                "맥락 설명",
+            ],
+            benefit: "시스템 이해에 따른 인지적 부하를 처리하여 높은 수준의 결정에 집중할 수 있도록 해줍니다.",
+        },
+        {
+            role: "기술 부채를 관리하는 팀",
+            painPoints: [
+                "알 수 없는 범위",
+                "우선순위",
+                "안전한 리팩토링",
+            ],
+            benefit: "기술 부채를 가시화하고 체계적으로 해결하는 데 도움이 됩니다.",
+        },
     ],
     workflow: {
-        title: "How It Works",
+        title: "워크플로에서 작동하는 방식",
         points: [
-            { title: "Connect", description: "Link your codebase to YugNex" },
-            { title: "Understand", description: "AI analyzes and maps your architecture" },
-            { title: "Collaborate", description: "Work together on features and fixes" },
-            { title: "Evolve", description: "System learns and improves continuously" }
-        ]
+            {
+                title: "방해가 되지 않는 통합형",
+                description: "기존 환경 및 코드베이스에 적합합니다. 마이그레이션이 필요하지 않습니다.",
+            },
+            {
+                title: "자동화되지 않은 협업",
+                description: "플랫폼이 제안하고 결정합니다. 이는 인간의 판단을 보완하기 위해 AI의 강점을 제공합니다.",
+            },
+            {
+                title: "투명하고 블랙박스가 아님",
+                description: "추론, 식별된 종속성, 위험 및 장단점을 보여줍니다.",
+            },
+        ],
     },
     comparison: [
-        { category: "Context", others: "Session-based", us: "Persistent" },
-        { category: "Understanding", others: "Syntax-level", us: "Architecture-level" },
-        { category: "Collaboration", others: "One-shot", us: "Continuous" }
-    ]
+        {
+            category: "코드 자동 완성",
+            others: "패턴을 기반으로 코드를 생성합니다. 다음 줄을 예측하세요. 더 빠르게 작성하도록 도와주세요.",
+            us: "시스템에 대한 이유. 전체 아키텍처를 이해합니다. 더 나은 구축을 도와주세요.",
+        },
+        {
+            category: "정적 분석",
+            others: "코드에서 문제를 찾아보세요. 플래그 구문 오류. 코딩 후 실행합니다.",
+            us: "아키텍처에 미치는 영향을 이해합니다. 시스템 전반에 미치는 영향에 대한 이유. 개발하면서 안내하세요.",
+        },
+        {
+            category: "코드 검토 도구",
+            others: "인적 검토를 촉진합니다. 차이점을 표시합니다. 변경 사항을 강조 표시합니다.",
+            us: "아키텍처 분석을 수행합니다. 의미를 설명하십시오. 시스템 일관성을 검증합니다.",
+        },
+    ],
 }

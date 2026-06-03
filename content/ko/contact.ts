@@ -1,22 +1,22 @@
 import { ContactContent } from '@/app/lib/contentTypes'
 
 export const contactContent: ContactContent = {
-    title: "Contact Us",
+    title: "문의하기",
     intro: {
-        title: "Get in Touch",
-        body: "We're currently in deep research mode. For partnership inquiries or media requests, please reach out."
+        title: "앞으로의 여정",
+        body: "우리는 중요한 연구 개발의 마지막 단계에 있습니다. 차세대 코딩 도우미가 아닙니다. 점진적인 개선이 아닙니다. 그러나 소프트웨어 구축 방법에 대한 근본적인 재검토가 필요합니다. 조기 액세스, 개발 업데이트 또는 파트너십 기회에 관심이 있다면 연락하세요.",
     },
     form: {
-        title: "Send a Message",
-        nameLabel: "Name",
-        emailLabel: "Email",
-        orgLabel: "Organization",
-        messageLabel: "Message",
-        submitLabel: "Send Message"
+        title: "묻다",
+        nameLabel: "이름",
+        emailLabel: "이메일",
+        orgLabel: "조직",
+        messageLabel: "메시지",
+        submitLabel: "문의 보내기",
     },
     socials: {
-        twitter: "https://x.com/yugnex",
-        email: "contact@yugnex.com",
-        location: "Bhilwara, Rajasthan, India"
-    }
+        twitter: "@YugNex",
+        email: "amit@yugnex.com",
+        location: "빌와라, 라자스탄, 인도",
+    },
 }

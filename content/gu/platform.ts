@@ -119,14 +119,14 @@ export const platformContent: PlatformContent = {
             us: "સિસ્ટમો વિશે કારણ. સમગ્ર આર્કિટેક્ચરને સમજો. વધુ સારી રીતે બનાવવામાં મદદ કરો.",
         },
         {
-            category: "Static Analysis",
-            others: "Find issues in code. Flag syntax errors. Run after coding.",
-            us: "Understand architectural implications. Reason about system-wide impacts. Guide as you develop.",
+            category: "સ્થિર વિશ્લેષણ",
+            others: "કોડમાં સમસ્યાઓ શોધો. ફ્લેગ સિન્ટેક્સ ભૂલો. કોડિંગ પછી ચલાવો.",
+            us: "આર્કિટેક્ચરલ અસરોને સમજો. સિસ્ટમ-વ્યાપી અસરો વિશે કારણ. તમે વિકાસ કરો તેમ માર્ગદર્શન આપો.",
         },
         {
-            category: "Code Review Tools",
-            others: "Facilitate human review. Show diffs. Highlight changes.",
-            us: "Perform architectural analysis. Explain implications. Validate system coherence.",
+            category: "કોડ સમીક્ષા સાધનો",
+            others: "માનવ સમીક્ષાની સુવિધા. તફાવતો બતાવો. ફેરફારોને હાઇલાઇટ કરો.",
+            us: "આર્કિટેક્ચરલ વિશ્લેષણ કરો. સૂચિતાર્થો સમજાવો. સિસ્ટમ સુસંગતતાને માન્ય કરો.",
         },
     ],
 }

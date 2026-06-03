@@ -1,32 +1,59 @@
 import { TechnologyContent } from '@/app/lib/contentTypes'
 
 export const technologyContent: TechnologyContent = {
-    title: "Technology",
+    title: "現在の AI コーディング ツールの問題点",
     problem: {
-        title: "The Problem with Current AI Tools",
-        subtitle: "Context-Free Code Generation",
-        body: "Current AI coding assistants generate plausible code without understanding your system's architecture, leading to bugs and technical debt.",
+        title: "コードは生成するが、システムを理解していない",
+        subtitle: "今日の AI コーディング アシスタントは、コードの自動補完、関数の生成、言語間の翻訳など、目覚ましい成果を上げています。しかし、それらはすべて基本的な制限を共有しています。それは、ソフトウェアを、理解されるべきシステムではなく、生成されるテキストとして扱うということです。",
+        body: "ソフトウェアエンジニアリングはテキスト生成の問題ではありません。システム推論の問題です。",
         limitations: [
-            { title: "No Memory", description: "Forgets context between sessions" },
-            { title: "No Architecture Awareness", description: "Doesn't understand your system design" },
-            { title: "No Validation", description: "Generates code that compiles but breaks things" }
-        ]
+            {
+                title: "コンテキストの問題",
+                description: "コードベースには、数千のファイルにわたる数百万の行が含まれています。現在のツールは単純な検索によってこれを橋渡ししようとしますが、ソフトウェアにおける関連性はテキストの類似性ではなく、因果関係、依存関係の連鎖、アーキテクチャの境界に関するものです。",
+            },
+            {
+                title: "推論のギャップ",
+                description: "構文的に正しいコードを生成することと、エンジニアリング上の健全な意思決定を行うことの間には、根本的な違いがあります。経験豊富なエンジニアがコードを変更するときは、システム全体のアーキテクチャへの影響、依存関係の影響、パフォーマンスのトレードオフ、および保守性を考慮します。",
+            },
+            {
+                title: "検証のギャップ",
+                description: "ソフトウェアエンジニアリングでは、妥当性ではなく正確さが必要です。現在のツールには、構文チェックを超えて検証するメカニズムがありません。彼らは、変更によってシステムの不変性が維持されるのか、アーキテクチャの境界が尊重されるのか、それともセキュリティの脆弱性が導入されるのかを推論することができません。",
+            },
+        ],
     },
     approach: {
-        title: "YugNex Approach",
-        subtitle: "Architecture-Aware AI Engineering",
+        title: "ソフトウェアエンジニアリングのために構築",
+        subtitle: "私たちは別の質問から始めました。「AI はどうすればより良いコードを書けるのか?」ではありません。しかし、「経験豊富なエンジニアと同じように、AI はどのようにしてソフトウェア システムを理解できるのでしょうか?」",
         sections: [
-            { title: "Persistent Context", body: "Never forgets your codebase architecture and patterns" },
-            { title: "Systemic Reasoning", body: "Understands implications across your entire system" },
-            { title: "Multi-Level Validation", body: "Ensures correctness, security, and maintainability" }
-        ]
+            {
+                title: "一般化よりも専門化",
+                body: "ソフトウェア エンジニアリングのさまざまな側面には、基本的に異なる種類の推論が必要です。すべてを 1 つのモデルに圧縮するのではなく、ソフトウェア推論の特定のドメイン向けにそれぞれ設計された特殊な AI コンポーネントを使用し、エンジニアリング チームのように連携します。",
+            },
+            {
+                title: "協調的な推論",
+                body: "ソフトウェアの決定では、多くの場合、競合する懸念事項間のトレードオフを比較検討する必要があります。当社のアーキテクチャにより、特殊なコンポーネントがコンテキストを共有し、仮定に異議を唱え、構造化された調整を通じて合意に向けて作業できるようになります。",
+            },
+            {
+                title: "システム全体の理解",
+                body: "ソフトウェアの理解は、構文、セマンティクス、アーキテクチャ パターン、設計意図、システム全体のプロパティなどの複数のレベルで行われます。私たちは、さまざまなコンポーネントがさまざまな抽象レベルで動作する、階層化された推論を使用します。",
+            },
+            {
+                title: "検索を超えたコンテキスト",
+                body: "私たちは、切り離されたコード スニペットを引き出すのではなく、コードだけでなく、依存関係、不変条件、アーキテクチャの境界の網を捉えて、システムの関係を動的に表現するアプローチを開発しています。",
+            },
+        ],
     },
     difference: {
-        title: "The YugNex Difference",
+        title: "違い",
         comparison: [
-            { label: "Context", value: "Persistent" },
-            { label: "Understanding", value: "Architecture-Aware" },
-            { label: "Validation", value: "Multi-Dimensional" }
-        ]
-    }
+            {
+                label: "現在のツール",
+                value: "コードの生成 → 構文の最適化 → コンテキスト制限内での作業 → 汎用アーキテクチャ",
+            },
+            {
+                label: "私たちのアプローチ",
+                value: "システムを理解する → アーキテクチャについての理由 → 動的な表現を構築する → ソフトウェアエンジニアリング専用に構築",
+            },
+        ],
+    },
 }

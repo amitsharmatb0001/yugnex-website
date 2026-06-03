@@ -1,54 +1,132 @@
 import { PlatformContent } from '@/app/lib/contentTypes'
 
 export const platformContent: PlatformContent = {
-    title: "Platform",
-    subtitle: "Autonomous Software Engineering Platform",
+    title: "平台",
+    subtitle: "重新构想的自主软件工程",
     hero: {
-        title: "YugNex Platform",
-        description: "An AI-powered platform that understands, reasons, and collaborates on complex software systems."
-    },
-    builtFor: {
-        title: "Built for Engineers",
-        subtitle: "By Engineers",
-        body: "We understand the challenges of building complex software systems. YugNex is designed to amplify your capabilities, not replace them."
+        title: "我们正在建设什么",
+        description: "一个人工智能驱动的平台，超越代码生成，真正理解、推理复杂的软件系统并进行协作。不是另一个自动完成工具。一个协作工程合作伙伴，为您的开发工作流程带来架构理解、系统推理和验证。",
     },
     capabilities: [
         {
-            title: "Architecture Understanding",
-            description: "Comprehends your system's structure and design patterns",
+            title: "理解架构，而不仅仅是语法",
+            description: "虽然当前的工具可以预测下一行代码，但我们的平台可以全面了解您的系统架构、依赖关系和设计模式。",
             points: [
-                "Analyzes code relationships and dependencies",
-                "Understands design patterns and architectural decisions",
-                "Maintains context across the entire codebase"
-            ]
-        }
+                "在完整的系统上下文中评估更改",
+                "在实施之前了解依赖性影响",
+                "自动尊重架构边界",
+                "技术债务影响主动浮出水面",
+            ],
+        },
+        {
+            title: "影响的原因",
+            description: "每个代码更改都会产生影响——性能、安全性、可维护性、可扩展性。我们的平台不仅仅生成代码；还生成代码。它会解释该代码对您的系统意味着什么。",
+            points: [
+                "分析全系统的影响",
+                "评估风险和权衡",
+                "考虑替代方法",
+                "保持建筑的连贯性",
+            ],
+        },
+        {
+            title: "多层次验证",
+            description: "语法上正确的代码不是目标，架构上合理、可维护、安全的代码才是。",
+            points: [
+                "正确性：它能在不破坏东西的情况下工作吗？",
+                "安全：安全边界是否得到维护？",
+                "架构：它与系统设计一致吗？",
+                "可维护性：六个月后工程师会理解它吗？",
+            ],
+        },
     ],
     useCases: [
         {
-            title: "Legacy Code Modernization",
-            challenge: "Update old codebases without breaking functionality",
-            solution: "YugNex understands the entire system and suggests safe refactoring paths"
-        }
+            title: "复杂的重构",
+            challenge: "在大型代码库中进行重构是有风险的。您需要了解使用代码的每个地方，每个可能破坏的依赖关系......",
+            solution: "分析完整的依赖关系图，识别所有受影响的组件，评估架构影响，并帮助安全地执行更改。",
+        },
+        {
+            title: "架构分析",
+            challenge: "对于新团队成员来说，了解大型代码库的实际工作原理（其模式、隐含契约、设计决策）需要数周时间。",
+            solution: "构建全面的架构图，显示系统结构、依赖关系、设计模式和架构边界。",
+        },
+        {
+            title: "安全系统演进",
+            challenge: "添加功能或进行更改时不会引入错误、违反架构原则或产生技术债务。",
+            solution: "在整个系统环境中评估拟议的更改，在实施之前识别潜在问题，提出架构上一致的方法。",
+        },
+        {
+            title: "遗留代码理解",
+            challenge: "具有最少文档、不明确的设计决策和累积的技术债务的继承代码库的维护成本很高。",
+            solution: "重建架构意图，识别设计模式和反模式，映射依赖关系，并揭示技术债务。",
+        },
+        {
+            title: "大规模代码审查",
+            challenge: "彻底的代码审查需要了解整个系统的影响，但审查者的时间和认知带宽有限。",
+            solution: "执行深入的架构分析，识别跨维度的潜在问题，并突出显示需要人类判断的问题。",
+        },
     ],
     targetAudience: [
         {
-            role: "Engineering Teams",
-            painPoints: ["Context switching", "Knowledge silos", "Technical debt"],
-            benefit: "Shared AI teammate with perfect memory and system understanding"
-        }
+            role: "工程团队",
+            painPoints: [
+                "多项服务",
+                "建筑模式",
+                "安全/性能要求",
+            ],
+            benefit: "您需要的不仅仅是自动完成。您需要了解架构。",
+        },
+        {
+            role: "高级工程师和建筑师",
+            painPoints: [
+                "跟踪依赖关系",
+                "审查架构违规行为",
+                "解释上下文",
+            ],
+            benefit: "处理系统理解的认知负荷，使您能够专注于高层决策。",
+        },
+        {
+            role: "管理技术债务的团队",
+            painPoints: [
+                "范围未知",
+                "优先顺序",
+                "安全重构",
+            ],
+            benefit: "使技术债务变得可见并帮助您系统地解决它。",
+        },
     ],
     workflow: {
-        title: "How It Works",
+        title: "它如何与您的工作流程配合使用",
         points: [
-            { title: "Connect", description: "Link your codebase to YugNex" },
-            { title: "Understand", description: "AI analyzes and maps your architecture" },
-            { title: "Collaborate", description: "Work together on features and fixes" },
-            { title: "Evolve", description: "System learns and improves continuously" }
-        ]
+            {
+                title: "集成，非侵入式",
+                description: "适合您现有的环境和代码库。无需迁移。",
+            },
+            {
+                title: "协作，而非自动化",
+                description: "平台建议，你决定。它带来了人工智能的优势来补充人类的判断。",
+            },
+            {
+                title: "透明，非黑匣子",
+                description: "显示其推理、确定的依赖性、风险和权衡。",
+            },
+        ],
     },
     comparison: [
-        { category: "Context", others: "Session-based", us: "Persistent" },
-        { category: "Understanding", others: "Syntax-level", us: "Architecture-level" },
-        { category: "Collaboration", others: "One-shot", us: "Continuous" }
-    ]
+        {
+            category: "代码自动完成",
+            others: "根据模式生成代码。预测下一行。帮助写得更快。",
+            us: "关于系统的原因。了解整个架构。帮助建设得更好。",
+        },
+        {
+            category: "静态分析",
+            others: "查找代码中的问题。标记语法错误。编码后运行。",
+            us: "了解架构的含义。关于系统范围影响的原因。指导您的发展。",
+        },
+        {
+            category: "代码审查工具",
+            others: "促进人工审核。显示差异。突出显示变化。",
+            us: "执行架构分析。解释影响。验证系统的一致性。",
+        },
+    ],
 }

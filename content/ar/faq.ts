@@ -1,54 +1,54 @@
 export const faqContent = [
     {
-        question: "When can I try it?",
-        answer: "We're in advanced prototype phase with launch planned for 2027. Join our waitlist for early access."
+        question: "متى يمكنني تجربتها؟",
+        answer: "نحن في مرحلة النموذج الأولي المتقدمة ومن المخطط إطلاقه في عام 2027. انضم إلى قائمة الانتظار للوصول المبكر.",
     },
     {
-        question: "Is this another code completion tool?",
-        answer: "No. We're building systems that understand and reason about entire software architectures."
+        question: "هل هذه أداة أخرى لإكمال التعليمات البرمجية؟",
+        answer: "لا، نحن نبني أنظمة تفهم وتفكر في بنيات البرامج بأكملها.",
     },
     {
-        question: "Why should I believe this is possible?",
-        answer: "Because AI capabilities have reached the threshold where true software reasoning is feasible. We've filed patents on the core innovations. The question is execution, not possibility."
+        question: "لماذا يجب أن أصدق أن هذا ممكن؟",
+        answer: "لأن قدرات الذكاء الاصطناعي وصلت إلى الحد الذي يصبح فيه التفكير البرمجي الحقيقي ممكنًا. لقد قدمنا ​​براءات اختراع على الابتكارات الأساسية. السؤال هو التنفيذ وليس الاحتمال.",
     },
     {
-        question: "Are you hiring?",
-        answer: "Currently focused on core R&D. Future opportunities will be announced."
+        question: "هل تقوم بالتوظيف؟",
+        answer: "تركز حاليًا على البحث والتطوير الأساسي. سيتم الإعلان عن الفرص المستقبلية.",
     },
     {
-        question: "What makes you different from Cursor, GitHub Copilot, or other AI coding tools?",
-        answer: "Those are assistance tools. We're building autonomous engineering systems. The difference is reasoning vs. generation."
+        question: "ما الذي يجعلك مختلفًا عن Cursor أو GitHub Copilot أو أدوات البرمجة الأخرى التي تعمل بالذكاء الاصطناعي؟",
+        answer: "تلك هي أدوات المساعدة. نحن نبني أنظمة هندسية مستقلة. الفرق هو المنطق مقابل الجيل.",
     },
     {
-        question: "Will this replace developers?",
-        answer: "No. Software engineering requires human judgment, creativity, and context that AI can't replace. Our platform augments engineers, handling the cognitive load of system understanding so you can focus on higher-level decisions."
+        question: "هل سيحل هذا محل المطورين؟",
+        answer: "لا، فهندسة البرمجيات تتطلب الحكم البشري والإبداع والسياق الذي لا يمكن للذكاء الاصطناعي أن يحل محله. تعمل منصتنا على تعزيز المهندسين، والتعامل مع العبء المعرفي لفهم النظام حتى تتمكن من التركيز على القرارات ذات المستوى الأعلى.",
     },
     {
-        question: "How does it handle proprietary codebases?",
-        answer: "Your code stays yours. We're building for on-premise and private cloud deployment with full data sovereignty. No code leaves your infrastructure without your explicit permission."
+        question: "كيف يتعامل مع قواعد التعليمات البرمجية الخاصة؟",
+        answer: "الرمز الخاص بك يبقى لك. نحن نصمم للنشر على السحابة المحلية والخاصة مع السيادة الكاملة للبيانات. لا يوجد رمز يترك البنية الأساسية الخاصة بك دون الحصول على إذن صريح منك.",
     },
     {
-        question: "What languages/frameworks does it support?",
-        answer: "We're starting with the most widely-used languages and frameworks. Specific support matrix will be announced closer to launch."
+        question: "ما اللغات/الأطر التي يدعمها؟",
+        answer: "لقد بدأنا باللغات والأطر الأكثر استخدامًا. سيتم الإعلان عن مصفوفة الدعم المحددة مع اقتراب موعد الإطلاق.",
     },
     {
-        question: "Can it work with legacy systems?",
-        answer: "Yes. In fact, legacy systems with minimal documentation are where architectural understanding becomes most valuable. The platform reconstructs architectural intent from the code itself."
+        question: "هل يمكن أن تعمل مع الأنظمة القديمة؟",
+        answer: "نعم. في الواقع، الأنظمة القديمة ذات الحد الأدنى من التوثيق هي المكان الذي يصبح فيه الفهم المعماري أكثر قيمة. تقوم المنصة بإعادة بناء النية المعمارية من الكود نفسه.",
     },
     {
-        question: "What's the learning curve?",
-        answer: "If you can use your current IDE, you can use our platform. We're designing for zero friction adoption."
+        question: "ما هو منحنى التعلم؟",
+        answer: "إذا كان بإمكانك استخدام IDE الحالي الخاص بك، فيمكنك استخدام منصتنا. نحن نصمم لاعتماد الاحتكاك الصفري.",
     },
     {
-        question: "Is my code used for training?",
-        answer: "No. Your code is never used for training. The platform analyzes your specific codebase to understand its unique architecture—your IP stays completely private."
+        question: "هل يتم استخدام الكود الخاص بي للتدريب؟",
+        answer: "لا، لن يتم استخدام الرمز الخاص بك مطلقًا للتدريب. يقوم النظام الأساسي بتحليل قاعدة التعليمات البرمجية الخاصة بك لفهم بنيتها الفريدة، ويظل عنوان IP الخاص بك خاصًا تمامًا.",
     },
     {
-        question: "How is this different from AI pair programming?",
-        answer: "AI pair programming tools predict what you'll type next. We understand what your changes will do to the entire system. It's the difference between tactical assistance and strategic understanding."
+        question: "كيف يختلف هذا عن البرمجة الزوجية للذكاء الاصطناعي؟",
+        answer: "تتنبأ أدوات البرمجة الزوجية بالذكاء الاصطناعي بما ستكتبه بعد ذلك. نحن نفهم ما ستفعله تغييراتك على النظام بأكمله. إنه الفرق بين المساعدة التكتيكية والفهم الاستراتيجي.",
     },
     {
-        question: "When exactly will it launch?",
-        answer: "2027, when it's ready for production use. We're not rushing to market with demos—we're building systems that work reliably in real-world conditions."
-    }
+        question: "متى سيتم إطلاقه بالضبط؟",
+        answer: "2027، عندما يكون جاهزًا للاستخدام الإنتاجي. نحن لا نتعجل في طرح العروض التوضيحية في السوق، بل نبني أنظمة تعمل بشكل موثوق في ظروف العالم الحقيقي.",
+    },
 ]

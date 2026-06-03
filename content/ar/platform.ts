@@ -1,54 +1,132 @@
 import { PlatformContent } from '@/app/lib/contentTypes'
 
 export const platformContent: PlatformContent = {
-    title: "Platform",
-    subtitle: "Autonomous Software Engineering Platform",
+    title: "المنصة",
+    subtitle: "هندسة البرمجيات المستقلة، إعادة تصورها",
     hero: {
-        title: "YugNex Platform",
-        description: "An AI-powered platform that understands, reasons, and collaborates on complex software systems."
-    },
-    builtFor: {
-        title: "Built for Engineers",
-        subtitle: "By Engineers",
-        body: "We understand the challenges of building complex software systems. YugNex is designed to amplify your capabilities, not replace them."
+        title: "ما نقوم ببنائه",
+        description: "نظام أساسي مدعوم بالذكاء الاصطناعي يتجاوز إنشاء التعليمات البرمجية لفهم أنظمة البرامج المعقدة والتفكير فيها والتعاون فيها. ليست أداة الإكمال التلقائي الأخرى. شريك هندسي تعاوني يجلب الفهم المعماري والتفكير المنهجي والتحقق من صحة سير عمل التطوير الخاص بك.",
     },
     capabilities: [
         {
-            title: "Architecture Understanding",
-            description: "Comprehends your system's structure and design patterns",
+            title: "يفهم الهندسة المعمارية، وليس بناء الجملة فقط",
+            description: "بينما تتنبأ الأدوات الحالية بالسطر التالي من التعليمات البرمجية، فإن نظامنا الأساسي يبني فهمًا شاملاً لبنية نظامك وتبعياته وأنماط تصميمه.",
             points: [
-                "Analyzes code relationships and dependencies",
-                "Understands design patterns and architectural decisions",
-                "Maintains context across the entire codebase"
-            ]
-        }
+                "يتم تقييم التغييرات في سياق النظام الكامل",
+                "يتم فهم تأثيرات التبعية قبل التنفيذ",
+                "يتم احترام الحدود المعمارية تلقائيًا",
+                "تظهر آثار الديون الفنية بشكل استباقي",
+            ],
+        },
+        {
+            title: "أسباب حول الآثار",
+            description: "كل تغيير في التعليمات البرمجية له آثار - الأداء والأمان وقابلية الصيانة وقابلية التوسع. منصتنا لا تقوم فقط بإنشاء التعليمات البرمجية؛ يتعلق الأمر بما يعنيه هذا الرمز لنظامك.",
+            points: [
+                "يتم تحليل التأثيرات على مستوى النظام",
+                "ويتم تقييم المخاطر والمقايضات",
+                "يتم النظر في النهج البديلة",
+                "يتم الحفاظ على التماسك المعماري",
+            ],
+        },
+        {
+            title: "التحقق من صحة على مستويات متعددة",
+            description: "إن الهدف من التعليمات البرمجية الصحيحة من الناحية النحوية هو أن تكون التعليمات البرمجية سليمة هندسيًا وقابلة للصيانة وآمنة.",
+            points: [
+                "الصواب: هل يعمل دون كسر الأشياء؟",
+                "السلامة: هل يتم الحفاظ على الحدود الأمنية؟",
+                "الهندسة المعمارية: هل تتوافق مع تصميم النظام؟",
+                "قابلية الصيانة: هل سيفهمها المهندسون بعد ستة أشهر من الآن؟",
+            ],
+        },
     ],
     useCases: [
         {
-            title: "Legacy Code Modernization",
-            challenge: "Update old codebases without breaking functionality",
-            solution: "YugNex understands the entire system and suggests safe refactoring paths"
-        }
+            title: "إعادة البناء المعقدة",
+            challenge: "تعد إعادة البناء في قواعد التعليمات البرمجية الكبيرة أمرًا محفوفًا بالمخاطر. أنت بحاجة إلى فهم كل مكان يتم استخدام الكود فيه، وكل تبعية قد تنكسر...",
+            solution: "يحلل الرسم البياني الكامل للتبعية، ويحدد جميع المكونات المتأثرة، ويقيم الآثار المعمارية، ويساعد في تنفيذ التغييرات بأمان.",
+        },
+        {
+            title: "التحليل المعماري",
+            challenge: "إن فهم كيفية عمل قاعدة التعليمات البرمجية الكبيرة فعليًا - أنماطها، وعقودها الضمنية، وقرارات التصميم الخاصة بها - يستغرق أسابيع لأعضاء الفريق الجدد.",
+            solution: "يبني خرائط معمارية شاملة توضح بنية النظام وعلاقات التبعية وأنماط التصميم والحدود المعمارية.",
+        },
+        {
+            title: "تطور النظام الآمن",
+            challenge: "إضافة ميزات أو إجراء تغييرات دون إدخال أخطاء أو انتهاك المبادئ المعمارية أو خلق ديون فنية.",
+            solution: "يقيم التغييرات المقترحة في سياق النظام بالكامل، ويحدد المشكلات المحتملة قبل التنفيذ، ويقترح أساليب متماسكة معمارياً.",
+        },
+        {
+            title: "فهم الكود القديم",
+            challenge: "يعد الحفاظ على قواعد التعليمات البرمجية الموروثة ذات الحد الأدنى من التوثيق وقرارات التصميم غير الواضحة والديون الفنية المتراكمة أمرًا مكلفًا.",
+            solution: "يعيد بناء الهدف المعماري، ويحدد أنماط التصميم والأنماط المضادة، ويرسم علاقات التبعية، ويوضح الديون الفنية.",
+        },
+        {
+            title: "مراجعة الكود على نطاق واسع",
+            challenge: "تتطلب المراجعة الشاملة للتعليمات البرمجية فهم الآثار المترتبة على مستوى النظام، ولكن لدى المراجعين وقت محدود ونطاق ترددي معرفي محدود.",
+            solution: "يقوم بإجراء تحليل معماري عميق، ويحدد المشكلات المحتملة عبر الأبعاد، ويسلط الضوء على الاهتمامات التي تتطلب الحكم البشري.",
+        },
     ],
     targetAudience: [
         {
-            role: "Engineering Teams",
-            painPoints: ["Context switching", "Knowledge silos", "Technical debt"],
-            benefit: "Shared AI teammate with perfect memory and system understanding"
-        }
+            role: "الفرق الهندسية",
+            painPoints: [
+                "خدمات متعددة",
+                "الأنماط المعمارية",
+                "متطلبات الأمان/الأداء",
+            ],
+            benefit: "أنت بحاجة إلى أكثر من الإكمال التلقائي. أنت بحاجة إلى فهم معماري.",
+        },
+        {
+            role: "كبار المهندسين والمعماريين",
+            painPoints: [
+                "تتبع التبعيات",
+                "تدقيق المخالفات المعمارية",
+                "شرح السياق",
+            ],
+            benefit: "يتعامل مع العبء المعرفي لفهم النظام، مما يحررك من التركيز على القرارات عالية المستوى.",
+        },
+        {
+            role: "فرق إدارة الديون الفنية",
+            painPoints: [
+                "نطاق غير معروف",
+                "تحديد الأولويات",
+                "إعادة هيكلة آمنة",
+            ],
+            benefit: "يجعل الديون الفنية مرئية ويساعدك على معالجتها بشكل منهجي.",
+        },
     ],
     workflow: {
-        title: "How It Works",
+        title: "كيف يعمل مع سير العمل الخاص بك",
         points: [
-            { title: "Connect", description: "Link your codebase to YugNex" },
-            { title: "Understand", description: "AI analyzes and maps your architecture" },
-            { title: "Collaborate", description: "Work together on features and fixes" },
-            { title: "Evolve", description: "System learns and improves continuously" }
-        ]
+            {
+                title: "متكاملة وغير تدخلية",
+                description: "يناسب بيئتك الحالية وقاعدة التعليمات البرمجية. لا الهجرة المطلوبة.",
+            },
+            {
+                title: "تعاونية وليست آلية",
+                description: "تقترح المنصة عليك أن تقرر. إنه يجلب نقاط قوة الذكاء الاصطناعي لاستكمال الحكم البشري.",
+            },
+            {
+                title: "صندوق شفاف وليس أسود",
+                description: "يُظهر منطقه، والتبعيات المحددة، والمخاطر، والمقايضات.",
+            },
+        ],
     },
     comparison: [
-        { category: "Context", others: "Session-based", us: "Persistent" },
-        { category: "Understanding", others: "Syntax-level", us: "Architecture-level" },
-        { category: "Collaboration", others: "One-shot", us: "Continuous" }
-    ]
+        {
+            category: "الإكمال التلقائي للكود",
+            others: "إنشاء التعليمات البرمجية على أساس الأنماط. توقع السطر التالي. مساعدة في الكتابة بشكل أسرع.",
+            us: "السبب حول الأنظمة. فهم الهندسة المعمارية بأكملها. مساعدة في بناء أفضل.",
+        },
+        {
+            category: "التحليل الساكن",
+            others: "ابحث عن المشكلات في الكود. الإبلاغ عن الأخطاء النحوية. تشغيل بعد الترميز.",
+            us: "فهم الآثار المعمارية. السبب وراء التأثيرات على مستوى النظام. قم بالتوجيه أثناء التطوير.",
+        },
+        {
+            category: "أدوات مراجعة الكود",
+            others: "تسهيل المراجعة البشرية. إظهار الاختلافات. تسليط الضوء على التغييرات.",
+            us: "إجراء التحليل المعماري. اشرح الآثار المترتبة. التحقق من تماسك النظام.",
+        },
+    ],
 }

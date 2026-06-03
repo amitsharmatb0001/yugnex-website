@@ -1,54 +1,132 @@
 import { PlatformContent } from '@/app/lib/contentTypes'
 
 export const platformContent: PlatformContent = {
-    title: "Platform",
-    subtitle: "Autonomous Software Engineering Platform",
+    title: "プラットフォーム",
+    subtitle: "自律型ソフトウェア エンジニアリングの再考",
     hero: {
-        title: "YugNex Platform",
-        description: "An AI-powered platform that understands, reasons, and collaborates on complex software systems."
-    },
-    builtFor: {
-        title: "Built for Engineers",
-        subtitle: "By Engineers",
-        body: "We understand the challenges of building complex software systems. YugNex is designed to amplify your capabilities, not replace them."
+        title: "私たちが構築しているもの",
+        description: "AI を活用したプラットフォームは、コード生成を超えて、複雑なソフトウェア システムを真に理解し、推論し、共同作業することができます。別のオートコンプリート ツールではありません。アーキテクチャの理解、体系的な推論、検証を開発ワークフローにもたらす、協力的なエンジニアリング パートナーです。",
     },
     capabilities: [
         {
-            title: "Architecture Understanding",
-            description: "Comprehends your system's structure and design patterns",
+            title: "構文だけでなくアーキテクチャを理解する",
+            description: "現在のツールはコードの次の行を予測しますが、当社のプラットフォームはシステムのアーキテクチャ、依存関係、設計パターンを包括的に理解します。",
             points: [
-                "Analyzes code relationships and dependencies",
-                "Understands design patterns and architectural decisions",
-                "Maintains context across the entire codebase"
-            ]
-        }
+                "変更はシステム全体のコンテキストで評価されます",
+                "依存関係の影響は実装前に理解される",
+                "建築上の境界は自動的に尊重されます",
+                "技術的負債の影響が積極的に表面化する",
+            ],
+        },
+        {
+            title: "影響に関する理由",
+            description: "すべてのコード変更には、パフォーマンス、セキュリティ、保守性、拡張性などの影響があります。私たちのプラットフォームはコードを生成するだけではありません。そのコードがシステムにとって何を意味するかを推論します。",
+            points: [
+                "システム全体への影響を分析",
+                "リスクとトレードオフを評価する",
+                "代替アプローチが検討されている",
+                "アーキテクチャの一貫性が維持される",
+            ],
+        },
+        {
+            title: "複数のレベルで検証",
+            description: "構文的に正しいコードが目標ではなく、アーキテクチャ的に健全で保守可能で安全なコードが目標です。",
+            points: [
+                "正しさ: 物を壊すことなく動作しますか?",
+                "安全性: セキュリティ境界は維持されていますか?",
+                "アーキテクチャ: システム設計と一致していますか?",
+                "保守性: エンジニアは 6 か月後にそれを理解できるでしょうか?",
+            ],
+        },
     ],
     useCases: [
         {
-            title: "Legacy Code Modernization",
-            challenge: "Update old codebases without breaking functionality",
-            solution: "YugNex understands the entire system and suggests safe refactoring paths"
-        }
+            title: "複雑なリファクタリング",
+            challenge: "大規模なコードベースでのリファクタリングにはリスクが伴います。コードが使用されるすべての場所、壊れる可能性のあるすべての依存関係を理解する必要があります。",
+            solution: "完全な依存関係グラフを分析し、影響を受けるすべてのコンポーネントを特定し、アーキテクチャへの影響を評価し、変更を安全に実行できるようにします。",
+        },
+        {
+            title: "アーキテクチャ分析",
+            challenge: "新しいチームメンバーが大規模なコードベースが実際にどのように機能するか、そのパターン、暗黙の契約、設計上の決定などを理解するには、数週間かかります。",
+            solution: "システム構造、依存関係、設計パターン、アーキテクチャ境界を示す包括的なアーキテクチャ マップを作成します。",
+        },
+        {
+            title: "安全なシステムの進化",
+            challenge: "バグを導入したり、アーキテクチャ原則に違反したり、技術的負債を生じさせたりすることなく、機能を追加したり変更を加えたりすること。",
+            solution: "提案された変更をシステム全体のコンテキストで評価し、実装前に潜在的な問題を特定し、アーキテクチャ的に一貫したアプローチを提案します。",
+        },
+        {
+            title: "レガシーコードの理解",
+            challenge: "最小限のドキュメント、不明確な設計上の決定、蓄積された技術的負債を含む継承されたコードベースの維持には費用がかかります。",
+            solution: "アーキテクチャの意図を再構築し、設計パターンとアンチパターンを特定し、依存関係をマッピングし、技術的負債を明らかにします。",
+        },
+        {
+            title: "大規模なコードレビュー",
+            challenge: "徹底的なコードレビューにはシステム全体の影響を理解する必要がありますが、レビュー担当者の時間と認識帯域幅は限られています。",
+            solution: "アーキテクチャに関する詳細な分析を実行し、さまざまな次元で潜在的な問題を特定し、人間の判断が必要な懸念事項を強調表示します。",
+        },
     ],
     targetAudience: [
         {
-            role: "Engineering Teams",
-            painPoints: ["Context switching", "Knowledge silos", "Technical debt"],
-            benefit: "Shared AI teammate with perfect memory and system understanding"
-        }
+            role: "エンジニアリングチーム",
+            painPoints: [
+                "複数のサービス",
+                "アーキテクチャパターン",
+                "セキュリティ/パフォーマンスの要件",
+            ],
+            benefit: "オートコンプリート以上のものが必要です。建築的な理解が必要です。",
+        },
+        {
+            role: "シニアエンジニアおよびアーキテクト",
+            painPoints: [
+                "依存関係のトレース",
+                "アーキテクチャ違反のレビュー",
+                "コンテキストの説明",
+            ],
+            benefit: "システム理解の認知的負荷を処理し、高レベルの意思決定に集中できるようにします。",
+        },
+        {
+            role: "技術的負債を管理するチーム",
+            painPoints: [
+                "不明な範囲",
+                "優先順位付け",
+                "安全なリファクタリング",
+            ],
+            benefit: "技術的負債を可視化し、体系的に対処するのに役立ちます。",
+        },
     ],
     workflow: {
-        title: "How It Works",
+        title: "ワークフローでの仕組み",
         points: [
-            { title: "Connect", description: "Link your codebase to YugNex" },
-            { title: "Understand", description: "AI analyzes and maps your architecture" },
-            { title: "Collaborate", description: "Work together on features and fixes" },
-            { title: "Evolve", description: "System learns and improves continuously" }
-        ]
+            {
+                title: "統合型で邪魔にならない",
+                description: "既存の環境とコードベースに適合します。移行は必要ありません。",
+            },
+            {
+                title: "自動化ではなく共同作業",
+                description: "プラットフォームは、あなたが決めることを提案します。 AI の強みをもたらし、人間の判断を補完します。",
+            },
+            {
+                title: "ブラックボックスではなく透明",
+                description: "その推論、特定された依存関係、リスク、トレードオフを示します。",
+            },
+        ],
     },
     comparison: [
-        { category: "Context", others: "Session-based", us: "Persistent" },
-        { category: "Understanding", others: "Syntax-level", us: "Architecture-level" },
-        { category: "Collaboration", others: "One-shot", us: "Continuous" }
-    ]
+        {
+            category: "コードのオートコンプリート",
+            others: "パターンに基づいてコードを生成します。次の行を予測します。より速く書くのに役立ちます。",
+            us: "システムに関する理由。アーキテクチャ全体を理解する。より良い構築を支援します。",
+        },
+        {
+            category: "静的解析",
+            others: "コード内の問題を見つけます。構文エラーにフラグを立てます。コーディング後に実行します。",
+            us: "アーキテクチャ上の影響を理解する。システム全体への影響に関する理由。成長に合わせてガイドします。",
+        },
+        {
+            category: "コードレビューツール",
+            others: "人間によるレビューを促進します。差分を表示します。変更を強調表示します。",
+            us: "アーキテクチャ分析を実行します。影響を説明します。システムの一貫性を検証します。",
+        },
+    ],
 }

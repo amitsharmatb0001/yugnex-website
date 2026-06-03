@@ -9,19 +9,27 @@ export const researchContent: ResearchContent = {
             "Satahi star ki generation par gehri samajh",
             "Architecture aur implications ke bare mein systematic tark",
             "Nirantar seekhna aur anukuln (adaptation)",
-            "Manav-AI sahyogi buddhimatta"
-        ]
+            "Manav-AI sahyogi buddhimatta",
+            "इसे सही करने का समय आ गया है",
+        ],
     },
     papers: [
         {
-            id: 'whitepaper-2026',
-            title: 'Swayatt Software Engineering ki or: Chunautiyan aur Dishayein',
-            description: 'AI-assisted software engineering mein reasoning, context, aur architectural samajh par shodh. Yeh whitepaper persistent, autonomous software engineering intelligence banane mein aane wali moolbhoot chunautiyon ki padtaal karta hai.',
-            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
-            fileName: 'YugNex_Research_Whitepaper.pdf',
-            publishDate: '2026-01-01',
-            authors: ['YugNex Technical Research Division'],
-            tags: ['AI', 'Software Engineering', 'Autonomous Systems', 'Research']
-        }
-    ]
+            id: "whitepaper-2026",
+            title: "Swayatt Software Engineering ki or: Chunautiyan aur Dishayein",
+            description: "AI-assisted software engineering mein reasoning, context, aur architectural samajh par shodh. Yeh whitepaper persistent, autonomous software engineering intelligence banane mein aane wali moolbhoot chunautiyon ki padtaal karta hai.",
+            pdfUrl: "/YugNex_Research_Whitepaper.pdf",
+            fileName: "YugNex_Research_Whitepaper.pdf",
+            publishDate: "2026-01-01",
+            authors: [
+                "YugNex Technical Research Division",
+            ],
+            tags: [
+                "AI",
+                "Software Engineering",
+                "Autonomous Systems",
+                "Research",
+            ],
+        },
+    ],
 }

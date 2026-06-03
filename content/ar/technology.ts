@@ -1,32 +1,59 @@
 import { TechnologyContent } from '@/app/lib/contentTypes'
 
 export const technologyContent: TechnologyContent = {
-    title: "Technology",
+    title: "مشكلة أدوات ترميز الذكاء الاصطناعي الحالية",
     problem: {
-        title: "The Problem with Current AI Tools",
-        subtitle: "Context-Free Code Generation",
-        body: "Current AI coding assistants generate plausible code without understanding your system's architecture, leading to bugs and technical debt.",
+        title: "إنهم ينشئون التعليمات البرمجية، لكنهم لا يفهمون الأنظمة",
+        subtitle: "لقد حقق مساعدو البرمجة بالذكاء الاصطناعي اليوم نتائج مبهرة، مثل الإكمال التلقائي للتعليمات البرمجية، وتوليد الوظائف، والترجمة بين اللغات. ولكنها جميعها تشترك في قيد أساسي: فهي تتعامل مع البرمجيات باعتبارها نصًا يجب إنشاؤه، وليس أنظمة يجب فهمها.",
+        body: "هندسة البرمجيات ليست مشكلة في إنشاء النصوص. إنها مشكلة منطق النظام.",
         limitations: [
-            { title: "No Memory", description: "Forgets context between sessions" },
-            { title: "No Architecture Awareness", description: "Doesn't understand your system design" },
-            { title: "No Validation", description: "Generates code that compiles but breaks things" }
-        ]
+            {
+                title: "مشكلة السياق",
+                description: "تحتوي قواعد التعليمات البرمجية على ملايين الأسطر عبر آلاف الملفات. تحاول الأدوات الحالية سد هذه المشكلة من خلال الاسترجاع البسيط، ولكن الملاءمة في البرامج ليست تشابهًا نصيًا، بل تتعلق بالعلاقات السببية وسلاسل التبعية والحدود المعمارية.",
+            },
+            {
+                title: "الفجوة المنطقية",
+                description: "هناك فرق جوهري بين إنشاء تعليمات برمجية صحيحة نحويًا واتخاذ قرارات هندسية سليمة. عندما يقوم المهندسون ذوو الخبرة بتعديل التعليمات البرمجية، فإنهم يأخذون في الاعتبار الآثار المعمارية على مستوى النظام، وتأثيرات التبعية، ومقايضات الأداء، وقابلية الصيانة.",
+            },
+            {
+                title: "فجوة التحقق",
+                description: "تتطلب هندسة البرمجيات الصواب وليس المعقولية. تفتقر الأدوات الحالية إلى آليات للتحقق من صحتها بما يتجاوز التحقق من بناء الجملة. ولا يمكنهم التفكير فيما إذا كانت التغييرات تحافظ على ثوابت النظام، أو تحترم الحدود المعمارية، أو تقدم ثغرات أمنية.",
+            },
+        ],
     },
     approach: {
-        title: "YugNex Approach",
-        subtitle: "Architecture-Aware AI Engineering",
+        title: "بنيت لهندسة البرمجيات",
+        subtitle: "لقد بدأنا بسؤال مختلف: ليس \"كيف يمكن للذكاء الاصطناعي كتابة تعليمات برمجية أفضل؟\" ولكن \"كيف يمكن للذكاء الاصطناعي فهم الأنظمة البرمجية بالطريقة التي يفعلها المهندسون ذوو الخبرة؟\"",
         sections: [
-            { title: "Persistent Context", body: "Never forgets your codebase architecture and patterns" },
-            { title: "Systemic Reasoning", body: "Understands implications across your entire system" },
-            { title: "Multi-Level Validation", body: "Ensures correctness, security, and maintainability" }
-        ]
+            {
+                title: "التخصص على التعميم",
+                body: "تتطلب الجوانب المختلفة لهندسة البرمجيات أنواعًا مختلفة تمامًا من التفكير. بدلاً من ضغط كل شيء في نموذج واحد، نستخدم مكونات الذكاء الاصطناعي المتخصصة - كل منها مصمم لمجالات محددة من التفكير البرمجي - للعمل معًا كفريق هندسي.",
+            },
+            {
+                title: "التفكير التعاوني",
+                body: "غالبًا ما تتطلب القرارات المتعلقة بالبرمجيات إجراء مفاضلات بين الاهتمامات المتنافسة. تتيح بنيتنا للمكونات المتخصصة مشاركة السياق وتحدي الافتراضات والعمل نحو التوافق من خلال التنسيق المنظم.",
+            },
+            {
+                title: "فهم على مستوى النظام",
+                body: "يعمل فهم البرمجيات على مستويات متعددة: بناء الجملة، والدلالات، والأنماط المعمارية، وقصد التصميم، والخصائص على مستوى النظام. نحن نستخدم التفكير الطبقي حيث تعمل المكونات المختلفة على مستويات مختلفة من التجريد.",
+            },
+            {
+                title: "سياق أبعد من الاسترجاع",
+                body: "بدلاً من سحب مقتطفات التعليمات البرمجية المنفصلة، ​​فإننا نعمل على تطوير أساليب لبناء تمثيلات ديناميكية لعلاقات النظام - لا نلتقط التعليمات البرمجية فحسب، بل شبكة التبعيات والثوابت والحدود المعمارية.",
+            },
+        ],
     },
     difference: {
-        title: "The YugNex Difference",
+        title: "الفرق",
         comparison: [
-            { label: "Context", value: "Persistent" },
-            { label: "Understanding", value: "Architecture-Aware" },
-            { label: "Validation", value: "Multi-Dimensional" }
-        ]
-    }
+            {
+                label: "الأدوات الحالية",
+                value: "إنشاء التعليمات البرمجية ← تحسين بناء الجملة ← العمل ضمن حدود السياق ← بنيات الأغراض العامة",
+            },
+            {
+                label: "نهجنا",
+                value: "فهم الأنظمة ← السبب وراء الهندسة المعمارية ← إنشاء تمثيلات ديناميكية ← مصممة خصيصًا لهندسة البرمجيات",
+            },
+        ],
+    },
 }

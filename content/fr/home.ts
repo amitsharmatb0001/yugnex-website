@@ -5,5 +5,5 @@ export const homeContent: HomeContent = {
     tagline: "Laboratoire de Systèmes d'IA Fondamentaux · De l'Inde pour le Monde",
     subline: "Nous construisons des plateformes d'ingénierie logicielle autonomes qui comprennent, raisonnent et collaborent véritablement",
     banner: "Phase R&D Privée • Lancement 2027",
-    credentials: "DPIIT Recognized (DIPP234393) • Founded 2025 • Deep Research Mode"
+    credentials: "DPIIT Recognized (DIPP234393) • Founded 2025 • Deep Research Mode",
 }

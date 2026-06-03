@@ -1,54 +1,54 @@
 export const faqContent = [
     {
-        question: "When can I try it?",
-        answer: "We're in advanced prototype phase with launch planned for 2027. Join our waitlist for early access."
+        question: "Wann kann ich es versuchen?",
+        answer: "Wir befinden uns in der fortgeschrittenen Prototypenphase, der Start ist für 2027 geplant. Tragen Sie sich auf unsere Warteliste für den frühen Zugriff ein.",
     },
     {
-        question: "Is this another code completion tool?",
-        answer: "No. We're building systems that understand and reason about entire software architectures."
+        question: "Ist dies ein weiteres Code-Vervollständigungstool?",
+        answer: "Nein. Wir bauen Systeme, die ganze Softwarearchitekturen verstehen und überdenken.",
     },
     {
-        question: "Why should I believe this is possible?",
-        answer: "Because AI capabilities have reached the threshold where true software reasoning is feasible. We've filed patents on the core innovations. The question is execution, not possibility."
+        question: "Warum sollte ich glauben, dass das möglich ist?",
+        answer: "Weil die KI-Fähigkeiten die Schwelle erreicht haben, an der echtes Software-Denken möglich ist. Wir haben die Kerninnovationen zum Patent angemeldet. Die Frage ist die Ausführung, nicht die Möglichkeit.",
     },
     {
-        question: "Are you hiring?",
-        answer: "Currently focused on core R&D. Future opportunities will be announced."
+        question: "Stellen Sie ein?",
+        answer: "Konzentriert sich derzeit auf die Kernforschung und -entwicklung. Zukünftige Möglichkeiten werden bekannt gegeben.",
     },
     {
-        question: "What makes you different from Cursor, GitHub Copilot, or other AI coding tools?",
-        answer: "Those are assistance tools. We're building autonomous engineering systems. The difference is reasoning vs. generation."
+        question: "Was unterscheidet Sie von Cursor, GitHub Copilot oder anderen KI-Codierungstools?",
+        answer: "Das sind Hilfsmittel. Wir bauen autonome technische Systeme. Der Unterschied liegt im Denken vs. Generieren.",
     },
     {
-        question: "Will this replace developers?",
-        answer: "No. Software engineering requires human judgment, creativity, and context that AI can't replace. Our platform augments engineers, handling the cognitive load of system understanding so you can focus on higher-level decisions."
+        question: "Wird dies Entwickler ersetzen?",
+        answer: "Nein. Softwareentwicklung erfordert menschliches Urteilsvermögen, Kreativität und Kontext, die KI nicht ersetzen kann. Unsere Plattform unterstützt Ingenieure, indem sie die kognitive Belastung des Systemverständnisses bewältigt, sodass Sie sich auf Entscheidungen auf höherer Ebene konzentrieren können.",
     },
     {
-        question: "How does it handle proprietary codebases?",
-        answer: "Your code stays yours. We're building for on-premise and private cloud deployment with full data sovereignty. No code leaves your infrastructure without your explicit permission."
+        question: "Wie geht es mit proprietären Codebasen um?",
+        answer: "Ihr Code bleibt Ihr. Wir entwickeln Lösungen für die On-Premise- und Private-Cloud-Bereitstellung mit vollständiger Datensouveränität. Kein Code verlässt Ihre Infrastruktur ohne Ihre ausdrückliche Erlaubnis.",
     },
     {
-        question: "What languages/frameworks does it support?",
-        answer: "We're starting with the most widely-used languages and frameworks. Specific support matrix will be announced closer to launch."
+        question: "Welche Sprachen/Frameworks werden unterstützt?",
+        answer: "Wir beginnen mit den am häufigsten verwendeten Sprachen und Frameworks. Die spezifische Support-Matrix wird kurz vor der Veröffentlichung bekannt gegeben.",
     },
     {
-        question: "Can it work with legacy systems?",
-        answer: "Yes. In fact, legacy systems with minimal documentation are where architectural understanding becomes most valuable. The platform reconstructs architectural intent from the code itself."
+        question: "Funktioniert es mit Legacy-Systemen?",
+        answer: "Ja. Tatsächlich ist das Verständnis der Architektur bei Altsystemen mit minimaler Dokumentation am wertvollsten. Die Plattform rekonstruiert die architektonische Absicht aus dem Code selbst.",
     },
     {
-        question: "What's the learning curve?",
-        answer: "If you can use your current IDE, you can use our platform. We're designing for zero friction adoption."
+        question: "Wie ist die Lernkurve?",
+        answer: "Wenn Sie Ihre aktuelle IDE verwenden können, können Sie unsere Plattform nutzen. Wir entwerfen für eine reibungslose Einführung.",
     },
     {
-        question: "Is my code used for training?",
-        answer: "No. Your code is never used for training. The platform analyzes your specific codebase to understand its unique architecture—your IP stays completely private."
+        question: "Wird mein Code für das Training verwendet?",
+        answer: "Nein. Ihr Code wird niemals für Schulungen verwendet. Die Plattform analysiert Ihre spezifische Codebasis, um deren einzigartige Architektur zu verstehen – Ihre IP bleibt vollständig privat.",
     },
     {
-        question: "How is this different from AI pair programming?",
-        answer: "AI pair programming tools predict what you'll type next. We understand what your changes will do to the entire system. It's the difference between tactical assistance and strategic understanding."
+        question: "Wie unterscheidet sich das von der KI-Paarprogrammierung?",
+        answer: "KI-Paar-Programmiertools sagen voraus, was Sie als Nächstes eingeben werden. Wir verstehen, welche Auswirkungen Ihre Änderungen auf das gesamte System haben. Es ist der Unterschied zwischen taktischer Unterstützung und strategischem Verständnis.",
     },
     {
-        question: "When exactly will it launch?",
-        answer: "2027, when it's ready for production use. We're not rushing to market with demos—we're building systems that work reliably in real-world conditions."
-    }
+        question: "Wann genau wird es starten?",
+        answer: "2027, wenn es für den Produktionseinsatz bereit ist. Wir drängen nicht mit Demos auf den Markt – wir bauen Systeme, die unter realen Bedingungen zuverlässig funktionieren.",
+    },
 ]

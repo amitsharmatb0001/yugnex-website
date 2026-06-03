@@ -1,54 +1,54 @@
 export const faqContent = [
     {
-        question: "When can I try it?",
-        answer: "We're in advanced prototype phase with launch planned for 2027. Join our waitlist for early access."
+        question: "我什么时候可以尝试一下？",
+        answer: "我们正处于高级原型阶段，计划于 2027 年发布。加入我们的等候名单即可抢先体验。",
     },
     {
-        question: "Is this another code completion tool?",
-        answer: "No. We're building systems that understand and reason about entire software architectures."
+        question: "这是另一个代码完成工具吗？",
+        answer: "不。我们正在构建能够理解和推理整个软件架构的系统。",
     },
     {
-        question: "Why should I believe this is possible?",
-        answer: "Because AI capabilities have reached the threshold where true software reasoning is feasible. We've filed patents on the core innovations. The question is execution, not possibility."
+        question: "我为什么要相信这是可能的？",
+        answer: "因为人工智能的能力已经达到了真正软件推理可行的门槛。我们已经为核心创新申请了专利。问题是执行，而不是可能性。",
     },
     {
-        question: "Are you hiring?",
-        answer: "Currently focused on core R&D. Future opportunities will be announced."
+        question: "你在招人吗？",
+        answer: "目前专注于核心研发。未来的机会将被公布。",
     },
     {
-        question: "What makes you different from Cursor, GitHub Copilot, or other AI coding tools?",
-        answer: "Those are assistance tools. We're building autonomous engineering systems. The difference is reasoning vs. generation."
+        question: "你与 Cursor、GitHub Copilot 或其他 AI 编码工具有何不同？",
+        answer: "这些都是辅助工具。我们正在构建自主工程系统。区别在于推理与生成。",
     },
     {
-        question: "Will this replace developers?",
-        answer: "No. Software engineering requires human judgment, creativity, and context that AI can't replace. Our platform augments engineers, handling the cognitive load of system understanding so you can focus on higher-level decisions."
+        question: "这会取代开发商吗？",
+        answer: "不。软件工程需要人工智能无法取代的人类判断力、创造力和背景。我们的平台增强了工程师的能力，处理系统理解的认知负荷，以便您可以专注于更高级别的决策。",
     },
     {
-        question: "How does it handle proprietary codebases?",
-        answer: "Your code stays yours. We're building for on-premise and private cloud deployment with full data sovereignty. No code leaves your infrastructure without your explicit permission."
+        question: "它如何处理专有代码库？",
+        answer: "您的代码仍然属于您。我们正在构建具有完整数据主权的本地和私有云部署。未经您的明确许可，任何代码都不会离开您的基础设施。",
     },
     {
-        question: "What languages/frameworks does it support?",
-        answer: "We're starting with the most widely-used languages and frameworks. Specific support matrix will be announced closer to launch."
+        question: "它支持哪些语言/框架？",
+        answer: "我们从最广泛使用的语言和框架开始。具体支持矩阵将在临近发布时公布。",
     },
     {
-        question: "Can it work with legacy systems?",
-        answer: "Yes. In fact, legacy systems with minimal documentation are where architectural understanding becomes most valuable. The platform reconstructs architectural intent from the code itself."
+        question: "它可以与遗留系统一起使用吗？",
+        answer: "是的。事实上，只有最少文档的遗留系统才是架构理解最有价值的地方。该平台从代码本身重建架构意图。",
     },
     {
-        question: "What's the learning curve?",
-        answer: "If you can use your current IDE, you can use our platform. We're designing for zero friction adoption."
+        question: "学习曲线是怎样的？",
+        answer: "如果您可以使用当前的 IDE，则可以使用我们的平台。我们正在设计零摩擦采用。",
     },
     {
-        question: "Is my code used for training?",
-        answer: "No. Your code is never used for training. The platform analyzes your specific codebase to understand its unique architecture—your IP stays completely private."
+        question: "我的代码用于训练吗？",
+        answer: "不会。您的代码绝不会用于训练。该平台分析您的特定代码库以了解其独特的架构 - 您的 IP 保持完全私有。",
     },
     {
-        question: "How is this different from AI pair programming?",
-        answer: "AI pair programming tools predict what you'll type next. We understand what your changes will do to the entire system. It's the difference between tactical assistance and strategic understanding."
+        question: "这与人工智能结对编程有何不同？",
+        answer: "人工智能结对编程工具可以预测您接下来要输入的内容。我们了解您的更改将对整个系统产生什么影响。这就是战术协助和战略理解之间的区别。",
     },
     {
-        question: "When exactly will it launch?",
-        answer: "2027, when it's ready for production use. We're not rushing to market with demos—we're building systems that work reliably in real-world conditions."
-    }
+        question: "具体什么时候推出？",
+        answer: "2027 年，准备投入生产使用。我们并不急于将演示推向市场——我们正在构建在现实条件下可靠工作的系统。",
+    },
 ]

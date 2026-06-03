@@ -1,32 +1,59 @@
 import { TechnologyContent } from '@/app/lib/contentTypes'
 
 export const technologyContent: TechnologyContent = {
-    title: "Technology",
+    title: "当前人工智能编码工具的问题",
     problem: {
-        title: "The Problem with Current AI Tools",
-        subtitle: "Context-Free Code Generation",
-        body: "Current AI coding assistants generate plausible code without understanding your system's architecture, leading to bugs and technical debt.",
+        title: "他们生成代码，但不理解系统",
+        subtitle: "如今的人工智能编码助手已经取得了令人印象深刻的成果——自动完成代码、生成函数、在语言之间进行翻译。但它们都有一个基本的局限性：它们将软件视为要生成的文本，而不是要理解的系统。",
+        body: "软件工程不是文本生成问题。这是一个系统推理问题。",
         limitations: [
-            { title: "No Memory", description: "Forgets context between sessions" },
-            { title: "No Architecture Awareness", description: "Doesn't understand your system design" },
-            { title: "No Validation", description: "Generates code that compiles but breaks things" }
-        ]
+            {
+                title: "语境问题",
+                description: "代码库包含数千个文件中的数百万行。当前的工具试图通过简单的检索来弥补这一点，但软件中的相关性并不是文本相似性，而是关于因果关系、依赖链和架构边界。",
+            },
+            {
+                title: "推理差距",
+                description: "生成语法正确的代码和做出合理的工程决策之间存在根本区别。当经验丰富的工程师修改代码时，他们会考虑系统范围的架构影响、依赖性影响、性能权衡和可维护性。",
+            },
+            {
+                title: "验证差距",
+                description: "软件工程需要正确性，而不是合理性。当前的工具缺乏语法检查之外的验证机制。他们无法推断更改是否会维护系统不变性、尊重架构边界或引入安全漏洞。",
+            },
+        ],
     },
     approach: {
-        title: "YugNex Approach",
-        subtitle: "Architecture-Aware AI Engineering",
+        title: "专为软件工程而打造",
+        subtitle: "我们从一个不同的问题开始：不是“人工智能如何编写更好的代码？”但是“人工智能如何像经验丰富的工程师那样理解软件系统呢？”",
         sections: [
-            { title: "Persistent Context", body: "Never forgets your codebase architecture and patterns" },
-            { title: "Systemic Reasoning", body: "Understands implications across your entire system" },
-            { title: "Multi-Level Validation", body: "Ensures correctness, security, and maintainability" }
-        ]
+            {
+                title: "专业化胜于普遍化",
+                body: "软件工程的不同方面需要根本不同类型的推理。我们没有将所有内容压缩到单个模型中，而是使用专门的人工智能组件（每个组件都是针对特定的软件推理领域而设计的），就像工程团队一样一起工作。",
+            },
+            {
+                title: "协作推理",
+                body: "软件决策通常需要在相互竞争的问题之间进行权衡。我们的架构使专业组件能够共享上下文、挑战假设并通过结构化协调达成共识。",
+            },
+            {
+                title: "全系统的理解",
+                body: "软件理解在多个层面上进行：语法、语义、架构模式、设计意图和系统范围的属性。我们使用分层推理，其中不同的组件在不同的抽象级别上运行。",
+            },
+            {
+                title: "无法检索的上下文",
+                body: "我们不是提取断开连接的代码片段，而是开发构建系统关系的动态表示的方法——不仅捕获代码，还捕获依赖关系、不变量和架构边界的网络。",
+            },
+        ],
     },
     difference: {
-        title: "The YugNex Difference",
+        title: "区别",
         comparison: [
-            { label: "Context", value: "Persistent" },
-            { label: "Understanding", value: "Architecture-Aware" },
-            { label: "Validation", value: "Multi-Dimensional" }
-        ]
-    }
+            {
+                label: "当前工具",
+                value: "生成代码 → 优化语法 → 在上下文限制内工作 → 通用架构",
+            },
+            {
+                label: "我们的方法",
+                value: "理解系统 → 架构推理 → 构建动态表示 → 专为软件工程而构建",
+            },
+        ],
+    },
 }

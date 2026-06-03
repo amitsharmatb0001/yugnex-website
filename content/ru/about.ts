@@ -1,28 +1,40 @@
 import { AboutContent } from '@/app/lib/contentTypes'
 
 export const aboutContent: AboutContent = {
-    title: "About YugNex Technology",
+    title: "О технологии ЮгНекс",
     company: {
-        name: "YugNex Technology",
-        status: "Deep Research & MVP Prototyping",
-        recognition: "DPIIT Recognized Startup (16 Dec 2025)",
-        location: "Bhilwara, Rajasthan, India"
+        name: "ЮгНекс Технология",
+        status: "Глубокие исследования и прототипирование MVP",
+        recognition: "Признанный стартап ДПИИТ (16 декабря 2025 г.)",
+        location: "Бхилвара, Раджастхан, Индия",
     },
     founder: {
-        name: "Amit Sharma",
-        bio: "Software developer and entrepreneur. Building autonomous systems that solve real engineering problems."
+        name: "Амит Шарма",
+        bio: "Разработчик программного обеспечения и предприниматель. Создание автономных систем, решающих реальные инженерные задачи.",
     },
     approach: [
-        "Research-first development",
-        "Patent-filed innovations (Provisional Filed January 2026)",
-        "Self-funded independence",
-        "Focus on fundamentals over hype",
-        "Building in India for the world"
+        "Научно-исследовательская разработка",
+        "Инновации, поданные на патент (предварительная подача: январь 2026 г.)",
+        "Самофинансируемая независимость",
+        "Сосредоточьтесь на основах, а не на шумихе",
+        "Строительство в Индии для всего мира",
     ],
     credentials: [
-        { label: "DPIIT Recognition", value: "16 Dec 2025" },
-        { label: "Incorporated", value: "Oct 2025" },
-        { label: "Status", value: "Deep Research & MVP Prototyping" },
-        { label: "Launch Timeline", value: "2027" }
-    ]
+        {
+            label: "Признание ДПИИТ",
+            value: "16 декабря 2025 г.",
+        },
+        {
+            label: "Инкорпорейтед",
+            value: "октябрь 2025 г.",
+        },
+        {
+            label: "Статус",
+            value: "Глубокие исследования и прототипирование MVP",
+        },
+        {
+            label: "График запуска",
+            value: "2027",
+        },
+    ],
 }

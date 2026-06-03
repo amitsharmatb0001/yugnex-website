@@ -1,28 +1,40 @@
 import { AboutContent } from '@/app/lib/contentTypes'
 
 export const aboutContent: AboutContent = {
-    title: "About YugNex Technology",
+    title: "关于YugNex科技",
     company: {
-        name: "YugNex Technology",
-        status: "Deep Research & MVP Prototyping",
-        recognition: "DPIIT Recognized Startup (16 Dec 2025)",
-        location: "Bhilwara, Rajasthan, India"
+        name: "宇格科技",
+        status: "深入研究和 MVP 原型设计",
+        recognition: "DPIIT 认可的初创企业（2025 年 12 月 16 日）",
+        location: "印度拉贾斯坦邦比尔瓦拉",
     },
     founder: {
-        name: "Amit Sharma",
-        bio: "Software developer and entrepreneur. Building autonomous systems that solve real engineering problems."
+        name: "阿米特·夏尔马",
+        bio: "软件开发人员和企业家。构建解决实际工程问题的自主系统。",
     },
     approach: [
-        "Research-first development",
-        "Patent-filed innovations (Provisional Filed January 2026)",
-        "Self-funded independence",
-        "Focus on fundamentals over hype",
-        "Building in India for the world"
+        "研究先行的开发",
+        "已申请专利的创新（临时申请 2026 年 1 月）",
+        "自筹资金独立",
+        "关注基本面而非炒作",
+        "在印度为世界建设",
     ],
     credentials: [
-        { label: "DPIIT Recognition", value: "16 Dec 2025" },
-        { label: "Incorporated", value: "Oct 2025" },
-        { label: "Status", value: "Deep Research & MVP Prototyping" },
-        { label: "Launch Timeline", value: "2027" }
-    ]
+        {
+            label: "DPIIT 认可",
+            value: "2025 年 12 月 16 日",
+        },
+        {
+            label: "法人",
+            value: "2025 年 10 月",
+        },
+        {
+            label: "地位",
+            value: "深入研究和 MVP 原型设计",
+        },
+        {
+            label: "启动时间表",
+            value: "2027",
+        },
+    ],
 }

@@ -1,12 +1,12 @@
 import { VisionContent } from '@/app/lib/contentTypes'
 
 export const visionContent: VisionContent = {
-    title: "Vision",
-    lead: "The transition to a new epoch of persistent, evolving engineering intelligence",
+    title: "想象",
+    lead: "向持久、不断发展的工程智能新时代的过渡",
     paragraphs: [
-        "We are entering a new era where software engineering is no longer limited by human cognitive bandwidth or the ephemeral nature of current tools.",
-        "YugNex represents the bridge between the 'Yug' (epoch) of human-only engineering and the 'Nex' (next) era of collaborative, autonomous systems.",
-        "Our vision is to create a persistent digital intelligence that understands software not just as text, but as a living, evolving system—preserving intent, context, and reasoning across the entire lifecycle.",
-        "We believe the future of software lies in the symbiotic relationship between human creativity and machine continuity, where AI doesn't just assist, but truly engineers alongside us."
-    ]
+        "我们正在进入一个新时代，软件工程不再受到人类认知带宽或当前工具的短暂性的限制。",
+        "YugNex 代表了纯人类工程的“Yug”（时代）和协作、自治系统的“Nex”（下一个）时代之间的桥梁。",
+        "我们的愿景是创建持久的数字智能，不仅将软件理解为文本，而且将其理解为一个活生生的、不断发展的系统——在整个生命周期中保留意图、上下文和推理。",
+        "我们相信软件的未来在于人类创造力和机器连续性之间的共生关系，其中人工智能不仅提供帮助，而且真正与我们一起工程师。",
+    ],
 }

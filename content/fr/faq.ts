@@ -1,54 +1,54 @@
 export const faqContent = [
     {
-        question: "When can I try it?",
-        answer: "We're in advanced prototype phase with launch planned for 2027. Join our waitlist for early access."
+        question: "Quand puis-je l'essayer ?",
+        answer: "Nous sommes en phase de prototype avancé avec un lancement prévu pour 2027. Rejoignez notre liste d'attente pour un accès anticipé.",
     },
     {
-        question: "Is this another code completion tool?",
-        answer: "No. We're building systems that understand and reason about entire software architectures."
+        question: "Est-ce un autre outil de complétion de code ?",
+        answer: "Non. Nous construisons des systèmes qui comprennent et raisonnent sur des architectures logicielles entières.",
     },
     {
-        question: "Why should I believe this is possible?",
-        answer: "Because AI capabilities have reached the threshold where true software reasoning is feasible. We've filed patents on the core innovations. The question is execution, not possibility."
+        question: "Pourquoi devrais-je croire que cela est possible ?",
+        answer: "Parce que les capacités de l’IA ont atteint le seuil où un véritable raisonnement logiciel est réalisable. Nous avons déposé des brevets sur les principales innovations. La question est l’exécution, pas la possibilité.",
     },
     {
-        question: "Are you hiring?",
-        answer: "Currently focused on core R&D. Future opportunities will be announced."
+        question: "Vous recrutez ?",
+        answer: "Actuellement concentré sur la R&D de base. Les opportunités futures seront annoncées.",
     },
     {
-        question: "What makes you different from Cursor, GitHub Copilot, or other AI coding tools?",
-        answer: "Those are assistance tools. We're building autonomous engineering systems. The difference is reasoning vs. generation."
+        question: "Qu'est-ce qui vous différencie de Cursor, de GitHub Copilot ou d'autres outils de codage d'IA ?",
+        answer: "Ce sont des outils d'assistance. Nous construisons des systèmes d'ingénierie autonomes. La différence est le raisonnement par rapport à la génération.",
     },
     {
-        question: "Will this replace developers?",
-        answer: "No. Software engineering requires human judgment, creativity, and context that AI can't replace. Our platform augments engineers, handling the cognitive load of system understanding so you can focus on higher-level decisions."
+        question: "Est-ce que cela remplacera les développeurs ?",
+        answer: "Non. Le génie logiciel nécessite du jugement humain, de la créativité et un contexte que l’IA ne peut pas remplacer. Notre plateforme complète les ingénieurs en gérant la charge cognitive liée à la compréhension du système afin que vous puissiez vous concentrer sur des décisions de niveau supérieur.",
     },
     {
-        question: "How does it handle proprietary codebases?",
-        answer: "Your code stays yours. We're building for on-premise and private cloud deployment with full data sovereignty. No code leaves your infrastructure without your explicit permission."
+        question: "Comment gère-t-il les bases de code propriétaires ?",
+        answer: "Votre code reste le vôtre. Nous préparons un déploiement sur site et dans un cloud privé avec une souveraineté totale des données. Aucun code ne quitte votre infrastructure sans votre autorisation explicite.",
     },
     {
-        question: "What languages/frameworks does it support?",
-        answer: "We're starting with the most widely-used languages and frameworks. Specific support matrix will be announced closer to launch."
+        question: "Quels langages/frameworks prend-il en charge ?",
+        answer: "Nous commençons par les langages et frameworks les plus utilisés. Une matrice de support spécifique sera annoncée à l’approche du lancement.",
     },
     {
-        question: "Can it work with legacy systems?",
-        answer: "Yes. In fact, legacy systems with minimal documentation are where architectural understanding becomes most valuable. The platform reconstructs architectural intent from the code itself."
+        question: "Peut-il fonctionner avec les systèmes existants ?",
+        answer: "Oui. En fait, c’est dans les systèmes existants avec une documentation minimale que la compréhension architecturale devient la plus précieuse. La plateforme reconstruit l'intention architecturale à partir du code lui-même.",
     },
     {
-        question: "What's the learning curve?",
-        answer: "If you can use your current IDE, you can use our platform. We're designing for zero friction adoption."
+        question: "Quelle est la courbe d’apprentissage ?",
+        answer: "Si vous pouvez utiliser votre IDE actuel, vous pouvez utiliser notre plateforme. Nous concevons pour une adoption sans friction.",
     },
     {
-        question: "Is my code used for training?",
-        answer: "No. Your code is never used for training. The platform analyzes your specific codebase to understand its unique architecture—your IP stays completely private."
+        question: "Mon code est-il utilisé pour la formation ?",
+        answer: "Non. Votre code n’est jamais utilisé pour la formation. La plateforme analyse votre base de code spécifique pour comprendre son architecture unique : votre adresse IP reste totalement privée.",
     },
     {
-        question: "How is this different from AI pair programming?",
-        answer: "AI pair programming tools predict what you'll type next. We understand what your changes will do to the entire system. It's the difference between tactical assistance and strategic understanding."
+        question: "En quoi est-ce différent de la programmation en binôme IA ?",
+        answer: "Les outils de programmation par paires d'IA prédisent ce que vous taperez ensuite. Nous comprenons l’impact de vos modifications sur l’ensemble du système. C'est la différence entre l'assistance tactique et la compréhension stratégique.",
     },
     {
-        question: "When exactly will it launch?",
-        answer: "2027, when it's ready for production use. We're not rushing to market with demos—we're building systems that work reliably in real-world conditions."
-    }
+        question: "Quand exactement sera-t-il lancé ?",
+        answer: "2027, lorsqu'il sera prêt à être utilisé en production. Nous ne nous précipitons pas sur le marché avec des démos : nous construisons des systèmes qui fonctionnent de manière fiable dans des conditions réelles.",
+    },
 ]

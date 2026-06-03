@@ -10,15 +10,15 @@ export const researchContent: ResearchContent = {
             "આર્કિટેક્ચર અને અસરો વિશે પ્રણાલીગત તર્ક",
             "સતત શિક્ષણ અને અનુકૂલન",
             "માનવ-AI સહયોગી બુદ્ધિ",
-            "Time to get it right",
+            "તેને યોગ્ય કરવાનો સમય",
         ],
     },
     papers: [
         {
-            id: "whitepaper-2026",
+            id: "વ્હાઇટપેપર-2026",
             title: "સ્વાયત્ત સોફ્ટવેર એન્જિનિયરિંગ તરફ: પડકારો અને દિશાઓ",
             description: "AI-સહાયિત સોફ્ટવેર એન્જિનિયરિંગમાં તર્ક, સંદર્ભ અને આર્કિટેક્ચરલ સમજ પર સંશોધન. આ શ્વેતપત્ર સતત, સ્વાયત્ત સોફ્ટવેર એન્જિનિયરિંગ બુદ્ધિના નિર્માણમાં પાયાના પડકારોની શોધ કરે છે.",
-            pdfUrl: "/YugNex_Research_Whitepaper.pdf",
+            pdfUrl: "/YugNex_Search_Whitepaper.pdf",
             fileName: "YugNex_Search_Whitepaper.pdf",
             publishDate: "2026-01-01",
             authors: [

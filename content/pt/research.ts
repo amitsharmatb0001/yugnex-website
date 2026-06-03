@@ -1,28 +1,35 @@
 import { ResearchContent } from '@/app/lib/contentTypes'
 
 export const researchContent: ResearchContent = {
-    title: "Building Foundations, Not Features",
+    title: "Construindo fundações, não recursos",
     philosophy: {
-        title: "Why It Takes Time",
-        body: "You might ask: \"Why not ship something now?\" Because foundational technology can't be rushed. When Google built their search algorithm, they didn't ship incrementally. When OpenAI trained GPT-3, they didn't release GPT-0.5 first. When SpaceX designed reusable rockets, they didn't start with \"partially reusable.\" We're building AI that makes engineering decisions. That requires a level of reasoning, context-awareness, and reliability that doesn't exist in current systems. We're taking the time because the problem deserves it.",
+        title: "Por que leva tempo",
+        body: "Você pode perguntar: “Por que não enviar algo agora?” Porque a tecnologia fundamental não pode ser apressada. Quando o Google construiu seu algoritmo de busca, eles não foram enviados de forma incremental. Quando a OpenAI treinou o GPT-3, eles não lançaram o GPT-0.5 primeiro. Quando a SpaceX projetou foguetes reutilizáveis, eles não começaram com “parcialmente reutilizáveis”. Estamos construindo uma IA que toma decisões de engenharia. Isso requer um nível de raciocínio, consciência do contexto e confiabilidade que não existe nos sistemas atuais. Estamos aproveitando o tempo porque o problema merece.",
         points: [
-            "Deep research into unsolved problems",
-            "Novel architectures tested rigorously",
-            "Systems that work reliably, not just demos",
-            "Patents to protect innovations",
-            "Time to get it right"
-        ]
+            "Pesquisa profunda sobre problemas não resolvidos",
+            "Novas arquiteturas testadas rigorosamente",
+            "Sistemas que funcionam de forma confiável, não apenas demonstrações",
+            "Patentes para proteger inovações",
+            "Hora de acertar",
+        ],
     },
     papers: [
         {
-            id: 'whitepaper-2026',
-            title: 'Toward Autonomous Software Engineering: Challenges and Directions',
-            description: 'Research on reasoning, context, and architectural understanding in AI-assisted software engineering. This whitepaper explores the foundational challenges in building persistent, autonomous software engineering intelligence.',
-            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
-            fileName: 'YugNex_Research_Whitepaper.pdf',
-            publishDate: '2026-01-01',
-            authors: ['YugNex Technology Research Division'],
-            tags: ['AI', 'Software Engineering', 'Autonomous Systems', 'Research']
-        }
-    ]
+            id: "whitepaper-2026",
+            title: "Rumo à engenharia de software autônoma: desafios e direções",
+            description: "Pesquisa sobre raciocínio, contexto e compreensão arquitetônica em engenharia de software assistida por IA. Este whitepaper explora os desafios fundamentais na construção de inteligência de engenharia de software autônoma e persistente.",
+            pdfUrl: "/YugNex_Research_Whitepaper.pdf",
+            fileName: "YugNex_Research_Whitepaper.pdf",
+            publishDate: "2026-01-01",
+            authors: [
+                "Divisão de Pesquisa de Tecnologia YugNex",
+            ],
+            tags: [
+                "IA",
+                "Engenharia de Software",
+                "Sistemas Autônomos",
+                "Pesquisar",
+            ],
+        },
+    ],
 }

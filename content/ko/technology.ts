@@ -1,32 +1,59 @@
 import { TechnologyContent } from '@/app/lib/contentTypes'
 
 export const technologyContent: TechnologyContent = {
-    title: "Technology",
+    title: "현재 AI 코딩 도구의 문제점",
     problem: {
-        title: "The Problem with Current AI Tools",
-        subtitle: "Context-Free Code Generation",
-        body: "Current AI coding assistants generate plausible code without understanding your system's architecture, leading to bugs and technical debt.",
+        title: "코드를 생성하지만 시스템을 이해하지 못합니다.",
+        subtitle: "오늘날의 AI 코딩 도우미는 코드 자동 완성, 기능 생성, 언어 간 번역 등 인상적인 결과를 달성했습니다. 그러나 그들은 모두 근본적인 한계를 공유합니다. 그들은 소프트웨어를 이해해야 할 시스템이 아니라 생성해야 할 텍스트로 취급합니다.",
+        body: "소프트웨어 엔지니어링은 텍스트 생성 문제가 아닙니다. 시스템 추론 문제입니다.",
         limitations: [
-            { title: "No Memory", description: "Forgets context between sessions" },
-            { title: "No Architecture Awareness", description: "Doesn't understand your system design" },
-            { title: "No Validation", description: "Generates code that compiles but breaks things" }
-        ]
+            {
+                title: "맥락 문제",
+                description: "코드베이스에는 수천 개의 파일에 걸쳐 수백만 줄이 포함되어 있습니다. 현재 도구는 간단한 검색을 통해 이를 연결하려고 시도하지만 소프트웨어의 관련성은 텍스트 유사성이 아니라 인과 관계, 종속성 체인 및 아키텍처 경계에 관한 것입니다.",
+            },
+            {
+                title: "추론의 격차",
+                description: "구문적으로 올바른 코드를 생성하는 것과 건전한 엔지니어링 결정을 내리는 것 사이에는 근본적인 차이가 있습니다. 숙련된 엔지니어가 코드를 수정할 때 시스템 전반의 아키텍처 영향, 종속성 영향, 성능 균형 및 유지 관리 가능성을 고려합니다.",
+            },
+            {
+                title: "검증 격차",
+                description: "소프트웨어 엔지니어링에는 타당성이 아닌 정확성이 필요합니다. 현재 도구에는 구문 검사 이상의 유효성을 검사하는 메커니즘이 부족합니다. 변경 사항이 시스템 불변성을 유지하는지, 아키텍처 경계를 존중하는지, 보안 취약점이 발생하는지 추론할 수 없습니다.",
+            },
+        ],
     },
     approach: {
-        title: "YugNex Approach",
-        subtitle: "Architecture-Aware AI Engineering",
+        title: "소프트웨어 엔지니어링을 위해 제작됨",
+        subtitle: "우리는 \"AI가 어떻게 더 나은 코드를 작성할 수 있을까?\"가 아닌 다른 질문으로 시작했습니다. 하지만 \"AI가 어떻게 숙련된 엔지니어처럼 소프트웨어 시스템을 이해할 수 있을까요?\"",
         sections: [
-            { title: "Persistent Context", body: "Never forgets your codebase architecture and patterns" },
-            { title: "Systemic Reasoning", body: "Understands implications across your entire system" },
-            { title: "Multi-Level Validation", body: "Ensures correctness, security, and maintainability" }
-        ]
+            {
+                title: "일반화보다 전문화",
+                body: "소프트웨어 엔지니어링의 다양한 측면에는 근본적으로 다른 유형의 추론이 필요합니다. 모든 것을 단일 모델로 압축하는 대신, 우리는 각각 소프트웨어 추론의 특정 영역을 위해 설계된 특수 AI 구성 요소를 엔지니어링 팀처럼 함께 사용합니다.",
+            },
+            {
+                title: "협력적 추론",
+                body: "소프트웨어 결정에는 종종 경쟁 문제 간의 균형을 맞춰야 합니다. 우리의 아키텍처를 통해 특수 구성 요소는 상황을 공유하고, 가정에 도전하고, 구조화된 조정을 통해 합의를 향해 작업할 수 있습니다.",
+            },
+            {
+                title: "시스템 전반에 걸친 이해",
+                body: "소프트웨어 이해는 구문, 의미, 아키텍처 패턴, 디자인 의도 및 시스템 전체 속성 등 여러 수준에서 작동합니다. 우리는 다양한 구성 요소가 다양한 추상화 수준에서 작동하는 계층적 추론을 사용합니다.",
+            },
+            {
+                title: "검색 이상의 컨텍스트",
+                body: "단절된 코드 조각을 끌어들이는 대신, 우리는 코드뿐만 아니라 종속성, 불변성 및 아키텍처 경계의 웹을 캡처하여 시스템 관계의 동적 표현을 구축하는 접근 방식을 개발하고 있습니다.",
+            },
+        ],
     },
     difference: {
-        title: "The YugNex Difference",
+        title: "차이점",
         comparison: [
-            { label: "Context", value: "Persistent" },
-            { label: "Understanding", value: "Architecture-Aware" },
-            { label: "Validation", value: "Multi-Dimensional" }
-        ]
-    }
+            {
+                label: "현재 도구",
+                value: "코드 생성 → 구문 최적화 → 컨텍스트 제한 내에서 작업 → 범용 아키텍처",
+            },
+            {
+                label: "우리의 접근 방식",
+                value: "시스템 이해 → 아키텍처에 대한 이유 → 동적 표현 구축 → 소프트웨어 엔지니어링을 위해 특별히 제작됨",
+            },
+        ],
+    },
 }

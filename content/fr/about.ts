@@ -1,28 +1,40 @@
 import { AboutContent } from '@/app/lib/contentTypes'
 
 export const aboutContent: AboutContent = {
-    title: "About YugNex Technology",
+    title: "À propos de la technologie YugNex",
     company: {
-        name: "YugNex Technology",
-        status: "Deep Research & MVP Prototyping",
-        recognition: "DPIIT Recognized Startup (16 Dec 2025)",
-        location: "Bhilwara, Rajasthan, India"
+        name: "Technologie YugNex",
+        status: "Recherche approfondie et prototypage MVP",
+        recognition: "Startup reconnue par le DPIIT (16 décembre 2025)",
+        location: "Bhilwara, Rajasthan, Inde",
     },
     founder: {
         name: "Amit Sharma",
-        bio: "Software developer and entrepreneur. Building autonomous systems that solve real engineering problems."
+        bio: "Développeur de logiciels et entrepreneur. Construire des systèmes autonomes qui résolvent de vrais problèmes d’ingénierie.",
     },
     approach: [
-        "Research-first development",
-        "Patent-filed innovations (Provisional Filed January 2026)",
-        "Self-funded independence",
-        "Focus on fundamentals over hype",
-        "Building in India for the world"
+        "Développement axé sur la recherche",
+        "Innovations déposées par brevet (dépôt provisoire en janvier 2026)",
+        "Indépendance autofinancée",
+        "Concentrez-vous sur les fondamentaux plutôt que sur le battage médiatique",
+        "Construire en Inde pour le monde",
     ],
     credentials: [
-        { label: "DPIIT Recognition", value: "16 Dec 2025" },
-        { label: "Incorporated", value: "Oct 2025" },
-        { label: "Status", value: "Deep Research & MVP Prototyping" },
-        { label: "Launch Timeline", value: "2027" }
-    ]
+        {
+            label: "Reconnaissance DPIIT",
+            value: "16 décembre 2025",
+        },
+        {
+            label: "Incorporé",
+            value: "octobre 2025",
+        },
+        {
+            label: "Statut",
+            value: "Recherche approfondie et prototypage MVP",
+        },
+        {
+            label: "Chronologie du lancement",
+            value: "2027",
+        },
+    ],
 }

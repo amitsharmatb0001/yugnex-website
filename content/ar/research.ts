@@ -1,28 +1,35 @@
 import { ResearchContent } from '@/app/lib/contentTypes'
 
 export const researchContent: ResearchContent = {
-    title: "Building Foundations, Not Features",
+    title: "أسس البناء، وليس الميزات",
     philosophy: {
-        title: "Why It Takes Time",
-        body: "You might ask: \"Why not ship something now?\" Because foundational technology can't be rushed. When Google built their search algorithm, they didn't ship incrementally. When OpenAI trained GPT-3, they didn't release GPT-0.5 first. When SpaceX designed reusable rockets, they didn't start with \"partially reusable.\" We're building AI that makes engineering decisions. That requires a level of reasoning, context-awareness, and reliability that doesn't exist in current systems. We're taking the time because the problem deserves it.",
+        title: "لماذا يستغرق وقتا",
+        body: "قد تسأل: \"لماذا لا تشحن شيئًا الآن؟\" لأنه لا يمكن التعجيل بالتكنولوجيا الأساسية. عندما قامت جوجل ببناء خوارزمية البحث الخاصة بها، لم يتم شحنها بشكل تدريجي. عندما قام OpenAI بتدريب GPT-3، لم يطلقوا GPT-0.5 أولاً. عندما صممت شركة SpaceX صواريخ قابلة لإعادة الاستخدام، فإنها لم تبدأ بصواريخ \"قابلة لإعادة الاستخدام جزئيًا\". نحن نبني الذكاء الاصطناعي الذي يتخذ القرارات الهندسية. ويتطلب ذلك مستوى من التفكير والوعي بالسياق والموثوقية غير موجود في الأنظمة الحالية. نحن نأخذ الوقت لأن المشكلة تستحق ذلك.",
         points: [
-            "Deep research into unsolved problems",
-            "Novel architectures tested rigorously",
-            "Systems that work reliably, not just demos",
-            "Patents to protect innovations",
-            "Time to get it right"
-        ]
+            "بحث عميق في المشاكل التي لم يتم حلها",
+            "تم اختبار بنيات الرواية بدقة",
+            "الأنظمة التي تعمل بشكل موثوق، وليس فقط العروض التوضيحية",
+            "براءات الاختراع لحماية الابتكارات",
+            "الوقت للحصول على الحق",
+        ],
     },
     papers: [
         {
-            id: 'whitepaper-2026',
-            title: 'Toward Autonomous Software Engineering: Challenges and Directions',
-            description: 'Research on reasoning, context, and architectural understanding in AI-assisted software engineering. This whitepaper explores the foundational challenges in building persistent, autonomous software engineering intelligence.',
-            pdfUrl: '/YugNex_Research_Whitepaper.pdf',
-            fileName: 'YugNex_Research_Whitepaper.pdf',
-            publishDate: '2026-01-01',
-            authors: ['YugNex Technology Research Division'],
-            tags: ['AI', 'Software Engineering', 'Autonomous Systems', 'Research']
-        }
-    ]
+            id: "ورقة بيضاء-2026",
+            title: "نحو هندسة البرمجيات المستقلة: التحديات والاتجاهات",
+            description: "بحث حول المنطق والسياق والفهم المعماري في هندسة البرمجيات بمساعدة الذكاء الاصطناعي. يستكشف هذا المستند التقني التحديات الأساسية في بناء ذكاء هندسة البرمجيات المستمر والمستقل.",
+            pdfUrl: "/YugNex_Research_Whitepaper.pdf",
+            fileName: "YugNex_Research_Whitepaper.pdf",
+            publishDate: "2026-01-01",
+            authors: [
+                "قسم أبحاث التكنولوجيا YugNex",
+            ],
+            tags: [
+                "منظمة العفو الدولية",
+                "هندسة البرمجيات",
+                "الأنظمة الذاتية",
+                "بحث",
+            ],
+        },
+    ],
 }

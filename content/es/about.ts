@@ -1,28 +1,40 @@
 import { AboutContent } from '@/app/lib/contentTypes'
 
 export const aboutContent: AboutContent = {
-    title: "About YugNex Technology",
+    title: "Acerca de la tecnología YugNex",
     company: {
-        name: "YugNex Technology",
-        status: "Deep Research & MVP Prototyping",
-        recognition: "DPIIT Recognized Startup (16 Dec 2025)",
-        location: "Bhilwara, Rajasthan, India"
+        name: "Tecnología YugNex",
+        status: "Investigación profunda y creación de prototipos MVP",
+        recognition: "Startup reconocida por DPIIT (16 de diciembre de 2025)",
+        location: "Bhilwara, Rajastán, India",
     },
     founder: {
         name: "Amit Sharma",
-        bio: "Software developer and entrepreneur. Building autonomous systems that solve real engineering problems."
+        bio: "Desarrollador de software y emprendedor. Construyendo sistemas autónomos que resuelvan problemas reales de ingeniería.",
     },
     approach: [
-        "Research-first development",
-        "Patent-filed innovations (Provisional Filed January 2026)",
-        "Self-funded independence",
-        "Focus on fundamentals over hype",
-        "Building in India for the world"
+        "Desarrollo centrado en la investigación",
+        "Innovaciones presentadas mediante patente (presentada provisionalmente en enero de 2026)",
+        "Independencia autofinanciada",
+        "Centrarse en los fundamentos por encima de las exageraciones",
+        "Construyendo en la India para el mundo",
     ],
     credentials: [
-        { label: "DPIIT Recognition", value: "16 Dec 2025" },
-        { label: "Incorporated", value: "Oct 2025" },
-        { label: "Status", value: "Deep Research & MVP Prototyping" },
-        { label: "Launch Timeline", value: "2027" }
-    ]
+        {
+            label: "Reconocimiento DPIIT",
+            value: "16 de diciembre de 2025",
+        },
+        {
+            label: "Incorporado",
+            value: "octubre de 2025",
+        },
+        {
+            label: "Estado",
+            value: "Investigación profunda y creación de prototipos MVP",
+        },
+        {
+            label: "Línea de tiempo de lanzamiento",
+            value: "2027",
+        },
+    ],
 }

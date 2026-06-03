@@ -1,28 +1,40 @@
 import { AboutContent } from '@/app/lib/contentTypes'
 
 export const aboutContent: AboutContent = {
-    title: "About YugNex Technology",
+    title: "حول تقنية YugNex",
     company: {
-        name: "YugNex Technology",
-        status: "Deep Research & MVP Prototyping",
-        recognition: "DPIIT Recognized Startup (16 Dec 2025)",
-        location: "Bhilwara, Rajasthan, India"
+        name: "تقنية يوجنيكس",
+        status: "البحث العميق والنماذج الأولية MVP",
+        recognition: "شركة ناشئة معترف بها من DPIIT (16 ديسمبر 2025)",
+        location: "بهيلوارا، راجاستان، الهند",
     },
     founder: {
-        name: "Amit Sharma",
-        bio: "Software developer and entrepreneur. Building autonomous systems that solve real engineering problems."
+        name: "أميت شارما",
+        bio: "مطور البرمجيات ورجل الأعمال. بناء أنظمة مستقلة تحل المشاكل الهندسية الحقيقية.",
     },
     approach: [
-        "Research-first development",
-        "Patent-filed innovations (Provisional Filed January 2026)",
-        "Self-funded independence",
-        "Focus on fundamentals over hype",
-        "Building in India for the world"
+        "البحث والتطوير أولا",
+        "الابتكارات المودعة ببراءات الاختراع (تم تقديمها مؤقتًا في يناير 2026)",
+        "الاستقلال بتمويل ذاتي",
+        "التركيز على الأساسيات بدلا من الضجيج",
+        "البناء في الهند للعالم",
     ],
     credentials: [
-        { label: "DPIIT Recognition", value: "16 Dec 2025" },
-        { label: "Incorporated", value: "Oct 2025" },
-        { label: "Status", value: "Deep Research & MVP Prototyping" },
-        { label: "Launch Timeline", value: "2027" }
-    ]
+        {
+            label: "التعرف على DPIIT",
+            value: "16 ديسمبر 2025",
+        },
+        {
+            label: "إدماج",
+            value: "أكتوبر 2025",
+        },
+        {
+            label: "حالة",
+            value: "البحث العميق والنماذج الأولية MVP",
+        },
+        {
+            label: "إطلاق الجدول الزمني",
+            value: "2027",
+        },
+    ],
 }

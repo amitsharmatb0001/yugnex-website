@@ -90,8 +90,8 @@ export default function UnifiedCanvas() {
         y: ry,
         vx: (Math.random() - 0.5) * 0.2,
         vy: (Math.random() - 0.5) * 0.2,
-        radius: Math.random() * 1.2 + 0.8,
-        alpha: Math.random() * 0.25 + 0.35,
+        radius: Math.random() * 1.5 + 1.0,
+        alpha: Math.random() * 0.3 + 0.45,
         initialX: rx,
         initialY: ry
       }
@@ -107,7 +107,7 @@ export default function UnifiedCanvas() {
         y: parent.y - 15,
         text: generateDynamicCodeSnippet(),
         speed: -(Math.random() * 0.35 + 0.2),
-        alpha: Math.random() * 0.2 + 0.3,
+        alpha: Math.random() * 0.3 + 0.45,
         color: colorBase,
         parentNodeIndex: nodeIndex,
         distanceLimit: Math.random() * 150 + 100
@@ -136,7 +136,7 @@ export default function UnifiedCanvas() {
 
       // 1. Draw Constellation Links (if not reduced motion)
       if (!prefersReduced) {
-        const maxDistance = 120
+        const maxDistance = 135
         ctx.lineWidth = 0.5
         for (let i = 0; i < nodes.length; i++) {
           const n1 = nodes[i]
@@ -146,7 +146,7 @@ export default function UnifiedCanvas() {
             const dy = n1.y - n2.y
             const dist = Math.sqrt(dx * dx + dy * dy)
             if (dist < maxDistance) {
-              const alpha = (1 - dist / maxDistance) * 0.28 * linkAlphaMultiplier
+              const alpha = (1 - dist / maxDistance) * 0.38 * linkAlphaMultiplier
               ctx.strokeStyle = `rgba(251, 191, 36, ${alpha})`
               ctx.beginPath()
               ctx.moveTo(n1.x, n1.y)
@@ -186,8 +186,8 @@ export default function UnifiedCanvas() {
         const mDist = Math.sqrt(mdx * mdx + mdy * mdy)
         const isHovered = mDist < 130
         const finalAlpha = isHovered 
-          ? Math.min(0.85, n.alpha * 1.6) 
-          : n.alpha * (isBooting ? 1.2 : 1.0)
+          ? Math.min(0.95, n.alpha * 1.8) 
+          : Math.min(0.85, n.alpha * (isBooting ? 1.3 : 1.1))
 
         ctx.shadowBlur = isHovered ? 5 : 2
         ctx.shadowColor = 'rgba(251, 191, 36, 0.45)'
@@ -247,7 +247,7 @@ export default function UnifiedCanvas() {
 
           // Fade out based on distance and scroll
           const distRatio = Math.min(1, dist / c.distanceLimit)
-          const baseAlpha = isMouseNear ? Math.min(0.75, c.alpha * 2.0) : c.alpha
+          const baseAlpha = isMouseNear ? Math.min(0.85, c.alpha * 1.8) : c.alpha
           const currentAlpha = baseAlpha * (1 - distRatio) * (0.8 + scrollFactor * 0.2)
 
           if (dist >= c.distanceLimit || c.y < -30) {
@@ -257,8 +257,8 @@ export default function UnifiedCanvas() {
 
           // Draw Connecting line between parent node and code text
           if (distRatio < 0.8) {
-            ctx.lineWidth = 0.4
-            ctx.strokeStyle = `rgba(251, 191, 36, ${(isMouseNear ? 0.25 : 0.12) * (1 - distRatio / 0.8)})`
+            ctx.lineWidth = 0.5
+            ctx.strokeStyle = `rgba(251, 191, 36, ${(isMouseNear ? 0.35 : 0.18) * (1 - distRatio / 0.8)})`
             ctx.beginPath()
             ctx.moveTo(parent.x, parent.y)
             ctx.lineTo(c.x, c.y + 6) // Center line to code block
@@ -269,6 +269,7 @@ export default function UnifiedCanvas() {
           ctx.shadowBlur = isMouseNear ? 5 : 2
           ctx.shadowColor = `${c.color}0.45)`
           ctx.fillStyle = `${c.color}${currentAlpha})`
+          ctx.textAlign = c.x > w / 2 ? 'right' : 'left'
           ctx.fillText(c.text, c.x, c.y)
           ctx.shadowBlur = 0 // Reset shadow
         }
