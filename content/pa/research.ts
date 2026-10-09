@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "ਵ੍ਹਾਈਟਪੇਪਰ-2026",
+            id: "whitepaper-2026",
             title: "ਖੁਦਮੁਖਤਿਆਰ ਸਾਫਟਵੇਅਰ ਇੰਜਨੀਅਰਿੰਗ ਵੱਲ: ਚੁਣੌਤੀਆਂ ਅਤੇ ਦਿਸ਼ਾਵਾਂ",
             description: "AI-ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਸਾਫਟਵੇਅਰ ਇੰਜਨੀਅਰਿੰਗ ਵਿੱਚ ਤਰਕ, ਸੰਦਰਭ, ਅਤੇ ਆਰਕੀਟੈਕਚਰਲ ਸਮਝ 'ਤੇ ਖੋਜ। ਇਹ ਵਾਈਟਪੇਪਰ ਨਿਰੰਤਰ, ਖੁਦਮੁਖਤਿਆਰ ਸੌਫਟਵੇਅਰ ਇੰਜਨੀਅਰਿੰਗ ਇੰਟੈਲੀਜੈਂਸ ਦੇ ਨਿਰਮਾਣ ਵਿੱਚ ਬੁਨਿਆਦੀ ਚੁਣੌਤੀਆਂ ਦੀ ਪੜਚੋਲ ਕਰਦਾ ਹੈ।",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "ਸਥਾਈ ਆਟੋਨੋਮਸ ਸਾਫਟਵੇਅਰ ਇੰਟੈਲੀਜੈਂਸ ਮਾਡਲਾਂ ਨੂੰ ਬਣਾਉਣ ਲਈ ਸਾਡੇ ਪ੍ਰਕਾਸ਼ਨਾਂ, ਵ੍ਹਾਈਟਪੇਪਰਾਂ ਅਤੇ ਖੋਜਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ।",
+    ledgerTitle: "ਦਸਤਾਵੇਜ਼ ਡੋਜ਼ੀਅਰ //",
+    formatLabel: "ਫਾਰਮੈਟ",
+    formatValue: "ਤਕਨੀਕੀ PDF (ਅੰਗਰੇਜ਼ੀ)",
+    noPublications: "ਕੋਈ ਖੋਜ ਪ੍ਰਕਾਸ਼ਨ ਨਹੀਂ ਮਿਲਿਆ।",
+    peerSignature: "GPG ਪੀਅਰ ਏਜੰਟ ਦੇ ਦਸਤਖਤ ਦੀ ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ",
+    peerSignStamp: "ਸਾਈਨ: ARCHITECT_AGENT_0x028A",
 }

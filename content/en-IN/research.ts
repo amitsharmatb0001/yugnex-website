@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "Explore our publications, whitepapers, and findings on building persistent autonomous software intelligence models.",
+    ledgerTitle: "DOCUMENT DOSSIER // ",
+    formatLabel: "Format",
+    formatValue: "Technical PDF (English)",
+    noPublications: "No research publications found.",
+    peerSignature: "GPG Peer Agent Signature Verified",
+    peerSignStamp: "SIGN: ARCHITECT_AGENT_0x028A",
 }

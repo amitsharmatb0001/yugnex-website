@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "Whitepaper-2026",
+            id: "whitepaper-2026",
             title: "Auf dem Weg zum autonomen Software-Engineering: Herausforderungen und Richtungen",
             description: "Forschung zu Argumentation, Kontext und Architekturverständnis in der KI-gestützten Softwareentwicklung. In diesem Whitepaper werden die grundlegenden Herausforderungen beim Aufbau persistenter, autonomer Software-Engineering-Intelligenz untersucht.",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "Entdecken Sie unsere Veröffentlichungen, Whitepapers und Erkenntnisse zum Aufbau persistenter autonomer Software-Intelligence-Modelle.",
+    ledgerTitle: "DOKUMENTENDOSSIER //",
+    formatLabel: "Format",
+    formatValue: "Technisches PDF (Englisch)",
+    noPublications: "Keine Forschungspublikationen gefunden.",
+    peerSignature: "GPG-Peer-Agent-Signatur überprüft",
+    peerSignStamp: "ZEICHEN: ARCHITECT_AGENT_0x028A",
 }

@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "livre blanc-2026",
+            id: "whitepaper-2026",
             title: "Vers le génie logiciel autonome : défis et orientations",
             description: "Recherche sur le raisonnement, le contexte et la compréhension architecturale dans le génie logiciel assisté par l'IA. Ce livre blanc explore les défis fondamentaux liés à la création d’une intelligence d’ingénierie logicielle persistante et autonome.",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "Découvrez nos publications, livres blancs et conclusions sur la création de modèles d’intelligence logicielle autonomes et persistants.",
+    ledgerTitle: "DOSSIER DOCUMENTAIRE //",
+    formatLabel: "Format",
+    formatValue: "PDF technique (anglais)",
+    noPublications: "Aucune publication de recherche trouvée.",
+    peerSignature: "Signature du pair-agent GPG vérifiée",
+    peerSignStamp: "SIGNE : ARCHITECT_AGENT_0x028A",
 }

@@ -129,4 +129,71 @@ export const platformContent: PlatformContent = {
             us: "Realize análises arquitetônicas. Explique as implicações. Valide a coerência do sistema.",
         },
     ],
+    disclaimer: "⚠️ Isenção de responsabilidade da simulação de P&D: esta interface é uma demonstração interativa para fins de visualização conceitual. O sistema autônomo de engenharia de software YugNex está atualmente na fase de Pesquisa e Desenvolvimento (P&D). Nenhum aplicativo digital de produção pública ou sistema totalmente otimizado está ativo no momento.",
+    tabs: {
+        github: "Solicitação pull do GitHub",
+        ide: "Integração de espaço de trabalho IDE",
+        cicd: "Pipeline invariável de CI/CD",
+    },
+    githubPr: {
+        statusOpen: "Abrir",
+        securityScore: "Pontuação de integridade de segurança",
+        securityBadge: "Agente Auditor de Segurança",
+        securityTime: "Verificado há 2 minutos",
+        securityFeedback: "Resolução de vulnerabilidade verificada. A chave secreta JWT codificada foi parametrizada para ser executada a partir de variáveis ​​ambientais do sistema. Os cabeçalhos de segurança X-Frame-Options foram injetados globalmente com sucesso. Verificações invariantes aprovadas.",
+    },
+    ideWorkspace: {
+        statusReviewing: "Revendo",
+        ideTitle: "YugNex: Resolver vazamento de listener em WebSockets",
+        ideDesc: "Vazamento de memória resolvido declarando o manipulador de fechamento explícito.",
+        btnAccept: "Aceitar sugestão",
+        btnDecline: "Declínio",
+    },
+    cicdPipeline: {
+        statusPipelinePassed: "Pipeline aprovado",
+        statusSuccess: "ESTADO: SUCESSO",
+        ciLogs: [
+            "[INFO] Gerando contêineres de tempo de execução de produção...",
+            "[INFO] Agrupando módulos e verificando árvores de construção do compilador...",
+            "[INFO] Executando varreduras invariantes formais:",
+            "✓ Invariante 01: integridade de autenticação da API (aprovada)",
+            "✓ Invariante 02: Restrições de alocação de recursos (aprovado)",
+            "✓ Invariante 03: Verificação de dependência circular (aprovada)",
+            "[SUCESSO] Compilação do sistema verificada. A integridade da execução passa com 0 vazamentos de memória.",
+            "implantando na borda da produção...",
+        ],
+    },
+    capabilitiesTitle: "Capacidades de plataforma interativa",
+    consoleSandboxRunner: "CONSOLE: SANDBOX_RUNNER",
+    btnExecuting: "EXECUÇÃO...",
+    btnRun: "CORRER",
+    capLogs: [
+        {
+            cmd: "yugnex build --analyze-architecture",
+            logs: [
+                "[INFO] Verificando diretórios de base de código...",
+                "[INFO] Construindo gráfico intermódulo causal (1.284 nós)...",
+                "[VCS] Verificando os limites arquitetônicos em relação às especificações do projeto...",
+                "[SUCESSO] Esquema de dependência construído. 0 violações de limite encontradas.",
+            ],
+        },
+        {
+            cmd: "yugnex diff --check-implications --file=userModel.ts",
+            logs: [
+                "[INFO] Rastreando importações downstream para userModel.ts...",
+                "[INFO] Verificando cadeias de dependências dentro de rotas/ e controladores/...",
+                "[WARN] userService.ts depende dos esquemas de banco de dados alterados. Validando parâmetros...",
+                "[SUCESSO] Caminhos causais verificados. Avaliação de risco de refatoração: 0 problemas.",
+            ],
+        },
+        {
+            cmd: "yugnex validate --invariants --level=all",
+            logs: [
+                "[INFO] Executando verificações de validação invariante multinível...",
+                "[INFO] Nível 1: Análise de sintaxe (PASS) | Nível 2: Tipos (PASS)",
+                "[INFO] Nível 3: Sandbox de segurança (PASS) | Nível 4: verificações de memória (PASS)",
+                "[SUCESSO] Validação formal concluída com sucesso. Código seguro.",
+            ],
+        },
+    ],
 }

@@ -40,14 +40,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                         </div>
 
                         <div className="space-y-6 pt-6">
-                            <h2 className="text-xl font-bold text-white">Direct Channels</h2>
+                            <h2 className="text-xl font-bold text-white">{content.directChannelsTitle}</h2>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-3">
-                                    <span className="text-yellow-500 opacity-70">Email</span>
+                                    <span className="text-yellow-500 opacity-70">{ui.email}</span>
                                     <a href={`mailto:${content.socials.email}`} className="hover:text-yellow-400 transition-colors">{content.socials.email}</a>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <span className="text-yellow-500 opacity-70">Twitter</span>
+                                    <span className="text-yellow-500 opacity-70">{ui.follow}</span>
                                     <a href="https://x.com/YugNex" target="_blank" className="hover:text-yellow-400 transition-colors">{content.socials.twitter}</a>
                                 </li>
                                 <li className="flex items-center gap-3">
@@ -69,6 +69,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                                 message: content.form.messageLabel,
                                 submit: content.form.submitLabel
                             }}
+                            placeholders={content.formPlaceholders}
                             messages={{
                                 sending: ui.sending,
                                 sent: ui.sent,

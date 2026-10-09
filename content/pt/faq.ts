@@ -1,6 +1,6 @@
 export const faqContent = [
     {
-        question: "Quando posso experimentar?",
+        question: "Quando posso tentar?",
         answer: "Estamos em fase avançada de protótipo com lançamento planejado para 2027. Junte-se à nossa lista de espera para acesso antecipado.",
     },
     {

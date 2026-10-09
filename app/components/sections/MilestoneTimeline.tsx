@@ -100,10 +100,18 @@ const MILESTONES: Milestone[] = [
   }
 ]
 
-export default function MilestoneTimeline() {
+interface MilestoneTimelineProps {
+  milestones?: Milestone[]
+  ledgerLabel?: string
+}
+
+export default function MilestoneTimeline({
+  milestones = MILESTONES,
+  ledgerLabel = "Milestone Registry Ledger"
+}: MilestoneTimelineProps) {
   const [activeIndex, setActiveIndex] = useState<number>(3) // Default to Active MVP Phase
 
-  const milestone = MILESTONES[activeIndex] || MILESTONES[0]
+  const milestone = milestones[activeIndex] || milestones[0]
 
   const getStatusClass = (status: string) => {
     switch (status) {
@@ -125,7 +133,7 @@ export default function MilestoneTimeline() {
     <div className={styles.timelineContainer}>
       {/* Navigation Buttons */}
       <div className={styles.milestonesNav}>
-        {MILESTONES.map((m, index) => {
+        {milestones.map((m, index) => {
           const isActive = activeIndex === index
           return (
             <button
@@ -158,10 +166,10 @@ export default function MilestoneTimeline() {
         <div className={styles.docPanel}>
           <div className={styles.docHeader}>
             <FileText size={15} />
-            <span>Milestone Registry Ledger</span>
+            <span>{ledgerLabel}</span>
           </div>
           <div className="space-y-1">
-            {milestone.docs.map((doc, idx) => (
+            {milestone?.docs?.map((doc, idx) => (
               <div key={idx} className={styles.docLine}>
                 <span>{doc.label}</span>
                 <span className={styles.docValue}>{doc.value}</span>

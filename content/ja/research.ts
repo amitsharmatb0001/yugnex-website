@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "ホワイトペーパー-2026",
+            id: "whitepaper-2026",
             title: "自律型ソフトウェアエンジニアリングに向けて: 課題と方向性",
             description: "AI 支援ソフトウェア エンジニアリングにおける推論、コンテキスト、アーキテクチャの理解に関する研究。このホワイトペーパーでは、永続的で自律的なソフトウェア エンジニアリング インテリジェンスを構築する際の基本的な課題について説明します。",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "永続的な自律型ソフトウェア インテリジェンス モデルの構築に関する当社の出版物、ホワイトペーパー、および調査結果をご覧ください。",
+    ledgerTitle: "文書関係書類 //",
+    formatLabel: "形式",
+    formatValue: "技術PDF（英語）",
+    noPublications: "研究出版物は見つかりませんでした。",
+    peerSignature: "GPG ピア エージェントの署名が検証されました",
+    peerSignStamp: "記号: ARCHITECT_AGENT_0x028A",
 }

@@ -6,6 +6,7 @@ import { buildSeo } from '@/app/lib/seo'
 import TextBlock from '@/app/components/sections/TextBlock'
 import ResearchPapers from '@/app/components/research/ResearchPapers'
 import { getUILabels } from '@/app/lib/uiLabels'
+import { db } from '@/app/lib/db'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
     const { locale } = await params
@@ -33,6 +34,32 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
     const effectiveLocale = resolveLocaleForPage(locale, 'research')
     const content = await loadResearchContent(effectiveLocale)
     const ui = getUILabels(locale)
+
+    // Load papers from database with a robust fallback to static content
+    let papersList = content.papers || []
+    try {
+        const [rows] = await db.execute<any[]>(
+            'SELECT id, title, description, publish_date, authors, tags, pdf_url FROM research_papers ORDER BY publish_date DESC'
+        )
+        if (rows && rows.length > 0) {
+            papersList = rows.map(p => ({
+                id: p.id,
+                title: p.title,
+                description: p.description,
+                pdfUrl: p.pdf_url || '',
+                fileName: p.pdf_url ? p.pdf_url.split('/').pop() || '' : '',
+                publishDate: p.publish_date 
+                    ? (p.publish_date instanceof Date 
+                        ? p.publish_date.toISOString().split('T')[0] 
+                        : String(p.publish_date).substring(0, 10))
+                    : '',
+                authors: p.authors ? p.authors.split(',').map((a: string) => a.trim()) : [],
+                tags: p.tags ? p.tags.split(',').map((t: string) => t.trim()) : []
+            }))
+        }
+    } catch (err) {
+        console.error('Database research papers fetch failed, using fallback:', err)
+    }
 
     return (
         <div className="page-container text-gray-200">
@@ -69,7 +96,17 @@ export default async function ResearchPage({ params }: { params: Promise<{ local
 
                 {/* Research Papers Section */}
                 <section className="container mx-auto px-6 max-w-6xl">
-                    <ResearchPapers locale={effectiveLocale} papers={content.papers || []} />
+                    <ResearchPapers 
+                        locale={effectiveLocale} 
+                        papers={papersList}
+                        subtitle={content.subtitle}
+                        ledgerTitle={content.ledgerTitle}
+                        formatLabel={content.formatLabel}
+                        formatValue={content.formatValue}
+                        noPublications={content.noPublications}
+                        peerSignature={content.peerSignature}
+                        peerSignStamp={content.peerSignStamp}
+                    />
                 </section>
             </div>
         </div>

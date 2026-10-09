@@ -9,14 +9,21 @@ export const contactContent: ContactContent = {
     form: {
         title: "Message Bhejein",
         nameLabel: "Naam",
-        emailLabel: "Email",
+        emailLabel: "email",
         orgLabel: "Organization (optional)",
-        messageLabel: "Message",
+        messageLabel: "sandesh",
         submitLabel: "Submit Karein",
     },
     socials: {
-        twitter: "@YugNex",
+        twitter: "@yugnex",
         email: "hello@yugnex.com",
         location: "Gurugram, India",
+    },
+    directChannelsTitle: "pratyaksh channel",
+    formPlaceholders: {
+        name: "jen do",
+        email: "jane@example.com",
+        org: "company limited",
+        message: "hum kaise sahyog kar sakte han?",
     },
 }

@@ -14,9 +14,37 @@ interface ApproachItem {
   body: string
 }
 
+interface CodeLensLine {
+  warningTitle?: string
+  warningDesc?: string
+  debate?: Array<{
+    role: string
+    text: string
+  }>
+}
+
+interface CodeLensContent {
+  panelTitle: string
+  insightTitleAutoFix: string
+  insightTitleDebate: string
+  solutionsDefault: string
+  lines: CodeLensLine[]
+}
+
 interface TechnologyInteractiveProps {
   limitations: LimitationItem[]
   approachSections: ApproachItem[]
+  diagnosticsTitle?: string
+  approachTitle?: string
+  debateTitle?: string
+  debateSubtitle?: string
+  limitationLogs?: Array<{
+    cmd: string
+    logs: string[]
+  }>
+  approachDiagrams?: string[]
+  liveTelemetry?: string
+  codeLensContent?: CodeLensContent
 }
 
 const LIMITATION_LOGS = [
@@ -62,15 +90,29 @@ const APPROACH_DIAGRAMS = [
   `Causal Relations Cached: 184,902\nActive Context Nodes: 12,042\nLookup Latency: 1.2ms (98% speedup over LLM search)\nSTATUS: Causal graphs fully synched.`
 ]
 
-export default function TechnologyInteractive({ limitations, approachSections }: TechnologyInteractiveProps) {
+export default function TechnologyInteractive({
+  limitations,
+  approachSections,
+  diagnosticsTitle,
+  approachTitle,
+  debateTitle,
+  debateSubtitle,
+  limitationLogs,
+  approachDiagrams,
+  liveTelemetry,
+  codeLensContent
+}: TechnologyInteractiveProps) {
   const [activeLimitation, setActiveLimitation] = useState(0)
   const [activeApproach, setActiveApproach] = useState<number | null>(0)
+
+  const activeLogs = limitationLogs || LIMITATION_LOGS
+  const activeDiagrams = approachDiagrams || APPROACH_DIAGRAMS
 
   return (
     <div className={styles.container}>
       {/* 1. Limitations Simulator */}
       <section className="relative">
-        <h2 className={styles.sectionTitle}>Interactive Limitations Diagnostics</h2>
+        <h2 className={styles.sectionTitle}>{diagnosticsTitle || 'Interactive Limitations Diagnostics'}</h2>
         <div className={styles.explorerLayout}>
           <div className={styles.tabsList}>
             {limitations.map((lim, idx) => (
@@ -106,9 +148,9 @@ export default function TechnologyInteractive({ limitations, approachSections }:
               <div className={styles.terminalBody}>
                 <div>
                   <span className={styles.terminalPrompt}>$ </span>
-                  <span className="text-white">{LIMITATION_LOGS[activeLimitation].cmd}</span>
+                  <span className="text-white">{activeLogs[activeLimitation]?.cmd}</span>
                 </div>
-                {LIMITATION_LOGS[activeLimitation].logs.map((log, lIdx) => {
+                {activeLogs[activeLimitation]?.logs.map((log, lIdx) => {
                   let logClass = styles.terminalLog
                   if (log.startsWith('[FAIL]') || log.startsWith('[CRITICAL]')) logClass = styles.terminalError
                   if (log.startsWith('[WARN]')) logClass = styles.terminalWarn
@@ -128,7 +170,7 @@ export default function TechnologyInteractive({ limitations, approachSections }:
 
       {/* 2. Interactive Approach Section */}
       <section className="relative">
-        <h2 className={styles.sectionTitle}>Our Layered Approach</h2>
+        <h2 className={styles.sectionTitle}>{approachTitle || 'Our Layered Approach'}</h2>
         <div className={styles.approachGrid}>
           {approachSections.map((sec, idx) => {
             const isActive = activeApproach === idx
@@ -154,10 +196,10 @@ export default function TechnologyInteractive({ limitations, approachSections }:
                   <div className={styles.approachSimulation}>
                     <div className={styles.simulationStatus}>
                       <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping" />
-                      <span>Live Telemetry Graph</span>
+                      <span>{liveTelemetry || 'Live Telemetry Graph'}</span>
                     </div>
                     <pre className={styles.simulationDiagram}>
-                      {APPROACH_DIAGRAMS[idx]}
+                      {activeDiagrams[idx]}
                     </pre>
                   </div>
                 )}
@@ -169,11 +211,11 @@ export default function TechnologyInteractive({ limitations, approachSections }:
 
       {/* 3. The Multi-Agent Debate CodeLens */}
       <section className="relative">
-        <h2 className={styles.sectionTitle}>Autonomous Analyzer Consensuses</h2>
+        <h2 className={styles.sectionTitle}>{debateTitle || 'Autonomous Analyzer Consensuses'}</h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto -mt-6 mb-8 text-sm font-light">
-          Hover over code lines to activate YugNex's multi-agent consensus panel debating security and refactoring concerns.
+          {debateSubtitle || "Hover over code lines to activate YugNex's multi-agent consensus panel debating security and refactoring concerns."}
         </p>
-        <CodeLens />
+        <CodeLens content={codeLensContent} />
       </section>
     </div>
   )

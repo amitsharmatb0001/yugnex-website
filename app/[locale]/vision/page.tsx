@@ -48,12 +48,18 @@ export default async function VisionPage({ params }: { params: Promise<{ locale:
 
                 {/* Interactive comparison portal */}
                 <section>
-                    <VisionPortal />
+                    <VisionPortal content={content} />
                 </section>
 
                 {/* Interactive detailed vision console */}
                 <section>
-                    <VisionConsole paragraphs={content.paragraphs} />
+                    <VisionConsole
+                        paragraphs={content.paragraphs}
+                        pillarMetas={content.pillarMetas}
+                        telemetryTitle={content.telemetryTitle}
+                        telemetryStatus={content.telemetryStatus}
+                        telemetryMap={content.telemetryMap}
+                    />
                 </section>
             </div>
         </div>

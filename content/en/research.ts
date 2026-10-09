@@ -24,5 +24,12 @@ export const researchContent: ResearchContent = {
             authors: ['YugNex Technology Research Division'],
             tags: ['AI', 'Software Engineering', 'Autonomous Systems', 'Research']
         }
-    ]
+    ],
+    subtitle: "Explore our publications, whitepapers, and findings on building persistent autonomous software intelligence models.",
+    ledgerTitle: "DOCUMENT DOSSIER // ",
+    formatLabel: "Format",
+    formatValue: "Technical PDF (English)",
+    noPublications: "No research publications found.",
+    peerSignature: "GPG Peer Agent Signature Verified",
+    peerSignStamp: "SIGN: ARCHITECT_AGENT_0x028A"
 }

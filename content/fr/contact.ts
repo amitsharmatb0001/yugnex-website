@@ -19,4 +19,11 @@ export const contactContent: ContactContent = {
         email: "amit@yugnex.com",
         location: "Bhilwara, Rajasthan, Inde",
     },
+    directChannelsTitle: "Canaux directs",
+    formPlaceholders: {
+        name: "Jane Doe",
+        email: "jane@exemple.com",
+        org: "Société Ltd.",
+        message: "Comment pouvons-nous collaborer ?",
+    },
 }

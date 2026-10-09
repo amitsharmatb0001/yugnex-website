@@ -78,11 +78,20 @@ const BLUEPRINT_LAYERS: BlueprintLayer[] = [
   }
 ]
 
-export default function MissionBlueprint() {
+interface MissionBlueprintProps {
+  blueprint?: BlueprintLayer[]
+  awaitingPipeline?: string
+}
+
+export default function MissionBlueprint({
+  blueprint = BLUEPRINT_LAYERS,
+  awaitingPipeline = "awaiting pipeline execution..."
+}: MissionBlueprintProps) {
   const [activeLayerId, setActiveLayerId] = useState<string>('ingestion')
   const [activeLogs, setActiveLogs] = useState<string[]>([])
 
-  const currentLayer = BLUEPRINT_LAYERS.find(l => l.id === activeLayerId) || BLUEPRINT_LAYERS[0]
+  const blueprintList = blueprint.length > 0 ? blueprint : BLUEPRINT_LAYERS
+  const currentLayer = blueprintList.find(l => l.id === activeLayerId) || blueprintList[0]
 
   useEffect(() => {
     // Simulate typing out logs when layer changes
@@ -97,7 +106,7 @@ export default function MissionBlueprint() {
     })
 
     return () => timerIds.forEach(clearTimeout)
-  }, [activeLayerId])
+  }, [activeLayerId, currentLayer])
 
   return (
     <div className={styles.blueprintContainer}>
@@ -108,7 +117,7 @@ export default function MissionBlueprint() {
         
         {/* Staggered Blueprint Layers */}
         <div className={styles.layersWrapper}>
-          {BLUEPRINT_LAYERS.map((layer) => (
+          {blueprintList.map((layer) => (
             <div
               key={layer.id}
               onClick={() => setActiveLayerId(layer.id)}
@@ -146,7 +155,7 @@ export default function MissionBlueprint() {
               </div>
             )
           })}
-          <div className="text-yellow-500 animate-pulse mt-1">$ awaiting pipeline execution...</div>
+          <div className="text-yellow-500 animate-pulse mt-1">$ {awaitingPipeline}</div>
         </div>
       </div>
     </div>

@@ -15,11 +15,11 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "श्वेतपत्र - 2026",
+            id: "whitepaper-2026",
             title: "स्वायत्त सॉफ्टवेअर अभियांत्रिकीकडे: आव्हाने आणि दिशा",
             description: "एआय-सहाय्यित सॉफ्टवेअर अभियांत्रिकीमध्ये तर्क, संदर्भ आणि आर्किटेक्चरल समज यावर संशोधन. हे श्वेतपत्रिका कायमस्वरूपी, स्वायत्त सॉफ्टवेअर अभियांत्रिकी बुद्धिमत्ता तयार करण्याच्या मूलभूत आव्हानांचे अन्वेषण करते.",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
-            fileName: "युगनेक्स_संशोधन_व्हाइटपेपर.pdf",
+            fileName: "YugNex_Research_Whitepaper.pdf",
             publishDate: "2026-01-01",
             authors: [
                 "YugNex तंत्रज्ञान संशोधन विभाग",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "सतत स्वायत्त सॉफ्टवेअर इंटेलिजन्स मॉडेल्स तयार करण्यासाठी आमची प्रकाशने, श्वेतपत्रिका आणि निष्कर्ष एक्सप्लोर करा.",
+    ledgerTitle: "दस्तऐवज डॉसियर //",
+    formatLabel: "स्वरूप",
+    formatValue: "तांत्रिक PDF (इंग्रजी)",
+    noPublications: "कोणतीही संशोधन प्रकाशने आढळली नाहीत.",
+    peerSignature: "GPG पीअर एजंट स्वाक्षरी सत्यापित",
+    peerSignStamp: "साइन इन: ARCHITECT_AGENT_0x028A",
 }

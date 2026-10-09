@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "白皮书-2026",
+            id: "whitepaper-2026",
             title: "走向自主软件工程：挑战和方向",
             description: "人工智能辅助软件工程中的推理、上下文和架构理解研究。本白皮书探讨了构建持久、自主的软件工程智能所面临的基本挑战。",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "探索我们关于构建持久自主软件智能模型的出版物、白皮书和研究结果。",
+    ledgerTitle: "文件档案 //",
+    formatLabel: "格式",
+    formatValue: "技术 PDF（英文）",
+    noPublications: "未找到研究出版物。",
+    peerSignature: "GPG 对等代理签名已验证",
+    peerSignStamp: "签名：ARCHITECT_AGENT_0x028A",
 }

@@ -5,6 +5,11 @@ import { Play, Check, ShieldAlert, Cpu, Network, Zap } from 'lucide-react'
 
 interface MissionConsoleProps {
   paragraphs: string[]
+  pipelineIntegrationFlow?: string
+  triggerDiagnostic?: string
+  runningDiagnostic?: string
+  layerMetas?: string[]
+  pipelineMap?: MissionPipeline[]
 }
 
 interface PipelineStep {
@@ -71,19 +76,20 @@ const PIPELINE_MAP: MissionPipeline[] = [
   }
 ]
 
-export default function MissionConsole({ paragraphs }: MissionConsoleProps) {
+export default function MissionConsole({
+  paragraphs,
+  pipelineIntegrationFlow = "Pipeline Integration Flow",
+  triggerDiagnostic = "TRIGGER DIAGNOSTIC",
+  runningDiagnostic = "RUNNING...",
+  layerMetas = ['Foundational Substrates', 'Perpetual Evolution', 'Architectural Context', 'Augmented Validation'],
+  pipelineMap = PIPELINE_MAP
+}: MissionConsoleProps) {
   const [activeLayer, setActiveLayer] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
   const [logFeed, setLogFeed] = useState<string[]>([])
 
   const getLayerMeta = (idx: number) => {
-    switch (idx) {
-      case 0: return 'Foundational Substrates'
-      case 1: return 'Perpetual Evolution'
-      case 2: return 'Architectural Context'
-      case 3: return 'Augmented Validation'
-      default: return `Layer 0${idx + 1}`
-    }
+    return layerMetas[idx] || `Layer 0${idx + 1}`
   }
 
   const getIcon = (idx: number) => {
@@ -95,13 +101,13 @@ export default function MissionConsole({ paragraphs }: MissionConsoleProps) {
     }
   }
 
-  const activeData = PIPELINE_MAP[activeLayer] || PIPELINE_MAP[0]
+  const activeData = pipelineMap[activeLayer] || pipelineMap[0]
 
   useEffect(() => {
     // Populate logs when layer changes
     setLogFeed(activeData.logs.slice(0, 2))
     setIsRunning(false)
-  }, [activeLayer])
+  }, [activeLayer, activeData])
 
   const triggerSimulation = () => {
     if (isRunning) return
@@ -155,7 +161,7 @@ export default function MissionConsole({ paragraphs }: MissionConsoleProps) {
             <div className={styles.pipelineFlow}>
               <div className="flex items-center gap-1.5 text-xs text-yellow-500 font-bold uppercase tracking-wider mb-2">
                 {getIcon(activeLayer)}
-                <span>Pipeline Integration Flow</span>
+                <span>{pipelineIntegrationFlow}</span>
               </div>
 
               {activeData.steps.map((step, sIdx) => (
@@ -176,7 +182,7 @@ export default function MissionConsole({ paragraphs }: MissionConsoleProps) {
                   className={styles.consoleAction}
                 >
                   <Play size={10} fill="#fbbf24" />
-                  <span>{isRunning ? 'RUNNING...' : 'TRIGGER DIAGNOSTIC'}</span>
+                  <span>{isRunning ? runningDiagnostic : triggerDiagnostic}</span>
                 </button>
               </div>
               <div className={styles.consoleBody}>

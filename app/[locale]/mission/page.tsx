@@ -48,12 +48,22 @@ export default async function MissionPage({ params }: { params: Promise<{ locale
 
                 {/* Interactive architecture blueprint */}
                 <section>
-                    <MissionBlueprint />
+                    <MissionBlueprint
+                        blueprint={content.blueprint}
+                        awaitingPipeline={content.awaitingPipeline}
+                    />
                 </section>
 
                 {/* Interactive detailed mission console */}
                 <section>
-                    <MissionConsole paragraphs={content.paragraphs} />
+                    <MissionConsole
+                        paragraphs={content.paragraphs}
+                        pipelineIntegrationFlow={content.pipelineIntegrationFlow}
+                        triggerDiagnostic={content.triggerDiagnostic}
+                        runningDiagnostic={content.runningDiagnostic}
+                        layerMetas={content.layerMetas}
+                        pipelineMap={content.pipelineMap}
+                    />
                 </section>
 
                 {/* Closing Statement */}
@@ -62,7 +72,7 @@ export default async function MissionPage({ params }: { params: Promise<{ locale
                         <div className="absolute inset-0 bg-yellow-500/10 blur-3xl rounded-full" />
                         <div className="relative p-8 rounded-2xl border border-yellow-500/30 backdrop-blur-sm">
                             <p className="text-xl md:text-2xl text-yellow-100 font-light leading-relaxed italic">
-                                "The new epoch isn't a distant vision. It's infrastructure we're building right now."
+                                "{content.closingStatement}"
                             </p>
                         </div>
                     </div>

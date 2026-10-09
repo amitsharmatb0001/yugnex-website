@@ -116,5 +116,72 @@ export const platformContent: PlatformContent = {
             others: "Facilitate human review. Show diffs. Highlight changes.",
             us: "Perform architectural analysis. Explain implications. Validate system coherence."
         }
+    ],
+    disclaimer: "⚠️ R&D Simulation Disclaimer: This interface is an interactive demonstration for conceptual visualization purposes. The YugNex autonomous software engineering system is currently in the Research & Development (R&D) phase. No public production digital application or fully optimized system is active at this time.",
+    tabs: {
+        github: "GitHub Pull Request",
+        ide: "IDE Workspace Integration",
+        cicd: "CI/CD Invariant pipeline"
+    },
+    githubPr: {
+        statusOpen: "Open",
+        securityScore: "Security Integrity Score",
+        securityBadge: "Security Auditor Agent",
+        securityTime: "Verified 2m ago",
+        securityFeedback: "Vulnerability resolution verified. The hardcoded JWT secret key has been parameterized to run from system environmental variables. X-Frame-Options security headers have been successfully injected globally. Invariant checks passed."
+    },
+    ideWorkspace: {
+        statusReviewing: "Reviewing",
+        ideTitle: "YugNex: Resolve listener leak in WebSockets",
+        ideDesc: "Memory leak resolved by declaring explicit close handler.",
+        btnAccept: "Accept Suggestion",
+        btnDecline: "Decline"
+    },
+    cicdPipeline: {
+        statusPipelinePassed: "Pipeline Passed",
+        statusSuccess: "STATUS: SUCCESS",
+        ciLogs: [
+            "[INFO] Spawning production runtime containers...",
+            "[INFO] Bundling modules and scanning compiler build trees...",
+            "[INFO] Executing formal invariant sweeps:",
+            "      ✓ Invariant 01: API authentication integrity (passed)",
+            "      ✓ Invariant 02: Resource allocation constraints (passed)",
+            "      ✓ Invariant 03: Circular dependency verification (passed)",
+            "[SUCCESS] System compilation build verified. Execution integrity passes with 0 memory leaks.",
+            "deploying to production edge..."
+        ]
+    },
+    capabilitiesTitle: "Interactive Platform Capabilities",
+    consoleSandboxRunner: "CONSOLE: SANDBOX_RUNNER",
+    btnExecuting: "EXECUTING...",
+    btnRun: "RUN",
+    capLogs: [
+        {
+            cmd: "yugnex build --analyze-architecture",
+            logs: [
+                "[INFO] Scanning codebase directories...",
+                "[INFO] Constructing causal inter-module graph (1,284 nodes)...",
+                "[VCS] Checking architectural boundaries against design specifications...",
+                "[SUCCESS] Dependency schema built. 0 boundary violations found."
+            ]
+        },
+        {
+            cmd: "yugnex diff --check-implications --file=userModel.ts",
+            logs: [
+                "[INFO] Tracing downstream imports for userModel.ts...",
+                "[INFO] Checking dependency chains inside routes/ and controllers/...",
+                "[WARN] userService.ts depends on changed database schemas. Validating parameters...",
+                "[SUCCESS] Causal paths verified. Refactoring risk assessment: 0 issues."
+            ]
+        },
+        {
+            cmd: "yugnex validate --invariants --level=all",
+            logs: [
+                "[INFO] Executing multi-level invariant validation checks...",
+                "[INFO] Level 1: Syntax Parsing (PASS) | Level 2: Types (PASS)",
+                "[INFO] Level 3: Security Sandboxing (PASS) | Level 4: Memory checks (PASS)",
+                "[SUCCESS] Formal validation completed successfully. Code safe."
+            ]
+        }
     ]
 }

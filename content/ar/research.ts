@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "ورقة بيضاء-2026",
+            id: "whitepaper-2026",
             title: "نحو هندسة البرمجيات المستقلة: التحديات والاتجاهات",
             description: "بحث حول المنطق والسياق والفهم المعماري في هندسة البرمجيات بمساعدة الذكاء الاصطناعي. يستكشف هذا المستند التقني التحديات الأساسية في بناء ذكاء هندسة البرمجيات المستمر والمستقل.",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "استكشف منشوراتنا وتقاريرنا والنتائج المتعلقة ببناء نماذج ذكاء برمجية مستقلة ومستمرة.",
+    ledgerTitle: "ملف الوثائق //",
+    formatLabel: "شكل",
+    formatValue: "ملف PDF الفني (الإنجليزية)",
+    noPublications: "لم يتم العثور على منشورات بحثية.",
+    peerSignature: "تم التحقق من توقيع وكيل GPG",
+    peerSignStamp: "تسجيل الدخول: ARCHITECT_AGENT_0x028A",
 }

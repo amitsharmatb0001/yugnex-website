@@ -56,4 +56,110 @@ export const technologyContent: TechnologyContent = {
             },
         ],
     },
+    diagnosticsTitle: "Diagnóstico interactivo de limitaciones",
+    approachTitle: "Nuestro enfoque en capas",
+    debateTitle: "Consensos del analizador autónomo",
+    debateSubtitle: "Pase el cursor sobre las líneas de código para activar el panel de consenso de múltiples agentes de YugNex que debate cuestiones de seguridad y refactorización.",
+    limitationLogs: [
+        {
+            cmd: "yugnex run trace --target=./src",
+            logs: [
+                "[INFO] Ejecutando rastreo de arquitectura del repositorio...",
+                "[ADVERTENCIA] Límite de contexto alcanzado en el índice de archivo 512.",
+                "[FALLO] context_overflow: el tamaño de la pila 1.048.576 bytes superó la ventana de contexto estándar.",
+                "[CRÍTICO] Analizador cancelado. El LLM tradicional no logra resolver las relaciones en todo el sistema.",
+                "[SOLUCIÓN YUGNEX] Redireccionamiento al sustrato de contexto causal...",
+                "[ÉXITO] Se completó el seguimiento del gráfico causal. 48.091 archivos indexados con nodos de caché persistente.",
+            ],
+        },
+        {
+            cmd: "yugnex run refactor --task=\"Update API params in userController.ts\"",
+            logs: [
+                "[INFO] Inicializando trabajo de refactorización de parámetros...",
+                "[INFO] Analizador ejecutando verificación de razonamiento simbólico en nodos de dependencia...",
+                "[ADVERTENCIA] Código generado por el asistente tradicional: la lista de parámetros userService.ts no coincide (falta el token).",
+                "[CRÍTICO] error_compilación: la sintaxis del código es válida pero interrumpirá la invocación en producción.",
+                "[SOLUCIÓN YUGNEX] El bloque de razonamiento simbólico interceptó una lista de parámetros no válidos. Revirtiendo cambios...",
+                "[ÉXITO] Se aplicaron enlaces parametrizados y llamadas sincronizadas en 14 módulos dependientes.",
+            ],
+        },
+        {
+            cmd: "yugnex run check-invariants --ci",
+            logs: [
+                "[INFO] Iniciando la verificación de canalización de CI...",
+                "[INFO] Modelos de escaneo/para vectores de seguridad de inyección de consultas de usuarios...",
+                "[ADVERTENCIA] direct_interpolation: interpolación de consultas detectada en perfilSearch.ts.",
+                "[FALLO] Invariante 02 violada: los parámetros de la base de datos deben estar vinculados. Estado de construcción: BLOQUEADO.",
+                "[SOLUCIÓN YUGNEX] Parámetros de fijación automática con consultas SQL parametrizadas...",
+                "[ÉXITO] Se aprobaron las invariantes. Controles de seguridad verificados (0 riesgos encontrados). Construcción publicada.",
+            ],
+        },
+    ],
+    approachDiagrams: [
+        "[Agente analizador AST] =======> [Agente solucionador causal]\n                                   ||\n                                   \\/ \n[Agente de consenso] <======== [Agente de refactor]\nESTADO: Razonamiento colaborativo especializado en línea.",
+        "Agente[Arquitecto]: \"La interpolación directa de SQL viola el estándar\".\nAgente[Seguridad]: \"Vulnerabilidad confirmada. Construcción de bloqueo automático\".\nAgente[Desarrollador]: \"Actualizando enlaces de consulta. Inyectando corrección...\"\nESTADO: Se alcanzó consenso. Código parcheado exitosamente.",
+        "Nivel 5 (Patrones de Diseño Arquitectónico) - ACTIVO\nNivel 4 (Interdependencias del Módulo) - ACTIVO\nNivel 3 (Enlace de variable semántica) - ACTIVO\nNivel 2 (Árbol de sintaxis abstracta) - ACTIVO\nESTADO: Razonamiento en capas en todo el sistema verificado.",
+        "Relaciones causales almacenadas en caché: 184.902\nNodos de contexto activos: 12.042\nLatencia de búsqueda: 1,2 ms (98 % de aceleración respecto a la búsqueda LLM)\nESTADO: Gráficos causales completamente sincronizados.",
+    ],
+    liveTelemetry: "Gráfico de telemetría en vivo",
+    codeLens: {
+        panelTitle: "active_routes.js — Líneas de desplazamiento/clic con nodos de alerta",
+        insightTitleAutoFix: "Recomendación de reparación automática de YugNex",
+        insightTitleDebate: "Debate sobre la resolución del agente",
+        solutionsDefault: "Pase el cursor sobre las líneas de código de la izquierda para activar la lente del analizador autónomo YugNex.",
+        lines: [
+            {
+            },
+            {
+                warningTitle: "Vulnerabilidad de inyección SQL",
+                warningDesc: "La interpolación directa de la entrada del usuario en una cadena de consulta SQL permite a los atacantes inyectar comandos SQL maliciosos y eludir la autenticación o ver tablas no autorizadas.",
+                debate: [
+                    {
+                        role: "Arquitecto",
+                        text: "Se detectó interpolación de consulta SQL directa. Esto viola nuestros estándares de seguridad.",
+                    },
+                    {
+                        role: "Auditor de seguridad",
+                        text: "Explotación remota posible a través de parámetros de estado. Confirmación bloqueada.",
+                    },
+                    {
+                        role: "Revelador",
+                        text: "Reescribir la consulta en el enlace parametrizado usando db.execute (consulta, [estado]).",
+                    },
+                ],
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+                warningTitle: "Cuello de botella de consulta N+1",
+                warningDesc: "La ejecución de una consulta de base de datos separada dentro de un bucle genera N consultas para N usuarios. Esto provoca fuertes picos de latencia y sobrecarga del servidor a medida que los grupos de conexiones de bases de datos se saturan.",
+                debate: [
+                    {
+                        role: "Arquitecto",
+                        text: "Cuello de botella de bases de datos relacionales. La ejecución de consultas dentro de un bucle está bloqueada.",
+                    },
+                    {
+                        role: "Revelador",
+                        text: "Agregar ID de usuario para buscar perfiles por lotes en una única consulta SELECT... WHERE IN (?).",
+                    },
+                    {
+                        role: "Auditor de Calidad",
+                        text: "Verificado. Las métricas de referencia muestran que el total de consultas ejecutadas disminuyó de N a 1.",
+                    },
+                ],
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+        ],
+    },
 }

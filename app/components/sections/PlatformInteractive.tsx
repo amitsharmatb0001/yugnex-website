@@ -18,6 +18,14 @@ interface UseCaseItem {
 interface PlatformInteractiveProps {
   capabilities: CapabilityItem[]
   useCases: UseCaseItem[]
+  capabilitiesTitle?: string
+  consoleSandboxRunner?: string
+  btnExecuting?: string
+  btnRun?: string
+  capLogs?: Array<{
+    cmd: string
+    logs: string[]
+  }>
   uiLabels: {
     theChallenge?: string
     ourSolution?: string
@@ -25,7 +33,7 @@ interface PlatformInteractiveProps {
   }
 }
 
-const CAP_LOGS = [
+const DEFAULT_CAP_LOGS = [
   {
     cmd: 'yugnex build --analyze-architecture',
     logs: [
@@ -55,43 +63,63 @@ const CAP_LOGS = [
   }
 ]
 
-export default function PlatformInteractive({ capabilities, useCases, uiLabels }: PlatformInteractiveProps) {
+export default function PlatformInteractive({
+  capabilities,
+  useCases,
+  capabilitiesTitle,
+  consoleSandboxRunner,
+  btnExecuting,
+  btnRun,
+  capLogs,
+  uiLabels
+}: PlatformInteractiveProps) {
   const [activeCap, setActiveCap] = useState(0)
   const [activeCase, setActiveCase] = useState(0)
   const [runningCapLogs, setRunningCapLogs] = useState<string[]>([])
   const [isRunning, setIsRunning] = useState(false)
 
+  const activeLogs = capLogs || DEFAULT_CAP_LOGS
+
   const triggerCapSimulation = (idx: number) => {
     if (isRunning) return
+    if (!activeLogs[idx]) return
     setIsRunning(true)
     setActiveCap(idx)
-    setRunningCapLogs([CAP_LOGS[idx].logs[0]])
+    setRunningCapLogs([activeLogs[idx].logs[0]])
 
     setTimeout(() => {
-      setRunningCapLogs(prev => [...prev, CAP_LOGS[idx].logs[1]])
+      if (activeLogs[idx] && activeLogs[idx].logs[1]) {
+        setRunningCapLogs(prev => [...prev, activeLogs[idx].logs[1]])
+      }
     }, 800)
 
     setTimeout(() => {
-      setRunningCapLogs(prev => [...prev, CAP_LOGS[idx].logs[2]])
+      if (activeLogs[idx] && activeLogs[idx].logs[2]) {
+        setRunningCapLogs(prev => [...prev, activeLogs[idx].logs[2]])
+      }
     }, 1600)
 
     setTimeout(() => {
-      setRunningCapLogs(prev => [...prev, CAP_LOGS[idx].logs[3]])
+      if (activeLogs[idx] && activeLogs[idx].logs[3]) {
+        setRunningCapLogs(prev => [...prev, activeLogs[idx].logs[3]])
+      }
       setIsRunning(false)
     }, 2400)
   }
 
   React.useEffect(() => {
     // Reset logs when tab changes
-    setRunningCapLogs(CAP_LOGS[activeCap].logs.slice(0, 2))
+    if (activeLogs[activeCap]) {
+      setRunningCapLogs(activeLogs[activeCap].logs.slice(0, 2))
+    }
     setIsRunning(false)
-  }, [activeCap])
+  }, [activeCap, activeLogs])
 
   return (
     <div className={styles.container}>
       {/* 1. Capabilities Section */}
       <section className="relative">
-        <h2 className={styles.sectionTitle}>Interactive Platform Capabilities</h2>
+        <h2 className={styles.sectionTitle}>{capabilitiesTitle || 'Interactive Platform Capabilities'}</h2>
         <div className={styles.capLayout}>
           <div className={styles.capTabs}>
             {capabilities.map((cap, idx) => (
@@ -126,20 +154,20 @@ export default function PlatformInteractive({ capabilities, useCases, uiLabels }
             {/* Sandbox Console */}
             <div className={styles.capConsole}>
               <div className={styles.capConsoleHeader}>
-                <span>CONSOLE: SANDBOX_RUNNER</span>
+                <span>{consoleSandboxRunner || 'CONSOLE: SANDBOX_RUNNER'}</span>
                 <button
                   onClick={() => triggerCapSimulation(activeCap)}
                   disabled={isRunning}
                   className="flex items-center gap-1 text-yellow-500 font-bold hover:text-yellow-400 disabled:opacity-50"
                 >
                   <Play size={10} fill="#fbbf24" />
-                  <span>{isRunning ? 'EXECUTING...' : 'RUN'}</span>
+                  <span>{isRunning ? (btnExecuting || 'EXECUTING...') : (btnRun || 'RUN')}</span>
                 </button>
               </div>
               <div className={styles.capConsoleBody}>
                 <div>
                   <span className="text-purple-400 mr-2">$</span>
-                  <span className="text-white">{CAP_LOGS[activeCap].cmd}</span>
+                  <span className="text-white">{activeLogs[activeCap]?.cmd}</span>
                 </div>
                 {runningCapLogs.map((log, lIdx) => {
                   const isSuccess = log.startsWith('[SUCCESS]')

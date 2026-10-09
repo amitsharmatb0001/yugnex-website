@@ -129,4 +129,71 @@ export const platformContent: PlatformContent = {
             us: "执行架构分析。解释影响。验证系统的一致性。",
         },
     ],
+    disclaimer: "⚠️研发模拟免责声明：该界面是用于概念可视化目的的交互式演示。 YugNex自主软件工程系统目前处于研发（R&D）阶段。目前没有活跃的公共生产数字应用程序或完全优化的系统。",
+    tabs: {
+        github: "GitHub 拉取请求",
+        ide: "IDE 工作区集成",
+        cicd: "CI/CD 不变管道",
+    },
+    githubPr: {
+        statusOpen: "打开",
+        securityScore: "安全完整性评分",
+        securityBadge: "安全审计代理",
+        securityTime: "2 分钟前已验证",
+        securityFeedback: "漏洞解决方案已验证。硬编码的 JWT 密钥已被参数化，可以从系统环境变量运行。 X-Frame-Options 安全标头已成功全局注入。不变检查已通过。",
+    },
+    ideWorkspace: {
+        statusReviewing: "审阅",
+        ideTitle: "YugNex：解决 WebSocket 中的侦听器泄漏",
+        ideDesc: "通过声明显式关闭处理程序解决了内存泄漏。",
+        btnAccept: "接受建议",
+        btnDecline: "衰退",
+    },
+    cicdPipeline: {
+        statusPipelinePassed: "管道已通过",
+        statusSuccess: "状态：成功",
+        ciLogs: [
+            "[信息] 生成生产运行时容器...",
+            "[INFO] 捆绑模块和扫描编译器构建树...",
+            "[INFO] 执行形式不变扫描：",
+            "✓ 不变式01：API认证完整性（通过）",
+            "✓ 不变式02：资源分配约束（通过）",
+            "✓ 不变式03：循环依赖验证（通过）",
+            "[成功] 系统编译构建已验证。执行完整性通过，内存泄漏为零。",
+            "部署到生产边缘...",
+        ],
+    },
+    capabilitiesTitle: "互动平台能力",
+    consoleSandboxRunner: "控制台：SANDBOX_RUNNER",
+    btnExecuting: "正在执行...",
+    btnRun: "跑步",
+    capLogs: [
+        {
+            cmd: "yugnex build --analyze-architecture",
+            logs: [
+                "[信息] 扫描代码库目录...",
+                "[INFO] 构建因果模块间图（1,284 个节点）...",
+                "[VCS] 根据设计规范检查架构边界...",
+                "[成功] 依赖架构已构建。发现 0 起边界违规行为。",
+            ],
+        },
+        {
+            cmd: "yugnex diff --check-implications --file=userModel.ts",
+            logs: [
+                "[INFO] 跟踪 userModel.ts 的下游导入...",
+                "[信息] 检查路由/和控制器/...内的依赖链",
+                "[警告] userService.ts 依赖于更改的数据库架构。正在验证参数...",
+                "[成功] 因果路径已验证。重构风险评估：0 个问题。",
+            ],
+        },
+        {
+            cmd: "yugnex validate --invariants --level=all",
+            logs: [
+                "[INFO] 执行多级不变验证检查...",
+                "[信息] 第 1 级：语法分析（通过）|第 2 级：类型（通过）",
+                "[信息] 第 3 级：安全沙箱 (PASS) |第 4 级：内存检查（通过）",
+                "[成功] 正式验证成功完成。代码安全。",
+            ],
+        },
+    ],
 }

@@ -39,10 +39,55 @@ const PILLARS: Pillar[] = [
   }
 ]
 
-export default function VisionPortal() {
+interface VisionPortalProps {
+  content?: {
+    oldYugTitle: string
+    oldYugDesc: string
+    newNexTitle: string
+    newNexDesc: string
+    labels: {
+      contextHorizon: string
+      dependencyTracing: string
+      codebaseLifecycle: string
+      verificationLoop: string
+    }
+    oldValues: {
+      contextHorizon: string
+      dependencyTracing: string
+      codebaseLifecycle: string
+      verificationLoop: string
+    }
+    newValues: {
+      contextHorizon: string
+      dependencyTracing: string
+      codebaseLifecycle: string
+      verificationLoop: string
+    }
+    pillarsTitle: string
+    pillars: Array<{
+      id: string
+      name: string
+      description: string
+      details: string
+      terminalLog: string
+    }>
+    systemSynapsed: string
+  }
+}
+
+export default function VisionPortal({ content }: VisionPortalProps) {
   const [activePillar, setActivePillar] = useState<string>('context')
 
-  const currentPillar = PILLARS.find(p => p.id === activePillar) || PILLARS[0]
+  const pillarsList = content?.pillars || PILLARS
+  const currentPillar = pillarsList.find(p => p.id === activePillar) || pillarsList[0]
+
+  const getPillarIcon = (id: string) => {
+    switch (id) {
+      case 'context': return <Layers size={20} />
+      case 'reasoning': return <Brain size={20} />
+      default: return <Cpu size={20} />
+    }
+  }
 
   return (
     <div className={styles.portalContainer}>
@@ -52,27 +97,27 @@ export default function VisionPortal() {
         <div className={`${styles.epochCard} ${styles.oldCard}`}>
           <div className={styles.cardHeader}>
             <ShieldAlert size={22} className="text-red-400" />
-            <h3 className={styles.cardTitle}>The Old Yug</h3>
+            <h3 className={styles.cardTitle}>{content?.oldYugTitle || "The Old Yug"}</h3>
           </div>
           <p className={styles.cardSubline}>
-            Human-only software development. Constrained by individual cognitive limits, resulting in software decay, context fragmentation, and accumulated technical debt.
+            {content?.oldYugDesc || "Human-only software development. Constrained by individual cognitive limits, resulting in software decay, context fragmentation, and accumulated technical debt."}
           </p>
           <div className="space-y-1">
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Context Horizon</span>
-              <span className={`${styles.statVal} ${styles.statValAlert}`}>~100K Tokens (Fragmented)</span>
+              <span className={styles.statLabel}>{content?.labels?.contextHorizon || "Context Horizon"}</span>
+              <span className={`${styles.statVal} ${styles.statValAlert}`}>{content?.oldValues?.contextHorizon || "~100K Tokens (Fragmented)"}</span>
             </div>
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Systemic Dependency Tracing</span>
-              <span className={`${styles.statVal} ${styles.statValAlert}`}>Manual / Approximate</span>
+              <span className={styles.statLabel}>{content?.labels?.dependencyTracing || "Systemic Dependency Tracing"}</span>
+              <span className={`${styles.statVal} ${styles.statValAlert}`}>{content?.oldValues?.dependencyTracing || "Manual / Approximate"}</span>
             </div>
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Codebase Lifecycle</span>
-              <span className={`${styles.statVal} ${styles.statValAlert}`}>Entropy & Degradation</span>
+              <span className={styles.statLabel}>{content?.labels?.codebaseLifecycle || "Codebase Lifecycle"}</span>
+              <span className={`${styles.statVal} ${styles.statValAlert}`}>{content?.oldValues?.codebaseLifecycle || "Entropy & Degradation"}</span>
             </div>
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Verification Loop</span>
-              <span className={`${styles.statVal} ${styles.statValAlert}`}>Post-Implementation Tests</span>
+              <span className={styles.statLabel}>{content?.labels?.verificationLoop || "Verification Loop"}</span>
+              <span className={`${styles.statVal} ${styles.statValAlert}`}>{content?.oldValues?.verificationLoop || "Post-Implementation Tests"}</span>
             </div>
           </div>
         </div>
@@ -81,27 +126,27 @@ export default function VisionPortal() {
         <div className={styles.epochCard}>
           <div className={styles.cardHeader}>
             <GitCompare size={22} className="text-yellow-400" />
-            <h3 className={styles.cardTitle}>The Next Nex</h3>
+            <h3 className={styles.cardTitle}>{content?.newNexTitle || "The Next Nex"}</h3>
           </div>
           <p className={styles.cardSubline}>
-            Autonomous collaborative engineering. A persistent, semantic reasoning substrate that understands your architecture, verifies invariants, and works alongside you.
+            {content?.newNexDesc || "Autonomous collaborative engineering. A persistent, semantic reasoning substrate that understands your architecture, verifies invariants, and works alongside you."}
           </p>
           <div className="space-y-1">
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Context Horizon</span>
-              <span className={`${styles.statVal} ${styles.statValSuccess}`}>Infinite Graph Representation</span>
+              <span className={styles.statLabel}>{content?.labels?.contextHorizon || "Context Horizon"}</span>
+              <span className={`${styles.statVal} ${styles.statValSuccess}`}>{content?.newValues?.contextHorizon || "Infinite Graph Representation"}</span>
             </div>
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Systemic Dependency Tracing</span>
-              <span className={`${styles.statVal} ${styles.statValSuccess}`}>Dynamic AST Trace (Causal)</span>
+              <span className={styles.statLabel}>{content?.labels?.dependencyTracing || "Systemic Dependency Tracing"}</span>
+              <span className={`${styles.statVal} ${styles.statValSuccess}`}>{content?.newValues?.dependencyTracing || "Dynamic AST Trace (Causal)"}</span>
             </div>
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Codebase Lifecycle</span>
-              <span className={`${styles.statVal} ${styles.statValSuccess}`}>Refactored / Zero-Debt</span>
+              <span className={styles.statLabel}>{content?.labels?.codebaseLifecycle || "Codebase Lifecycle"}</span>
+              <span className={`${styles.statVal} ${styles.statValSuccess}`}>{content?.newValues?.codebaseLifecycle || "Refactored / Zero-Debt"}</span>
             </div>
             <div className={styles.statRow}>
-              <span className={styles.statLabel}>Verification Loop</span>
-              <span className={`${styles.statVal} ${styles.statValSuccess}`}>Pre-Commit Sandbox Invariants</span>
+              <span className={styles.statLabel}>{content?.labels?.verificationLoop || "Verification Loop"}</span>
+              <span className={`${styles.statVal} ${styles.statValSuccess}`}>{content?.newValues?.verificationLoop || "Pre-Commit Sandbox Invariants"}</span>
             </div>
           </div>
         </div>
@@ -109,17 +154,17 @@ export default function VisionPortal() {
 
       {/* Interactive Pillars Section */}
       <div className={styles.pillarContainer}>
-        <h3 className={styles.sectionTitle}>Cognitive Substrate Pillars</h3>
+        <h3 className={styles.sectionTitle}>{content?.pillarsTitle || "Cognitive Substrate Pillars"}</h3>
         
         <div className={styles.pillarsGrid}>
-          {PILLARS.map((pillar) => (
+          {pillarsList.map((pillar) => (
             <div
               key={pillar.id}
               onClick={() => setActivePillar(pillar.id)}
               className={`${styles.pillarCard} ${activePillar === pillar.id ? styles.activePillar : ''}`}
             >
               <div className={styles.pillarIcon}>
-                {pillar.icon}
+                {getPillarIcon(pillar.id)}
               </div>
               <h4 className={styles.pillarName}>{pillar.name}</h4>
               <p className={styles.pillarDesc}>{pillar.description}</p>
@@ -134,7 +179,7 @@ export default function VisionPortal() {
               <Activity size={14} className="text-yellow-400 animate-pulse" />
               <span className={styles.detailsTitle}>{currentPillar.terminalLog}</span>
             </div>
-            <span className={styles.detailsStatus}>System Synapsed</span>
+            <span className={styles.detailsStatus}>{content?.systemSynapsed || "System Synapsed"}</span>
           </div>
           <div className={styles.detailsContent}>
             <p className="font-light text-gray-300 leading-relaxed">

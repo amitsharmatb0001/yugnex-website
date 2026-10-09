@@ -40,14 +40,20 @@ export default async function HomePage({
                     
                     <div className="glass-card p-10 md:p-14 bg-black/60 relative">
                         <h2 className="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">
-                            Build the Next Epoch of Software
+                            {content.waitlistTitle}
                         </h2>
                         <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto mb-10 font-light leading-relaxed">
-                            YugNex is currently in private R&D testing with select partners. Enter your email below to reserve priority access when public testing begins.
+                            {content.waitlistDesc}
                         </p>
 
                         {/* Waitlist Form */}
-                        <WaitlistForm />
+                        <WaitlistForm
+                            placeholder={content.waitlistPlaceholder}
+                            joiningText={content.waitlistJoining}
+                            joinBtnText={content.waitlistJoinBtn}
+                            successTitle={content.waitlistSuccessTitle}
+                            successDesc={content.waitlistSuccessDesc}
+                        />
                     </div>
                 </section>
             </div>

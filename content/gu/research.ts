@@ -15,11 +15,11 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "વ્હાઇટપેપર-2026",
+            id: "whitepaper-2026",
             title: "સ્વાયત્ત સોફ્ટવેર એન્જિનિયરિંગ તરફ: પડકારો અને દિશાઓ",
             description: "AI-સહાયિત સોફ્ટવેર એન્જિનિયરિંગમાં તર્ક, સંદર્ભ અને આર્કિટેક્ચરલ સમજ પર સંશોધન. આ શ્વેતપત્ર સતત, સ્વાયત્ત સોફ્ટવેર એન્જિનિયરિંગ બુદ્ધિના નિર્માણમાં પાયાના પડકારોની શોધ કરે છે.",
-            pdfUrl: "/YugNex_Search_Whitepaper.pdf",
-            fileName: "YugNex_Search_Whitepaper.pdf",
+            pdfUrl: "/YugNex_Research_Whitepaper.pdf",
+            fileName: "YugNex_Research_Whitepaper.pdf",
             publishDate: "2026-01-01",
             authors: [
                 "YugNex ટેકનોલોજી સંશોધન વિભાગ",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "અમારા પ્રકાશનો, વ્હાઇટપેપર્સ અને સતત સ્વાયત્ત સૉફ્ટવેર ઇન્ટેલિજન્સ મૉડલ્સ બનાવવા પરના તારણોનું અન્વેષણ કરો.",
+    ledgerTitle: "દસ્તાવેજ ડોઝિયર //",
+    formatLabel: "ફોર્મેટ",
+    formatValue: "ટેકનિકલ પીડીએફ (અંગ્રેજી)",
+    noPublications: "કોઈ સંશોધન પ્રકાશનો મળ્યાં નથી.",
+    peerSignature: "GPG પીઅર એજન્ટની સહી ચકાસાયેલ",
+    peerSignStamp: "SIGN: ARCHITECT_AGENT_0x028A",
 }

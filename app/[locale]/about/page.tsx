@@ -85,8 +85,13 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
                 {/* Timeline Section */}
                 <section className="border-t border-white/10 pt-8">
-                    <h3 className="text-3xl font-bold text-center text-white mb-6">Our Journey & Milestones</h3>
-                    <MilestoneTimeline />
+                    <h3 className="text-3xl font-bold text-center text-white mb-6">
+                        {content.journeyTitle}
+                    </h3>
+                    <MilestoneTimeline
+                        milestones={content.milestones}
+                        ledgerLabel={content.ledgerLabel}
+                    />
                 </section>
             </div>
         </div>

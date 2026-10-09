@@ -6,4 +6,11 @@ export const homeContent: HomeContent = {
     subline: "From idea to production with memory, reasoning, and continuity. Built in India for the world.",
     banner: "Currently in foundational research and core system development.",
     credentials: "DPIIT Recognized Startup · Patent Pending · Built in India · Global Standards",
+    waitlistTitle: "Build the Next Epoch of Software",
+    waitlistDesc: "YugNex is currently in private R&D testing with select partners. Enter your email below to reserve priority access when public testing begins.",
+    waitlistPlaceholder: "Enter your professional email",
+    waitlistJoining: "Joining...",
+    waitlistJoinBtn: "Join Waitlist",
+    waitlistSuccessTitle: "You are on the list!",
+    waitlistSuccessDesc: "Thank you for joining the YugNex waitlist. We will notify you as soon as early developer access begins.",
 }

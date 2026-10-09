@@ -71,6 +71,7 @@ export const UI_LABELS: Record<Locale, {
     verificationRequired?: string
     allRightsReserved?: string
     legalDisclaimer?: string
+    selectLanguage?: string
 }> = {
     'en': {
         vision: 'Vision',
@@ -124,6 +125,7 @@ export const UI_LABELS: Record<Locale, {
         successMessage: 'Message sent successfully! We\'ll be in touch shortly.',
         errorMessage: 'Failed to send message. Please try again or contact us directly.',
         verificationRequired: 'Please complete the verification check.',
+        selectLanguage: 'Select Language',
     },
     'en-IN': {
         vision: 'Vision',
@@ -232,6 +234,7 @@ export const UI_LABELS: Record<Locale, {
         verificationRequired: 'कृपया सत्यापन जांच पूरी करें।',
         allRightsReserved: 'सर्वाधिकार सुरक्षित।',
         legalDisclaimer: 'आधिकारिक और कानूनी उद्देश्यों के लिए, इस वेबसाइट का अंग्रेजी संस्करण आधिकारिक माना जाता है। अनुवाद केवल सुविधा के लिए प्रदान किए गए हैं।',
+        selectLanguage: 'भाषा चुनें',
     },
     'hi-Latn': {
         vision: 'Vision',
@@ -287,6 +290,7 @@ export const UI_LABELS: Record<Locale, {
         verificationRequired: 'Kripya satyapan jaanch poori karein.',
         allRightsReserved: 'Sarvadhikar Surakshit.',
         legalDisclaimer: 'Adhikarik aur kanooni uddeshyon ke liye, is website ka angrezi sanskaran adhikarik mana jata hai. Anuvad keval suvidha ke liye pradan kiye gaye hain.',
+        selectLanguage: 'Language chunein',
     },
     'ta': {
         vision: 'தொலைநோக்கு',

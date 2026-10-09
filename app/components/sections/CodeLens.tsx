@@ -55,9 +55,48 @@ const LINES: LineData[] = [
   { text: '};', hasWarning: false },
 ]
 
-export default function CodeLens() {
+interface CodeLensContent {
+  panelTitle: string
+  insightTitleAutoFix: string
+  insightTitleDebate: string
+  solutionsDefault: string
+  lines: Array<{
+    warningTitle?: string
+    warningDesc?: string
+    debate?: Array<{
+      role: string
+      text: string
+    }>
+  }>
+}
+
+interface CodeLensProps {
+  content?: CodeLensContent
+}
+
+export default function CodeLens({ content }: CodeLensProps) {
   const [selectedLine, setSelectedLine] = useState<number | null>(1)
-  const line = selectedLine !== null ? LINES[selectedLine] : null
+
+  const displayLines = LINES.map((staticLine, index) => {
+    const localizedLine = content?.lines?.[index]
+    if (!localizedLine) return staticLine
+
+    return {
+      ...staticLine,
+      warningTitle: localizedLine.warningTitle || staticLine.warningTitle,
+      warningDesc: localizedLine.warningDesc || staticLine.warningDesc,
+      debate: (localizedLine.debate && staticLine.debate) ? staticLine.debate.map((staticMsg, dIdx) => {
+        const localizedMsg = localizedLine.debate?.[dIdx]
+        return {
+          ...staticMsg,
+          text: localizedMsg?.text || staticMsg.text,
+          role: (localizedMsg?.role || staticMsg.role) as any
+        }
+      }) : staticLine.debate
+    }
+  })
+
+  const line = selectedLine !== null ? displayLines[selectedLine] : null
 
   const getRoleBadgeColor = (role: string) => {
     switch (role) {
@@ -80,10 +119,10 @@ export default function CodeLens() {
               <span className={styles.dotYellow} />
               <span className={styles.dotGreen} />
             </div>
-            <span className={styles.panelTitle}>active_routes.js — Hover/Click lines with alert nodes</span>
+            <span className={styles.panelTitle}>{content?.panelTitle || 'active_routes.js — Hover/Click lines with alert nodes'}</span>
           </div>
           <div className={styles.codeBody}>
-            {LINES.map((l, index) => {
+            {displayLines.map((l, index) => {
               const isSelected = selectedLine === index
               return (
                 <div
@@ -121,7 +160,7 @@ export default function CodeLens() {
               <p className={styles.insightDesc}>{line.warningDesc}</p>
               
               <div className={styles.solutionCard}>
-                <div className={styles.solutionTitle}>YugNex Auto-Fix Recommendation</div>
+                <div className={styles.solutionTitle}>{content?.insightTitleAutoFix || 'YugNex Auto-Fix Recommendation'}</div>
                 <pre className={styles.solutionCode}>{line.fixCode}</pre>
               </div>
 
@@ -129,7 +168,7 @@ export default function CodeLens() {
                 <div className="mt-4 pt-4 border-t border-white/10 space-y-2.5">
                   <div className="flex items-center gap-1.5 text-xs text-yellow-500 font-bold uppercase tracking-wider">
                     <MessageSquare size={13} />
-                    <span>Agent Resolution Debate</span>
+                    <span>{content?.insightTitleDebate || 'Agent Resolution Debate'}</span>
                   </div>
                   <div className="space-y-2 max-h-[160px] overflow-y-auto pr-1">
                     {line.debate.map((msg, i) => (
@@ -147,7 +186,7 @@ export default function CodeLens() {
           ) : (
             <div className={styles.solutionsDefault}>
               <RefreshCw className="mx-auto mb-4 animate-spin text-yellow-500/60" size={32} />
-              <p className="text-sm">Hover over lines of code on the left to activate the YugNex autonomous analyzer lens.</p>
+              <p className="text-sm">{content?.solutionsDefault || 'Hover over lines of code on the left to activate the YugNex autonomous analyzer lens.'}</p>
             </div>
           )}
         </div>

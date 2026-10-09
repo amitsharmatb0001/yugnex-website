@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "श्वेतपत्र-2026",
+            id: "whitepaper-2026",
             title: "स्वायत्त सॉफ्टवेयर इंजीनियरिंग की ओर: चुनौतियाँ और दिशाएँ",
             description: "एआई-सहायता प्राप्त सॉफ्टवेयर इंजीनियरिंग में तर्क, संदर्भ और वास्तुशिल्प समझ पर शोध। यह श्वेतपत्र लगातार, स्वायत्त सॉफ्टवेयर इंजीनियरिंग बुद्धिमत्ता के निर्माण में मूलभूत चुनौतियों की पड़ताल करता है।",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "लगातार स्वायत्त सॉफ़्टवेयर इंटेलिजेंस मॉडल के निर्माण पर हमारे प्रकाशनों, श्वेतपत्रों और निष्कर्षों का अन्वेषण करें।",
+    ledgerTitle: "दस्तावेज़ डोजियर //",
+    formatLabel: "प्रारूप",
+    formatValue: "तकनीकी पीडीएफ (अंग्रेजी)",
+    noPublications: "कोई शोध प्रकाशन नहीं मिला.",
+    peerSignature: "जीपीजी पीयर एजेंट के हस्ताक्षर सत्यापित",
+    peerSignStamp: "हस्ताक्षर: ARCHITECT_AGENT_0x028A",
 }

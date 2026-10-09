@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { getUILabels } from '@/app/lib/uiLabels'
 import { type Locale } from '@/app/lib/i18n'
 import { Download, BookOpen, FileText, CheckCircle } from 'lucide-react'
@@ -19,9 +20,26 @@ interface ResearchPaper {
 interface ResearchPapersProps {
   locale?: string
   papers: ResearchPaper[]
+  subtitle?: string
+  ledgerTitle?: string
+  formatLabel?: string
+  formatValue?: string
+  noPublications?: string
+  peerSignature?: string
+  peerSignStamp?: string
 }
 
-export default function ResearchPapers({ locale = 'en', papers }: ResearchPapersProps) {
+export default function ResearchPapers({
+  locale = 'en',
+  papers,
+  subtitle,
+  ledgerTitle,
+  formatLabel,
+  formatValue,
+  noPublications,
+  peerSignature,
+  peerSignStamp
+}: ResearchPapersProps) {
   const ui = getUILabels(locale as Locale)
   const [activePaperIndex, setActivePaperIndex] = useState<number>(0)
   const [typedAbstract, setTypedAbstract] = useState<string>('')
@@ -38,7 +56,7 @@ export default function ResearchPapers({ locale = 'en', papers }: ResearchPapers
     
     const interval = setInterval(() => {
       if (i < fullText.length) {
-        setTypedAbstract(prev => prev + fullText[i])
+        setTypedAbstract(prev => prev + fullText.slice(i, i + 3))
         i += 3 // Type out 3 characters at a time for smooth readability
       } else {
         clearInterval(interval)
@@ -55,7 +73,7 @@ export default function ResearchPapers({ locale = 'en', papers }: ResearchPapers
           {ui.researchPublications || 'Research Publications'}
         </h2>
         <p className="text-gray-400 max-w-3xl mx-auto font-light">
-          Explore our publications, whitepapers, and findings on building persistent autonomous software intelligence models.
+          {subtitle || 'Explore our publications, whitepapers, and findings on building persistent autonomous software intelligence models.'}
         </p>
       </div>
 
@@ -92,7 +110,7 @@ export default function ResearchPapers({ locale = 'en', papers }: ResearchPapers
           <div className={styles.dossierCard}>
             <div>
               <div className={styles.dossierHeader}>
-                <div className={styles.dossierLabel}>DOCUMENT DOSSIER // {activePaper.id.toUpperCase()}</div>
+                <div className={styles.dossierLabel}>{ledgerTitle || 'DOCUMENT DOSSIER // '}{activePaper.id.toUpperCase()}</div>
                 <h3 className={styles.dossierTitle}>{activePaper.title}</h3>
               </div>
 
@@ -107,15 +125,15 @@ export default function ResearchPapers({ locale = 'en', papers }: ResearchPapers
               <div className="mt-4 p-3 rounded bg-green-500/5 border border-green-500/20 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <CheckCircle size={14} className="text-green-400" />
-                  <span className="text-[10px] font-mono text-green-400 font-bold uppercase tracking-wider">GPG Peer Agent Signature Verified</span>
+                  <span className="text-[10px] font-mono text-green-400 font-bold uppercase tracking-wider">{peerSignature || 'GPG Peer Agent Signature Verified'}</span>
                 </div>
-                <span className="text-[9px] font-mono text-gray-500">SIGN: ARCHITECT_AGENT_0x028A</span>
+                <span className="text-[9px] font-mono text-gray-500">{peerSignStamp || 'SIGN: ARCHITECT_AGENT_0x028A'}</span>
               </div>
 
               {/* Meta Blocks */}
               <div className={styles.dossierMeta}>
                 <div className={styles.metaBlock}>
-                  <span className={styles.metaLabel}>Published</span>
+                  <span className={styles.metaLabel}>{ui.published || 'Published'}</span>
                   <span className={styles.metaValue}>
                     {new Date(activePaper.publishDate).toLocaleDateString(locale, {
                       year: 'numeric',
@@ -125,29 +143,40 @@ export default function ResearchPapers({ locale = 'en', papers }: ResearchPapers
                   </span>
                 </div>
                 <div className={styles.metaBlock}>
-                  <span className={styles.metaLabel}>Format</span>
-                  <span className={styles.metaValue}>Technical PDF (English)</span>
+                  <span className={styles.metaLabel}>{formatLabel || 'Format'}</span>
+                  <span className={styles.metaValue}>{formatValue || 'Technical PDF (English)'}</span>
                 </div>
               </div>
             </div>
 
             <div className={styles.dossierFooter}>
-              <a
-                href={activePaper.pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.downloadButton}
-              >
-                <Download size={16} />
-                <span>{ui.downloadPDF || 'Download PDF'}</span>
-              </a>
+              <div className="flex gap-4 flex-wrap mt-6">
+                <Link
+                  href={`/${locale}/research/${activePaper.id}`}
+                  className={styles.readButton}
+                >
+                  <BookOpen size={16} />
+                  <span>Read Online</span>
+                </Link>
+                {activePaper.pdfUrl && activePaper.pdfUrl.endsWith('.pdf') && (
+                  <a
+                    href={activePaper.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.downloadButton}
+                  >
+                    <Download size={16} />
+                    <span>{ui.downloadPDF || 'Download PDF'}</span>
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
       ) : (
         <div className={styles.defaultView}>
           <FileText size={48} className="mb-4 opacity-40" />
-          <p>No research publications found.</p>
+          <p>{noPublications || 'No research publications found.'}</p>
         </div>
       )}
 

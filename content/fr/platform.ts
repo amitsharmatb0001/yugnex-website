@@ -129,4 +129,71 @@ export const platformContent: PlatformContent = {
             us: "Effectuer une analyse architecturale. Expliquez les implications. Valider la cohérence du système.",
         },
     ],
+    disclaimer: "⚠️ Avis de non-responsabilité sur la simulation R&D : cette interface est une démonstration interactive à des fins de visualisation conceptuelle. Le système d'ingénierie logicielle autonome YugNex est actuellement en phase de recherche et développement (R&D). Aucune application numérique de production publique ou système entièrement optimisé n’est actif pour le moment.",
+    tabs: {
+        github: "Demande de tirage GitHub",
+        ide: "Intégration de l'espace de travail IDE",
+        cicd: "Pipeline invariant CI/CD",
+    },
+    githubPr: {
+        statusOpen: "Ouvrir",
+        securityScore: "Score d'intégrité de la sécurité",
+        securityBadge: "Agent auditeur de sécurité",
+        securityTime: "Vérifié il y a 2 millions",
+        securityFeedback: "Résolution de vulnérabilité vérifiée. La clé secrète JWT codée en dur a été paramétrée pour être exécutée à partir de variables d'environnement système. Les en-têtes de sécurité X-Frame-Options ont été injectés avec succès à l’échelle mondiale. Vérifications invariantes réussies.",
+    },
+    ideWorkspace: {
+        statusReviewing: "Révision",
+        ideTitle: "YugNex : Résoudre la fuite d'écoute dans WebSockets",
+        ideDesc: "Fuite de mémoire résolue en déclarant un gestionnaire de fermeture explicite.",
+        btnAccept: "Accepter les suggestions",
+        btnDecline: "Déclin",
+    },
+    cicdPipeline: {
+        statusPipelinePassed: "Pipeline réussi",
+        statusSuccess: "STATUT : SUCCÈS",
+        ciLogs: [
+            "[INFO] Création de conteneurs d'exécution de production...",
+            "[INFO] Regroupement de modules et analyse des arborescences de construction du compilateur...",
+            "[INFO] Exécution de balayages invariants formels :",
+            "✓ Invariant 01 : intégrité de l'authentification API (réussi)",
+            "✓ Invariant 02 : Contraintes d'allocation de ressources (réussi)",
+            "✓ Invariant 03 : Vérification de dépendance circulaire (réussie)",
+            "[SUCCÈS] Version de compilation du système vérifiée. L’intégrité de l’exécution est réussie avec 0 fuite de mémoire.",
+            "déploiement à la périphérie de la production...",
+        ],
+    },
+    capabilitiesTitle: "Capacités de la plateforme interactive",
+    consoleSandboxRunner: "CONSOLE : SANDBOX_RUNNER",
+    btnExecuting: "EXÉCUTION...",
+    btnRun: "COURIR",
+    capLogs: [
+        {
+            cmd: "yugnex build --analyze-architecture",
+            logs: [
+                "[INFO] Analyse des répertoires de base de code...",
+                "[INFO] Construction d'un graphe causal inter-modules (1 284 nœuds)...",
+                "[VCS] Vérification des limites architecturales par rapport aux spécifications de conception...",
+                "[SUCCÈS] Schéma de dépendances construit. 0 violation de limite trouvée.",
+            ],
+        },
+        {
+            cmd: "yugnex diff --check-implications --file=userModel.ts",
+            logs: [
+                "[INFO] Suivi des importations en aval pour userModel.ts...",
+                "[INFO] Vérification des chaînes de dépendances à l'intérieur des routes/ et des contrôleurs/...",
+                "[WARN] userService.ts dépend des schémas de base de données modifiés. Validation des paramètres...",
+                "[SUCCÈS] Chemins causals vérifiés. Évaluation des risques de refactorisation : 0 problème.",
+            ],
+        },
+        {
+            cmd: "yugnex validate --invariants --level=all",
+            logs: [
+                "[INFO] Exécution de contrôles de validation invariants à plusieurs niveaux...",
+                "[INFO] Niveau 1 : Analyse syntaxique (PASS) | Niveau 2 : Types (PASS)",
+                "[INFO] Niveau 3 : Security Sandboxing (PASS) | Niveau 4 : Vérifications de mémoire (PASS)",
+                "[SUCCÈS] Validation formelle terminée avec succès. Code sécurisé.",
+            ],
+        },
+    ],
 }

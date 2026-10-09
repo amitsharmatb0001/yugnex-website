@@ -52,6 +52,14 @@ export default async function TechnologyPage({ params }: { params: Promise<{ loc
                     <TechnologyInteractive 
                         limitations={content.problem.limitations} 
                         approachSections={content.approach.sections}
+                        diagnosticsTitle={content.diagnosticsTitle}
+                        approachTitle={content.approachTitle}
+                        debateTitle={content.debateTitle}
+                        debateSubtitle={content.debateSubtitle}
+                        limitationLogs={content.limitationLogs}
+                        approachDiagrams={content.approachDiagrams}
+                        liveTelemetry={content.liveTelemetry}
+                        codeLensContent={content.codeLens}
                     />
                 </section>
 

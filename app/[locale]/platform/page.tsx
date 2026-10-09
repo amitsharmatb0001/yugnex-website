@@ -42,7 +42,7 @@ export default async function PlatformPage({ params }: { params: Promise<{ local
 
                 {/* Interactive Developer Cockpit Widget */}
                 <section className="container mx-auto px-6 max-w-5xl">
-                    <DeveloperCockpit />
+                    <DeveloperCockpit content={content} />
                 </section>
 
                 {/* Capabilities & Use Cases Interactive Hub */}
@@ -59,6 +59,11 @@ export default async function PlatformPage({ params }: { params: Promise<{ local
                     <PlatformInteractive
                         capabilities={content.capabilities}
                         useCases={content.useCases}
+                        capabilitiesTitle={content.capabilitiesTitle}
+                        consoleSandboxRunner={content.consoleSandboxRunner}
+                        btnExecuting={content.btnExecuting}
+                        btnRun={content.btnRun}
+                        capLogs={content.capLogs}
                         uiLabels={{
                             theChallenge: ui.theChallenge,
                             ourSolution: ui.ourSolution,

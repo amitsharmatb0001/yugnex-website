@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "Explore nossas publicações, white papers e descobertas sobre a construção de modelos de inteligência de software autônomos e persistentes.",
+    ledgerTitle: "DOSSIÊ DE DOCUMENTOS //",
+    formatLabel: "Formatar",
+    formatValue: "PDF Técnico (Inglês)",
+    noPublications: "Nenhuma publicação de pesquisa encontrada.",
+    peerSignature: "Assinatura do agente peer GPG verificada",
+    peerSignStamp: "ASSINAR: ARQUITETO_AGENTE_0x028A",
 }

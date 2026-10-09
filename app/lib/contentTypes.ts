@@ -6,18 +6,81 @@ export interface HomeContent {
     subline: string
     banner: string
     credentials: string
+    waitlistTitle: string
+    waitlistDesc: string
+    waitlistPlaceholder: string
+    waitlistJoining: string
+    waitlistJoinBtn: string
+    waitlistSuccessTitle: string
+    waitlistSuccessDesc: string
 }
 
 export interface VisionContent {
     title: string
     lead: string
     paragraphs: string[]
+    oldYugTitle: string
+    oldYugDesc: string
+    newNexTitle: string
+    newNexDesc: string
+    labels: {
+        contextHorizon: string
+        dependencyTracing: string
+        codebaseLifecycle: string
+        verificationLoop: string
+    }
+    oldValues: {
+        contextHorizon: string
+        dependencyTracing: string
+        codebaseLifecycle: string
+        verificationLoop: string
+    }
+    newValues: {
+        contextHorizon: string
+        dependencyTracing: string
+        codebaseLifecycle: string
+        verificationLoop: string
+    }
+    pillarsTitle: string
+    pillars: Array<{
+        id: string
+        name: string
+        description: string
+        details: string
+        terminalLog: string
+    }>
+    systemSynapsed: string
+    telemetryTitle: string
+    telemetryStatus: string
+    pillarMetas: string[]
+    telemetryMap: Array<{
+        stats: Array<{ label: string; value: string; pct: number }>
+        logs: string[]
+    }>
 }
 
 export interface MissionContent {
     title: string
     lead: string
     paragraphs: string[]
+    closingStatement: string
+    blueprint: Array<{
+        id: string
+        num: string
+        name: string
+        badge: string
+        telemetryTitle: string
+        logs: string[]
+    }>
+    awaitingPipeline: string
+    pipelineIntegrationFlow: string
+    triggerDiagnostic: string
+    runningDiagnostic: string
+    layerMetas: string[]
+    pipelineMap: Array<{
+        steps: Array<{ label: string }>
+        logs: string[]
+    }>
 }
 
 // vision-content.ts
@@ -80,6 +143,13 @@ export interface ResearchContent {
         authors: string[]
         tags: string[]
     }>
+    subtitle: string
+    ledgerTitle: string
+    formatLabel: string
+    formatValue: string
+    noPublications: string
+    peerSignature: string
+    peerSignStamp: string
 }
 
 export interface TechnologyContent {
@@ -106,6 +176,30 @@ export interface TechnologyContent {
         comparison: Array<{
             label: string
             value: string
+        }>
+    }
+    diagnosticsTitle: string
+    approachTitle: string
+    debateTitle: string
+    debateSubtitle: string
+    limitationLogs: Array<{
+        cmd: string
+        logs: string[]
+    }>
+    approachDiagrams: string[]
+    liveTelemetry: string
+    codeLens: {
+        panelTitle: string
+        insightTitleAutoFix: string
+        insightTitleDebate: string
+        solutionsDefault: string
+        lines: Array<{
+            warningTitle?: string
+            warningDesc?: string
+            debate?: Array<{
+                role: string;
+                text: string;
+            }>
         }>
     }
 }
@@ -149,6 +243,39 @@ export interface PlatformContent {
         others: string
         us: string
     }>
+    disclaimer: string
+    tabs: {
+        github: string
+        ide: string
+        cicd: string
+    }
+    githubPr: {
+        statusOpen: string
+        securityScore: string
+        securityBadge: string
+        securityTime: string
+        securityFeedback: string
+    }
+    ideWorkspace: {
+        statusReviewing: string
+        ideTitle: string
+        ideDesc: string
+        btnAccept: string
+        btnDecline: string
+    }
+    cicdPipeline: {
+        statusPipelinePassed: string
+        statusSuccess: string
+        ciLogs: string[]
+    }
+    capabilitiesTitle: string
+    consoleSandboxRunner: string
+    btnExecuting: string
+    btnRun: string
+    capLogs: Array<{
+        cmd: string
+        logs: string[]
+    }>
 }
 
 export interface ContactContent {
@@ -170,6 +297,13 @@ export interface ContactContent {
         email: string
         location: string
     }
+    directChannelsTitle: string
+    formPlaceholders: {
+        name: string
+        email: string
+        org: string
+        message: string
+    }
 }
 
 export interface AboutContent {
@@ -188,5 +322,19 @@ export interface AboutContent {
     credentials: Array<{
         label: string
         value: string
+    }>
+    journeyTitle: string
+    ledgerLabel: string
+    milestones: Array<{
+        year: string
+        title: string
+        label: string
+        description: string
+        status: 'completed' | 'progress' | 'planned'
+        statusText: string
+        docs: Array<{
+            label: string
+            value: string
+        }>
     }>
 }

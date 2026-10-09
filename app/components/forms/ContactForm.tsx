@@ -13,6 +13,12 @@ interface ContactFormProps {
         message: string
         submit: string
     }
+    placeholders?: {
+        name: string
+        email: string
+        org: string
+        message: string
+    }
     messages?: {
         sending?: string
         sent?: string
@@ -28,7 +34,7 @@ declare global {
     }
 }
 
-export default function ContactForm({ labels, messages }: ContactFormProps) {
+export default function ContactForm({ labels, placeholders, messages }: ContactFormProps) {
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
     const [token, setToken] = useState<string>('')
     const [errorMessage, setErrorMessage] = useState<string>('')
@@ -99,21 +105,21 @@ export default function ContactForm({ labels, messages }: ContactFormProps) {
                     label={labels.name}
                     name="name"
                     required
-                    placeholder="Jane Doe"
+                    placeholder={placeholders?.name || "Jane Doe"}
                 />
                 <InputField
                     label={labels.email}
                     name="email"
                     type="email"
                     required
-                    placeholder="jane@example.com"
+                    placeholder={placeholders?.email || "jane@example.com"}
                 />
             </div>
 
             <InputField
                 label={labels.org}
                 name="organization"
-                placeholder="Company Ltd."
+                placeholder={placeholders?.org || "Company Ltd."}
             />
 
             <div className={`form-group`}>
@@ -125,7 +131,7 @@ export default function ContactForm({ labels, messages }: ContactFormProps) {
                     required
                     rows={4}
                     className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-200 focus:border-yellow-500/50 focus:outline-none transition-colors resize-none"
-                    placeholder="How can we collaborate?"
+                    placeholder={placeholders?.message || "How can we collaborate?"}
                 />
             </div>
 

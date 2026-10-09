@@ -213,7 +213,7 @@ export default function MainHeader({ locale: propLocale }: { locale?: Locale } =
         <div className="fixed inset-0 flex flex-col lg:hidden z-[99999] bg-black/95 backdrop-blur-md overflow-y-auto">
           {/* Header row with Close button */}
           <div className="flex justify-between items-center p-4 sm:p-6 border-b border-gray-800">
-            <span className="text-lg font-bold text-white">Select Language</span>
+            <span className="text-lg font-bold text-white">{ui.selectLanguage || 'Select Language'}</span>
             <button
               onClick={() => setLangMenuOpen(false)}
               onTouchEnd={(e) => {

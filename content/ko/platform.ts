@@ -129,4 +129,71 @@ export const platformContent: PlatformContent = {
             us: "아키텍처 분석을 수행합니다. 의미를 설명하십시오. 시스템 일관성을 검증합니다.",
         },
     ],
+    disclaimer: "⚠️ R&D 시뮬레이션 면책조항: 이 인터페이스는 개념 시각화 목적을 위한 대화형 데모입니다. YugNex 자율 소프트웨어 엔지니어링 시스템은 현재 연구 개발(R&D) 단계에 있습니다. 현재 공개 프로덕션 디지털 애플리케이션이나 완전히 최적화된 시스템이 활성화되어 있지 않습니다.",
+    tabs: {
+        github: "GitHub 풀 요청",
+        ide: "IDE 작업공간 통합",
+        cicd: "CI/CD 불변 파이프라인",
+    },
+    githubPr: {
+        statusOpen: "열려 있는",
+        securityScore: "보안 무결성 점수",
+        securityBadge: "보안 감사 에이전트",
+        securityTime: "2분 전 확인됨",
+        securityFeedback: "취약점 해결이 확인되었습니다. 하드코딩된 JWT 비밀 키는 시스템 환경 변수에서 실행되도록 매개변수화되었습니다. X-Frame-Options 보안 헤더가 전역적으로 성공적으로 삽입되었습니다. 불변 검사가 통과되었습니다.",
+    },
+    ideWorkspace: {
+        statusReviewing: "검토 중",
+        ideTitle: "YugNex: WebSocket의 리스너 누출 해결",
+        ideDesc: "명시적인 닫기 핸들러를 선언하여 메모리 누수를 해결했습니다.",
+        btnAccept: "제안 수락",
+        btnDecline: "감소",
+    },
+    cicdPipeline: {
+        statusPipelinePassed: "파이프라인 통과",
+        statusSuccess: "상태: 성공",
+        ciLogs: [
+            "[정보] 프로덕션 런타임 컨테이너 생성 중...",
+            "[정보] 모듈 번들링 및 컴파일러 빌드 트리 검색...",
+            "[정보] 형식적 불변 스윕 실행:",
+            "✓ 불변 01: API 인증 무결성(통과)",
+            "✓ 불변 02: 자원 할당 제약(통과)",
+            "✓ 불변 03: 순환 종속성 검증(통과)",
+            "[성공] 시스템 컴파일 빌드가 확인되었습니다. 실행 무결성은 메모리 누수 0으로 통과됩니다.",
+            "프로덕션 에지에 배포 중...",
+        ],
+    },
+    capabilitiesTitle: "대화형 플랫폼 기능",
+    consoleSandboxRunner: "콘솔: SANDBOX_RUNNER",
+    btnExecuting: "실행 중...",
+    btnRun: "달리다",
+    capLogs: [
+        {
+            cmd: "yugnex build --analyze-architecture",
+            logs: [
+                "[정보] 코드베이스 디렉터리를 검색하는 중...",
+                "[정보] 모듈 간 인과 그래프 생성 중(1,284개 노드)...",
+                "[VCS] 설계 사양과 아키텍처 경계를 확인하는 중...",
+                "[성공] 종속성 스키마가 구축되었습니다. 0개의 경계 위반이 발견되었습니다.",
+            ],
+        },
+        {
+            cmd: "yugnex diff --check-implications --file=userModel.ts",
+            logs: [
+                "[정보] userModel.ts에 대한 다운스트림 가져오기 추적 중...",
+                "[정보] 경로/및 컨트롤러/내부의 종속성 체인을 확인하는 중...",
+                "[경고] userService.ts는 변경된 데이터베이스 스키마에 따라 달라집니다. 매개변수 검증 중...",
+                "[성공] 원인 경로가 확인되었습니다. 리팩토링 위험 평가: 문제 0개.",
+            ],
+        },
+        {
+            cmd: "yugnex validate --invariants --level=all",
+            logs: [
+                "[정보] 다단계 불변 유효성 검사를 실행하는 중...",
+                "[정보] 레벨 1: 구문 분석(PASS) | 레벨 2: 유형(PASS)",
+                "[정보] 레벨 3: 보안 샌드박싱(PASS) | 레벨 4: 메모리 검사(PASS)",
+                "[성공] 공식 검증이 성공적으로 완료되었습니다. 코드가 안전합니다.",
+            ],
+        },
+    ],
 }

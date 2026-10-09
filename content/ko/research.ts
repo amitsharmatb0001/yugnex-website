@@ -15,11 +15,11 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "백서-2026",
+            id: "whitepaper-2026",
             title: "자율 소프트웨어 엔지니어링을 향하여: 과제와 방향",
             description: "AI 기반 소프트웨어 엔지니어링 분야의 추론, 맥락, 구조적 이해에 관한 연구입니다. 이 백서는 지속적이고 자율적인 소프트웨어 엔지니어링 인텔리전스를 구축하는 데 있어 기본적인 과제를 살펴봅니다.",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
-            fileName: "YugNex_Research_백서.pdf",
+            fileName: "YugNex_Research_Whitepaper.pdf",
             publishDate: "2026-01-01",
             authors: [
                 "유그넥스 기술연구본부",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "지속적인 자율 소프트웨어 인텔리전스 모델 구축에 관한 간행물, 백서 및 연구 결과를 살펴보세요.",
+    ledgerTitle: "문서 서류 //",
+    formatLabel: "체재",
+    formatValue: "기술 PDF(영어)",
+    noPublications: "연구발행물을 찾을 수 없습니다.",
+    peerSignature: "GPG 피어 에이전트 서명 확인됨",
+    peerSignStamp: "서명: ARCHITECT_AGENT_0x028A",
 }

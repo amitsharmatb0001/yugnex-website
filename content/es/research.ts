@@ -15,7 +15,7 @@ export const researchContent: ResearchContent = {
     },
     papers: [
         {
-            id: "documento técnico-2026",
+            id: "whitepaper-2026",
             title: "Hacia la ingeniería de software autónoma: desafíos y direcciones",
             description: "Investigación sobre razonamiento, contexto y comprensión arquitectónica en la ingeniería de software asistida por IA. Este documento técnico explora los desafíos fundamentales en la creación de inteligencia de ingeniería de software autónoma y persistente.",
             pdfUrl: "/YugNex_Research_Whitepaper.pdf",
@@ -32,4 +32,11 @@ export const researchContent: ResearchContent = {
             ],
         },
     ],
+    subtitle: "Explore nuestras publicaciones, documentos técnicos y hallazgos sobre la creación de modelos de inteligencia de software autónomos persistentes.",
+    ledgerTitle: "DOCUMENTO EXPEDIENTE //",
+    formatLabel: "Formato",
+    formatValue: "PDF técnico (inglés)",
+    noPublications: "No se encontraron publicaciones de investigación.",
+    peerSignature: "Firma del agente par GPG verificada",
+    peerSignStamp: "FIRMA: ARQUITECTO_AGENT_0x028A",
 }

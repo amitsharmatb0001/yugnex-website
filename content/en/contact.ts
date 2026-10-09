@@ -18,5 +18,12 @@ export const contactContent: ContactContent = {
         twitter: "@YugNex",
         email: "amit@yugnex.com",
         location: "Bhilwara, Rajasthan, India"
+    },
+    directChannelsTitle: "Direct Channels",
+    formPlaceholders: {
+        name: "Jane Doe",
+        email: "jane@example.com",
+        org: "Company Ltd.",
+        message: "How can we collaborate?"
     }
 }

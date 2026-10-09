@@ -5,6 +5,13 @@ import { Eye, Shield, Radio, Activity } from 'lucide-react'
 
 interface VisionConsoleProps {
   paragraphs: string[]
+  pillarMetas?: string[]
+  telemetryTitle?: string
+  telemetryStatus?: string
+  telemetryMap?: Array<{
+    stats: Array<{ label: string; value: string; pct: number }>
+    logs: string[]
+  }>
 }
 
 interface TelemetryData {
@@ -67,28 +74,28 @@ const TELEMETRY_MAP: TelemetryData[] = [
   }
 ]
 
-export default function VisionConsole({ paragraphs }: VisionConsoleProps) {
+export default function VisionConsole({
+  paragraphs,
+  pillarMetas = ['System Limits', 'The Next Epoch', 'Digital Intelligence', 'Human-AI Symbiosis'],
+  telemetryTitle = "Substrate Metrics",
+  telemetryStatus = "RUNNING",
+  telemetryMap = TELEMETRY_MAP
+}: VisionConsoleProps) {
   const [activePillar, setActivePillar] = useState(0)
   const [animatedPct, setAnimatedPct] = useState<number[]>([0, 0, 0])
 
   useEffect(() => {
     // Reset and animate progress bars when changing pillars
     setAnimatedPct([0, 0, 0])
-    const data = TELEMETRY_MAP[activePillar]
+    const data = telemetryMap[activePillar] || telemetryMap[0]
     const timer = setTimeout(() => {
       setAnimatedPct(data.stats.map(s => s.pct))
     }, 100)
     return () => clearTimeout(timer)
-  }, [activePillar])
+  }, [activePillar, telemetryMap])
 
   const getPillarMeta = (idx: number) => {
-    switch (idx) {
-      case 0: return 'System Limits'
-      case 1: return 'The Next Epoch'
-      case 2: return 'Digital Intelligence'
-      case 3: return 'Human-AI Symbiosis'
-      default: return `Pillar 0${idx + 1}`
-    }
+    return pillarMetas[idx] || `Pillar 0${idx + 1}`
   }
 
   const getIcon = (idx: number) => {
@@ -100,7 +107,7 @@ export default function VisionConsole({ paragraphs }: VisionConsoleProps) {
     }
   }
 
-  const activeData = TELEMETRY_MAP[activePillar] || TELEMETRY_MAP[0]
+  const activeData = telemetryMap[activePillar] || telemetryMap[0]
 
   return (
     <div className={styles.dashboard}>
@@ -139,7 +146,7 @@ export default function VisionConsole({ paragraphs }: VisionConsoleProps) {
             <div className={styles.telemetryStats}>
               <div className="flex items-center gap-1.5 text-xs text-yellow-500 font-bold uppercase tracking-wider mb-2">
                 {getIcon(activePillar)}
-                <span>Substrate Metrics</span>
+                <span>{telemetryTitle}</span>
               </div>
               
               {activeData.stats.map((stat, sIdx) => (
@@ -162,7 +169,7 @@ export default function VisionConsole({ paragraphs }: VisionConsoleProps) {
             <div className={styles.telemetryConsole}>
               <div className={styles.consoleHeader}>
                 <span>THREAD: {getPillarMeta(activePillar).toUpperCase().replace(' ', '_')}</span>
-                <span className={styles.consoleStatus}>RUNNING</span>
+                <span className={styles.consoleStatus}>{telemetryStatus}</span>
               </div>
               <div className={styles.consoleBody}>
                 {activeData.logs.map((log, lIdx) => (
